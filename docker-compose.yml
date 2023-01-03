@@ -9,7 +9,9 @@ services:
       - "80:80"
 
   node:
-    image: node:18.12
+    build:
+      context: ./node
+      dockerfile: Dockerfile
     container_name: node
     tty: true
     volumes:
