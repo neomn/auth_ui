@@ -5,6 +5,8 @@ services:
       context: ./nginx
       dockerfile: Dockerfile
     container_name: nginx
+    ports:
+      - "80:80"
 
   node:
     image: node:18.12
