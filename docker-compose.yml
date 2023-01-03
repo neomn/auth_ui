@@ -2,3 +2,5 @@ services:
   node:
     image: node:18.12
     container_name: node
+    volumes:
+      - ./src:/var/www/html
