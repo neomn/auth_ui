@@ -17,4 +17,4 @@ services:
     volumes:
       - ./src:/app
     ports:
-      - "3000:3000"
+      - "3000:5173"
