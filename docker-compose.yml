@@ -18,3 +18,5 @@ services:
       - ./src:/app
     ports:
       - "3000:4173"
+    command:
+      - sh -c "cd /app && npm run dev"
