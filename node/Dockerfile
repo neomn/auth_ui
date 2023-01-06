@@ -1,3 +1,3 @@
 FROM node:18.12
-#WORKDIR /app
-EXPOSE 4173
+WORKDIR /app
+RUN npm run dev
