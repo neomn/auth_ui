@@ -4,7 +4,7 @@ services:
     build:
       context: ./nginx
       dockerfile: Dockerfile
-    container_name: nginx
+    container_name: mynginx
     ports:
       - "80:80"
 
@@ -12,7 +12,7 @@ services:
     build:
       context: ./node
       dockerfile: Dockerfile
-    container_name: node
+    container_name: mynode
     tty: true
     volumes:
       - ./src:/app
