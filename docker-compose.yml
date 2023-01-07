@@ -8,11 +8,11 @@ services:
     ports:
       - "80:80"
 
-  app:
+  login_vue:
     build:
       context: ./node
       dockerfile: Dockerfile
-    container_name: app
+    container_name: login_vue
     tty: true
     volumes:
       - ./src:/app
