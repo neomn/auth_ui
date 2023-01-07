@@ -4,20 +4,18 @@ services:
     build:
       context: ./nginx
       dockerfile: Dockerfile
-    container_name: custom-nginx
+    container_name: nginx
     ports:
       - "80:80"
 
-  node:
+  app:
     build:
       context: ./node
       dockerfile: Dockerfile
-    container_name: node-vite-tailwind
+    container_name: app
     tty: true
     volumes:
       - ./src:/app
     ports:
       - "3000:4173"
-    #before running this commands you should install vite manually into the container
-    command: sh -c "cd /app && 
-                    npm run dev"
+    command: sh -c "npm run dev"
