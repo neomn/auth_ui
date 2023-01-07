@@ -18,4 +18,4 @@ services:
       - ./src:/app
     ports:
       - "3000:4173"
-    command: sh -c "npm run dev"
+    command: /bin/sh -c "npm run dev"
