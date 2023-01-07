@@ -18,5 +18,6 @@ services:
       - ./src:/app
     ports:
       - "3000:4173"
+    #before running this commands you should install vite manually into the container
     command: sh -c "cd /app && 
                     npm run dev"
