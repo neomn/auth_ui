@@ -15,7 +15,10 @@ services:
     container_name: node
     tty: true
     volumes:
-      - ./src:/app
+      - type: bind
+        source: "src"
+        target: /app
+#      - src:/app
     ports:
       - "3000:4173"
     working_dir: /app
