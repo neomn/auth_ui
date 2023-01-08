@@ -19,4 +19,4 @@ services:
     ports:
       - "3000:4173"
     working_dir: /app
-#    command: /bin/sh -c  "npm run dev"
+    command: /bin/sh -c  "npm install && npm run dev"
