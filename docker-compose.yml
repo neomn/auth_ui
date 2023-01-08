@@ -18,7 +18,6 @@ services:
       - type: bind
         source: "src"
         target: /app
-#      - src:/app
     ports:
       - "3000:4173"
     working_dir: /app
