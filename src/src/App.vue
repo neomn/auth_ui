@@ -4,6 +4,8 @@ import LoginImage from "./components/loginImage.vue";
 </script>
 
 <template>
-  <LoginImage/>
-  <login/>
+  <div class="flex flex-col w-full h-screen bg-gray-600">
+    <LoginImage/>
+    <login/>
+  </div>
 </template>
