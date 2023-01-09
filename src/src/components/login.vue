@@ -1,9 +1,8 @@
-<scrip>
+<script>
 
-</scrip>
-
-<templa>
+</script>
+<template>
   <div class="">
-
+    <h1>this is login</h1>
   </div>
-</templa>
+</template>
