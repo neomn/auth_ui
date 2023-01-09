@@ -1,13 +1,8 @@
-<template>
-
-</template>
-
 <script>
-export default {
-  name: "inputs"
-}
+
 </script>
+<template>
+  <div >
 
-<style scoped>
-
-</style>
+  </div>
+</template>
