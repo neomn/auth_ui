@@ -1,16 +1,16 @@
 <template>
-  <div class="flex justify-around">
-    <button class="border border-gray-400 ">
-      <img/>
-      <label>Login</label>
+  <div class="flex justify-around text-sm text-gray-400">
+    <button class="basis-1/3 m-1 flex flex-col items-center border border-gray-400 ">
+      <img alt="login icon" class="basis-2/3 border"/>
+      <label class="basis-1/3 border">Login</label>
     </button>
-    <button class="border border-gray-400 ">
-      <img/>
-      <label>Register</label>
+    <button class="basis-1/3 m-1 flex flex-col items-center border border-gray-400 ">
+      <img class="basis-2/3 border"/>
+      <label class="basis-1/3 border">Register</label>
     </button>
-    <button class="border border-gray-400 ">
-      <img/>
-      <label>Forget Password?</label>?
+    <button class="basis-1/3 m-1 flex flex-col items-center border border-gray-400 ">
+      <img alt="" class="basis-2/3  border"/>
+      <label class="basis-1/3 border">Recover</label>
     </button>
   </div>
 </template>
