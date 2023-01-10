@@ -15,7 +15,7 @@
       <label class="basis-1/3 border">Register</label>
     </button>
     <button class="basis-1/3 m-1 flex flex-col items-center border border-gray-400 ">
-      <img src="" alt="" class="basis-2/3  border"/>
+      <img src="src/assets/icons/1745504.png" alt="" class="basis-2/3  border"/>
       <label class="basis-1/3 border">Recover</label>
     </button>
   </div>
