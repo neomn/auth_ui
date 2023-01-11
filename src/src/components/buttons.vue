@@ -5,8 +5,8 @@
 </script>
 
 <template>
-  <div class="flex justify-around text-sm text-gray-400 overflow-hidden border">
-    <button class="basis-1/3 sm:basis-1/6 m-1 flex flex-col items-center p-1 border border-white">
+  <div class="flex justify-around sm:justify-evenly text-sm text-gray-400 overflow-hidden border">
+    <button class="basis-1/3 m-1 flex flex-col items-center p-1 border border-white">
       <img src="src/assets/icons/8983815.png" class="w-8"/>
       <label class=" ">Login</label>
     </button>
