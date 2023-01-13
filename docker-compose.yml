@@ -16,7 +16,7 @@ services:
     tty: true
     volumes:
       - type: bind
-        source: "src"
+        source: ./src
         target: /app
     ports:
       - "3000:4173"
