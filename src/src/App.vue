@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="flex flex-col sm:flex-row w-full h-screen bg-gray-600">
+  <div>
     <router-view/>
   </div>
 </template>
