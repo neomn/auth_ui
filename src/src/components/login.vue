@@ -1,12 +1,12 @@
 <template>
-  <div class="flex flex-col sm:flex-row w-full h-full  bg-gray-600">
-    <div class="basis-1/4 sm:basis-1/2 border border-white">
+  <div class="flex flex-col sm:flex-row h-screen bg-gray-600">
+    <div class="basis-2/6 sm:basis-1/2 border-2 border-amber-600 ">
       <WebsiteLogo/>
     </div>
-    <div class="basis-3/4 sm:basis-1/2">
-      <loginInputs class="border border-white" />
-      <SocialMediaLogin class="border border-white" />
-      <Buttons class="border border-white" />
+    <div class="basis-4/6 sm:basis-1/2 mt-2 border-2 border-lime-600">
+      <loginInputs class="basis-3/6 border border-white" />
+<!--      <SocialMediaLogin class="basis-1/6 border border-white" />-->
+<!--      <Buttons class="basis-1/6 border border-white" />-->
     </div>
   </div>
 </template>
