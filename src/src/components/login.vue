@@ -1,14 +1,13 @@
 <template>
-  <div class="flex flex-col sm:flex-row w-full h-screen bg-gray-600">
-    <div class="basis-1/3 sm:basis-1/2">
-      <WebsiteLogo class="border border-white"/>
+  <div class="flex flex-col sm:flex-row w-full h-full  bg-gray-600">
+    <div class="basis-1/4 sm:basis-1/2 border border-white">
+      <WebsiteLogo/>
     </div>
-    <div class="basis-2/3 sm:basis-1/2">
+    <div class="basis-3/4 sm:basis-1/2">
       <loginInputs class="border border-white" />
       <SocialMediaLogin class="border border-white" />
       <Buttons class="border border-white" />
     </div>
-
   </div>
 </template>
 
