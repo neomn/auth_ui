@@ -1,9 +1,11 @@
-import login from './components/'
-import register from './components/'
-import recover from './components/'
+import login from './components/login.vue'
+// import register from './components/'
+// import recover from './components/'
 
-const routes = [
-    {path: '/login', name:'login', component: root},
-    {path: '/register', name:'register', component: root},
-    {path: '/recover', name:'recover', component: root},
-]
+export function routes() {
+        return [
+            {path: '/login', name:'login', component: login},
+            // {path: '/register', name:'register', component: root},
+            // {path: '/recover', name:'recover', component: root},
+        ]
+}
