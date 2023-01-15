@@ -24,9 +24,13 @@ export default {
   data() {
     return {
       pageTitle: 'test',
+      route: this.$route.name
     }
   },
   mounted() {
+    console.log(this.route)
+  },
+  methods: {
 
   }
 }
