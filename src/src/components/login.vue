@@ -1,12 +1,10 @@
 <template>
   <div class="flex flex-col sm:flex-row bg-gray-600">
-    <div class="basis-2/6 sm:basis-1/2 border-2 border-amber-600 ">
-<!--      <WebsiteLogo/>-->
-    </div>
-    <div class="basis-4/6 sm:basis-1/2 mt-2 border-2 border-lime-600">
-<!--      <loginInputs class="basis-3/6 border border-white" />-->
-<!--      <SocialMediaLogin class="basis-1/6 border border-white" />-->
-<!--      <Buttons class="basis-1/6 border border-white" />-->
+    <WebsiteLogo class="basis-4/12 sm:basis-1/2 m-2 "/>
+    <div class="basis-8/12 sm:basis-1/2 border-2 border-red-600">
+      <loginInputs class="h-2/4"/>
+      <SocialMediaLogin class="h-1/4"/>
+      <Buttons class="h-1/4"/>
     </div>
   </div>
 </template>
@@ -23,7 +21,7 @@ export default {
   components: {WebsiteLogo, SocialMediaLogin, LoginInputs, RegisterInputs, Buttons},
   name: 'login',
 
-  data(){
+  data() {
     return {
       pageTitle: 'test',
     }
