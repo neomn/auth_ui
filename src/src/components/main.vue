@@ -19,7 +19,7 @@ import NavButtons from "./navButtons.vue"
 
 export default {
   components: {WebsiteLogo, SocialMediaLogin, LoginInputs, RegisterInputs, NavButtons},
-  name: 'login',
+  name: 'main',
 
   data() {
     return {
@@ -28,7 +28,7 @@ export default {
     }
   },
   mounted() {
-    console.log(this.route)
+    // console.log(this.route)
   },
   methods: {
 

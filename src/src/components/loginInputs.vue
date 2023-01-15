@@ -11,3 +11,22 @@
     </div>
   </div>
 </template>
+
+
+
+<script>
+export default{
+  data(){
+    return {
+      allInputs: ['email','phone_number',],
+      activeInputs: [],
+    }
+  },
+  methods: {
+    setActiveInputs(){
+
+    }
+  },
+}
+
+</script>
