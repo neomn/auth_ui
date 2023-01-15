@@ -11,9 +11,16 @@
 export default {
   data(){
     return {
-      route: this.$route.name
+      route: this.$route.name,
+      selectedMethod: 'sms',  // optoins>> sms,email,google,linkedIn
     }
   },
+  methods: {
+    // which auth method (email-sms-google-linkedIn) is selected
+    getSelectedMethod(){
+
+    },
+  }
 }
 
 </script>
