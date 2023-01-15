@@ -4,7 +4,7 @@
     <div class="basis-8/12 sm:basis-1/2 m-2 mt-1 sm:mt-2 border-2 border-gray-900 rounded-2xl overflow-hidden ">
       <loginInputs class="h-4/6"/>
       <SocialMediaLogin class="h-1/6"/>
-      <Buttons class="h-1/6"/>
+      <NavButtons class="h-1/6"/>
     </div>
   </div>
 </template>
@@ -15,10 +15,10 @@ import WebsiteLogo from "./websiteLogo.vue";
 import LoginInputs from "./loginInputs.vue";
 import SocialMediaLogin from "./socialMediaLogin.vue";
 import RegisterInputs from "./registerInputs.vue";
-import Buttons from "./buttons.vue"
+import NavButtons from "./navButtons.vue"
 
 export default {
-  components: {WebsiteLogo, SocialMediaLogin, LoginInputs, RegisterInputs, Buttons},
+  components: {WebsiteLogo, SocialMediaLogin, LoginInputs, RegisterInputs, NavButtons},
   name: 'login',
 
   data() {
