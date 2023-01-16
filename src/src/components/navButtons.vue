@@ -5,11 +5,11 @@
       <p class="">Login</p>
     </router-link>
     <router-link :to="{name:'register'}" class="basis-1/3 sm:basis-1/6 m-1 flex flex-col items-center p-1" v-bind:class="(this.$route.name === 'register')? 'border-b border-lime-400 rounded-lg':''">
-      <img src="src/assets/icons/3631696.png" class="w-6 "/>
+      <img src="src/assets/icons/register.png" class="w-6 "/>
       <p class="">Register</p>
     </router-link>
     <router-link :to="{name:'recover'}" class="basis-1/3 sm:basis-1/6 m-1 flex flex-col items-center p-1" v-bind:class="(this.$route.name === 'recover')? 'border-b border-lime-400 rounded-lg':''">
-      <img src="src/assets/icons/1745504.png" alt="" class="w-6"/>
+      <img src="src/assets/icons/recover.png" alt="" class="w-6"/>
       <p class="">Recover</p>
     </router-link>
   </div>
