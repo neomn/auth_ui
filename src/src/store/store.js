@@ -1,8 +1,11 @@
-import vue from 'vue'
-import vuex from 'vuex'
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-export default {
+Vue.use(Vuex)
+
+export const store = new Vuex.Store({
     state: {
+        theme: 'dark',
         navButtonCurrentLocation: 'login',
         authMethodCurrentLocation: 'sms',
     },
@@ -18,4 +21,4 @@ export default {
     modules: {
 
     }
-}
+})
