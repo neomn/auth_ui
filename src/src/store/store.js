@@ -3,7 +3,8 @@ import vuex from 'vuex'
 
 export default {
     state: {
-
+        navButtonCurrentLocation: 'login',
+        authMethodCurrentLocation: 'sms',
     },
     mutations: {
 
