@@ -1,6 +1,4 @@
 import root from './components/root.vue'
-import register from './components/register.vue'
-import recover from './components/recover.vue'
 import notFound from "./components/notFound.vue";
 
 const routes = [

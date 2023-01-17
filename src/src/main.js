@@ -4,6 +4,7 @@ import { store } from "./store/store.js";
 import { routes } from './routes'
 import App from './App.vue'
 
+
 const router = createRouter({
     history: createWebHistory(),
     routes: routes,
