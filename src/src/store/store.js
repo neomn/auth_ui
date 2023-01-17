@@ -11,6 +11,9 @@ export default {
     actions: {
 
     },
+    getters: {
+
+    },
     modules: {
 
     }
