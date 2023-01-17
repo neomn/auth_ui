@@ -14,13 +14,13 @@ export default {
       selectedMethod: 'sms',  // options >> sms,email,google,linkedIn , default: sms
     }
   },
-  computed: {
-    authMethodCurrentLocation(){
-      return this.$store.state.authMethodCurrentLocation
-    }
-  },
+  // computed: {
+  //   authMethodCurrentLocation(){
+  //     return this.$store.state.authMethodCurrentLocation
+  //   }
+  // },
   mounted() {
-    console.log(this.authMethodCurrentLocation())
+    // console.log(this.authMethodCurrentLocation())
   },
   methods: {
     // change auth method (email-sms-google-linkedIn)
