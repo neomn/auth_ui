@@ -23,7 +23,10 @@ export const store = new Vuex.Store({
         },
         changeAuthMethod: (state, payload) => {
             state.authMethod = payload
-        }
+        },
+        changeSelectedNavButton: (state, payload) => {
+            state.selectedNavButton = payload
+        },
     },
     actions: {
         changeAuthMethod: (context, payload) => {
