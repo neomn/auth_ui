@@ -7,8 +7,14 @@ export const store = new Vuex.Store({
         authMethod: 'sms',
     },
     getters: {
-        appState: state => {
-            return state
+        theme: state => {
+            return state.theme
+        },
+        authMethod: state => {
+            return state.authMethod
+        },
+        selectedNabButton: state => {
+            return state.selectedNavButton
         },
     },
     mutations: {

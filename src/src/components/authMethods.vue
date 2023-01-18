@@ -10,7 +10,7 @@
 <script>
 export default {
   computed: {
-    authMethod() {return this.$store.getters.appState.authMethod},
+    authMethod() {return this.$store.getters.authMethod},
   },
   methods: {
     changeAuthMethod(method){ this.$store.dispatch('changeAuthMethod', method)},
