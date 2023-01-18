@@ -29,8 +29,14 @@ export const store = new Vuex.Store({
         },
     },
     actions: {
+        changeTheme: (context, payload) => {
+            context.commit('changeTheme', payload)
+        },
         changeAuthMethod: (context, payload) => {
             context.commit('changeAuthMethod', payload)
+        },
+        changeSelectedNavButton: (context, payload) => {
+            context.commit('changeSelectedNavButton', payload)
         },
     },
     modules: {
