@@ -13,7 +13,9 @@ export const store = new Vuex.Store({
 
     },
     getters: {
-
+        appState: (state) => {
+            return state
+        },
     },
     modules: {
 

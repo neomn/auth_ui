@@ -17,7 +17,7 @@ export default {
   computed: {
     authMethodCurrentLocation(){
       return this.$store.state.authMethodCurrentLocation
-    }
+    },
   },
   mounted() {
     console.log(this.authMethodCurrentLocation)
