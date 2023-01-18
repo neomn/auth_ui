@@ -12,8 +12,8 @@ export const store = new Vuex.Store({
         },
     },
     mutations: {
-        changeTheme: state => {
-
+        changeTheme: (state, payload) => {
+            state.theme = payload
         },
         changeAuthMethod: (state, payload) => {
             state.authMethodCurrentLocation = payload
