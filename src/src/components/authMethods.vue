@@ -14,12 +14,9 @@ export default {
       return this.$store.getters.appState.authMethodCurrentLocation
     },
   },
-  mounted() {
-    console.log(this.authMethodCurrentLocation)
-  },
   methods: {
     changeAuthMethod(method){
-      this.$store.commit('changeAuthMethod', method)
+      this.$store.dispatch('changeAuthMethod', method)
     },
   }
 }

@@ -20,7 +20,9 @@ export const store = new Vuex.Store({
         }
     },
     actions: {
-
+        changeAuthMethod: (context, payload) => {
+            context.commit('changeAuthMethod', payload)
+        },
     },
     modules: {
 
