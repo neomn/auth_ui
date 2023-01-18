@@ -6,16 +6,21 @@ export const store = new Vuex.Store({
         navButtonCurrentLocation: 'login',
         authMethodCurrentLocation: 'sms',
     },
+    getters: {
+        appState: state => {
+            return state
+        },
+    },
     mutations: {
+        changeTheme: state => {
 
+        },
+        changeAuthMethod: (state, payload) => {
+            state.authMethodCurrentLocation = payload
+        }
     },
     actions: {
 
-    },
-    getters: {
-        appState: (state) => {
-            return state
-        },
     },
     modules: {
 

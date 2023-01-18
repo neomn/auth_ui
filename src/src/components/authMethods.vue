@@ -25,7 +25,7 @@ export default {
   methods: {
     // change auth method (email-sms-google-linkedIn)
     changeSelectedMethod(method){
-      this.selectedMethod = method
+      this.$store.commit('changeAuthMethod', method)
     },
   }
 }
