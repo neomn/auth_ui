@@ -3,8 +3,8 @@ import Vuex from 'vuex'
 export const store = new Vuex.Store({
     state: {
         theme: 'dark',
-        navButtonCurrentLocation: 'login',
-        authMethodCurrentLocation: 'sms',
+        selectedNavButton: 'login',
+        authMethod: 'sms',
     },
     getters: {
         appState: state => {
@@ -16,7 +16,7 @@ export const store = new Vuex.Store({
             state.theme = payload
         },
         changeAuthMethod: (state, payload) => {
-            state.authMethodCurrentLocation = payload
+            state.authMethod = payload
         }
     },
     actions: {
