@@ -19,8 +19,13 @@
 
 <script>
 export default {
-  methods: {
+  computed: {
 
+  },
+  methods: {
+    changeSelectedNabButton(button){
+      this.$store.dispatch('changeSelectedNavButton', button)
+    }
   }
 }
 </script>
