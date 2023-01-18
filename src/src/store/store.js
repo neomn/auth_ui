@@ -13,7 +13,7 @@ export const store = new Vuex.Store({
         authMethod: state => {
             return state.authMethod
         },
-        selectedNabButton: state => {
+        selectedNavButton: state => {
             return state.selectedNavButton
         },
     },
