@@ -9,11 +9,6 @@
 
 <script>
 export default {
-  // data(){
-  //   return {
-  //     selectedMethod: 'sms',  // options >> sms,email,google,linkedIn , default: sms
-  //   }
-  // },
   computed: {
     authMethodCurrentLocation(){
       return this.$store.getters.appState.authMethodCurrentLocation
@@ -23,7 +18,6 @@ export default {
     console.log(this.authMethodCurrentLocation)
   },
   methods: {
-    // change auth method (email-sms-google-linkedIn)
     changeAuthMethod(method){
       this.$store.commit('changeAuthMethod', method)
     },
