@@ -11,11 +11,11 @@
 
 
 <script>
-import WebsiteLogo from "./websiteLogo.vue";
+import WebsiteLogo from "./WebsiteLogo.vue";
 import Inputs from "./Inputs.vue";
-import AuthMethods from "./authMethods.vue";
-import RegisterInputs from "./registerInputs.vue";
-import NavButtons from "./navButtons.vue"
+import AuthMethods from "./AuthMethods.vue";
+import RegisterInputs from "./RegisterInputs.vue";
+import NavButtons from "./NavButtons.vue"
 
 export default {
   components: {WebsiteLogo, AuthMethods, Inputs, RegisterInputs, NavButtons},

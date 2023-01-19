@@ -1,5 +1,5 @@
-import root from './components/root.vue'
-import notFound from "./components/notFound.vue";
+import root from './components/Root.vue'
+import notFound from "./components/NotFound.vue";
 
 const routes = [
     {path: '/login', name:'login', component: root},
