@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-col text-white bg-gray-800 overflow-hidden ">
-    <div id="inputs" class="basis-5/6 w-full sm:pt-10 overflow-x-hidden overflow-x-scroll">
-      <FormInput class="border"/>
-      <FormInput class="border"/>
-      <FormInput class="border"/>
-      <FormInput class="border"/>
+    <div id="inputs" class="basis-5/6 w-full sm:pt-10 overflow-x-hidden overflow-y-scroll">
+      <FormInput v-if="authMethod ==='sms'" class=""/>
+      <FormInput v-if="authMethod ==='sms'" class=""/>
+      <FormInput v-if="authMethod ==='sms'" class=""/>
+      <FormInput v-if="authMethod ==='sms'" class=""/>
     </div>
     <div id="submitButton" class="basis-1/6 flex justify-around items-center w-full">
       <Button/>
@@ -25,6 +25,9 @@ export default{
       allInputs: ['email','phone_number',],
       activeInputs: [],
     }
+  },
+  computed: {
+    authMethod(){return this.$store.getters.authMethod }
   },
   methods: {
     setActiveInputs(){
