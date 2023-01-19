@@ -5,10 +5,6 @@
       <FormInput class="border"/>
       <FormInput class="border"/>
       <FormInput class="border"/>
-      <div class="flex justify-start mx-4">
-        <input id="rememberMe" type="checkbox">
-        <label for="rememberMe" class="mx-1">Remember Me</label>
-      </div>
     </div>
     <div id="submitButton" class="basis-1/6 flex justify-around items-center w-full">
       <Button/>
