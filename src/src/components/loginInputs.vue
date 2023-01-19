@@ -1,5 +1,6 @@
 <template>
-  <div class="flex flex-col justify-start sm:justify-end items-center bg-gray-800 overflow-hidden">
+  <div class="flex flex-col justify-start sm:justify-end items-center bg-gray-800 overflow-hidden border-2">
+    <form-input/>
     <input placeholder="   Email" class="basis-2/12 sm:basis-1/12 w-11/12 sm:w-3/4 mt-2 mb-1 border border-gray-500 rounded-lg bg-gray-800"/>
     <input placeholder="   Password" class="basis-2/12 sm:basis-1/12 w-11/12 sm:w-3/4 mb-1 border border-gray-500 rounded-lg bg-gray-800"/>
     <div class="basis-5/12 sm:basis-6/12 self-center w-11/12 sm:w-3/4 m-2 border border-gray-600 rounded-xl">
@@ -15,7 +16,9 @@
 
 
 <script>
+import FormInput from "./FormInput.vue";
 export default{
+  components: {FormInput,},
   data(){
     return {
       allInputs: ['email','phone_number',],
