@@ -1,14 +1,13 @@
 <template>
-  <div class="flex flex-col justify-start sm:justify-end items-center bg-gray-800 overflow-hidden border-2">
-    <form-input/>
-    <input placeholder="   Email" class="basis-2/12 sm:basis-1/12 w-11/12 sm:w-3/4 mt-2 mb-1 border border-gray-500 rounded-lg bg-gray-800"/>
-    <input placeholder="   Password" class="basis-2/12 sm:basis-1/12 w-11/12 sm:w-3/4 mb-1 border border-gray-500 rounded-lg bg-gray-800"/>
-    <div class="basis-5/12 sm:basis-6/12 self-center w-11/12 sm:w-3/4 m-2 border border-gray-600 rounded-xl">
-
+  <div class="flex flex-col text-white bg-gray-800 overflow-hidden border-2">
+    <div id="inputs" class="basis-5/6 w-full border">
+       <div class="border">1</div>
+       <div class="border">2</div>
+       <div class="border">3</div>
+       <div class="border">4</div>
     </div>
-    <div class="basis-1/12 mb-1 flex items-center">
-      <input type="checkbox" class=""/>
-      <label for="" class="mx-2 text-gray-400">Remember Me</label>
+    <div id="submitButton" class="basis-1/6 w-full border">
+      submit
     </div>
   </div>
 </template>
