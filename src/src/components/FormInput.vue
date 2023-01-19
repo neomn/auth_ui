@@ -7,6 +7,11 @@
 
 <script>
 export default {
-  name: "FormInput"
+  name: "FormInput",
+  data(){
+    return {
+      placeHolder:  '',
+    }
+  },
 }
 </script>
