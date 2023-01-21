@@ -22,4 +22,4 @@ const linkedin_login = {
 
 }
 
-export {sms_login,email_login,google_login,linkedin_login}
+export {sms_login, email_login, google_login, linkedin_login}

@@ -15,6 +15,7 @@
 
 
 <script>
+import {sms_login, email_login, google_login, linkedin_login} from "../store/loginOptions.js";
 import FormInput from "./FormInput.vue";
 import Button from "./Button.vue";
 

@@ -5,12 +5,7 @@ export const store = new Vuex.Store({
         theme: 'dark',
         selectedNavButton: 'login',
         authMethod: 'sms',
-        loginInputs: {
-            email: '',
-            phone_number:'',
-            password: '',
-            one_time_token: ''
-        },
+        activeFormInputs: {},
     },
     getters: {
         theme: state => {
