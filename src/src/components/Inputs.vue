@@ -34,16 +34,16 @@ export default{
     setActiveInputs(){
       if (this.$route.name === 'login'){
 
-        if (this.$store.authMethod === 'sms')
+        if (this.$store.getters.authMethod === 'sms')
           this.activeInputs = sms_login
 
-        if (this.$store.authMethod === 'email')
+        if (this.$store.getters.authMethod === 'email')
           this.activeInputs = email_login
 
-        if (this.$store.authMethod === 'google')
+        if (this.$store.getters.authMethod === 'google')
           this.activeInputs = google_login
 
-        if (this.$store.authMethod === 'linkedin')
+        if (this.$store.getters.authMethod === 'linkedin')
           this.activeInputs = linkedin_login
       }
     }
