@@ -5,6 +5,8 @@
       <FormInput id="email" v-if="authMethod ===''" class=""/>
       <FormInput id="password" v-if="authMethod ===''" class=""/>
       <FormInput id="confirm_password" v-if="authMethod ===''" class=""/>
+      <FormInput id="first_name" v-if="authMethod ===''" class=""/>
+      <FormInput id="last_name" v-if="authMethod ===''" class=""/>
     </div>
     <div id="submitButton" class=" basis-2/6 flex justify-around items-center w-full">
       <Button/>
