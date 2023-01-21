@@ -1,11 +1,17 @@
 import Vuex from 'vuex'
+import {sms_login, email_login, google_login, linkedin_login} from "./loginOptions.js";
 
 export const store = new Vuex.Store({
     state: {
         theme: 'dark',
         selectedNavButton: 'login',
         authMethod: 'sms',
-        activeFormInputs: {},
+        activeFormInputs: {
+            sms_login,
+            email_login,
+            google_login,
+            linkedin_login,
+        },
     },
     getters: {
         theme: state => {
