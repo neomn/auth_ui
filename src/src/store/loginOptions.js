@@ -3,7 +3,7 @@ const sms_login = {
     password:'',
     two_factor_auth: {
         one_time_token:'',
-    }
+    },
 }
 
 const email_login = {
