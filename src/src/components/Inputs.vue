@@ -29,7 +29,6 @@ export default{
   data(){
     return {
       activeInputs: {},
-      // placeholders: this.activeInputs.keys
     }
   },
   computed: {
@@ -41,7 +40,7 @@ export default{
     console.log(this.activeInputs)
   },
   methods: {
-    setActiveInputs(){
+    setWhichInputsShouldBeDisplayed(){
       if (this.$route.name === 'login'){
 
         if (this.$store.getters.authMethod === 'sms')
