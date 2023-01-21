@@ -23,12 +23,16 @@ export default{
   components: {FormInput, Button},
   data(){
     return {
-      allInputs: ['email','phone_number',],
-      activeInputs: [],
+      activeInputs: {},
     }
   },
   computed: {
     authMethod(){return this.$store.getters.authMethod }
+  },
+  mounted() {
+    this.setActiveInputs()
+    console.log('active inputs>')
+    console.log(this.activeInputs)
   },
   methods: {
     setActiveInputs(){
