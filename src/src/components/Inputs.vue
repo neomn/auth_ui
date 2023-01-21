@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col content-end text-white bg-gray-800 overflow-hidden ">
-    <div id="inputs" class="flex flex-col justify-center items-center basis-4/6 w-full mt-2 sm:pt-10 overflow-x-hidden overflow-y-scroll">
+    <div id="inputs" class="flex flex-col justify-start items-center basis-4/6 w-full mt-2 sm:pt-10 overflow-x-hidden overflow-y-scroll">
       <FormInput v-if="authMethod ==='sms'" class=""/>
       <FormInput v-if="authMethod ==='sms'" class=""/>
       <FormInput v-if="authMethod ===''" class=""/>
@@ -24,6 +24,7 @@ export default{
   data(){
     return {
       activeInputs: {},
+      // placeholders: this.activeInputs.keys
     }
   },
   computed: {
