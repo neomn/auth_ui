@@ -23,6 +23,9 @@ export const store = new Vuex.Store({
         selectedNavButton: state => {
             return state.selectedNavButton
         },
+        activeFormInputs: state => {
+            return state.activeFormInputs
+        },
     },
     mutations: {
         changeTheme: (state, payload) => {
@@ -50,3 +53,4 @@ export const store = new Vuex.Store({
 
     }
 })
+
