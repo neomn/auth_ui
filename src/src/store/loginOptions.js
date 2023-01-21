@@ -1,6 +1,23 @@
-
-sms= {
+sms = {
     phone_number:'',
-    one_time_token:'',
+    password:'',
+    two_factor_auth: {
+        one_time_token:'',
+    }
 }
 
+email = {
+    email:'',
+    password:'',
+    two_factor_auth: {
+        one_time_token:'',
+    }
+}
+
+google = {
+
+}
+
+linkedin = {
+
+}
