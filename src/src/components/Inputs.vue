@@ -32,7 +32,20 @@ export default{
   },
   methods: {
     setActiveInputs(){
+      if (this.$route.name === 'login'){
 
+        if (this.$store.authMethod === 'sms')
+          this.activeInputs = sms_login
+
+        if (this.$store.authMethod === 'email')
+          this.activeInputs = email_login
+
+        if (this.$store.authMethod === 'google')
+          this.activeInputs = google_login
+
+        if (this.$store.authMethod === 'linkedin')
+          this.activeInputs = linkedin_login
+      }
     }
   },
 }
