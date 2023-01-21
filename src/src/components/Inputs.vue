@@ -10,7 +10,9 @@
       <FormInput id="one_time_token" v-if="authMethod ===''" class=""/>
     </div>
     <div id="submitButton" class=" basis-2/6 flex justify-around items-center w-full">
-      <Button/>
+      <Button id="login"/>
+      <Button id="register"/>
+      <Button id="recover"/>
     </div>
   </div>
 </template>
