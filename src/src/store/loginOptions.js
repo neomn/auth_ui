@@ -1,4 +1,4 @@
-sms = {
+sms_login = {
     phone_number:'',
     password:'',
     two_factor_auth: {
@@ -6,7 +6,7 @@ sms = {
     }
 }
 
-email = {
+email_login = {
     email:'',
     password:'',
     two_factor_auth: {
@@ -14,10 +14,10 @@ email = {
     }
 }
 
-google = {
+google_login = {
 
 }
 
-linkedin = {
+linkedin_login = {
 
 }
