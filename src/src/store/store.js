@@ -13,6 +13,7 @@ export const store = new Vuex.Store({
             last_name: {display: false, value: ''},
             password: {display: true, value: ''},
             confirm_password: {display: false, value: ''},
+            one_time_token: {display: false, value: ''},
         },
         activeButtons: {
             login: false,
