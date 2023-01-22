@@ -16,9 +16,9 @@ export const store = new Vuex.Store({
             one_time_token: {display: false, value: ''},
         },
         activeButtons: {
-            login: false,
-            register: false,
-            recover: false,
+            login: {display: true},
+            register: {display: false},
+            recover: {display: false},
         }
     },
     getters: {
