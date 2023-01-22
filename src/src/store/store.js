@@ -48,6 +48,55 @@ export const store = new Vuex.Store({
         changeSelectedNavButton: (state, payload) => {
             state.selectedNavButton = payload
         },
+        changeActiveInputs:(state, payload) => {
+           let route = this.$route.name;
+
+           if (route === 'login'){
+               if (state.authMethod === 'sms'){
+
+               }
+               if (state.authMethod === 'email'){
+
+               }
+               if (state.authMethod === 'google'){
+
+               }
+               if (state.authMethod === 'linkedin'){
+
+               }
+           }
+            if (route === 'register'){
+                if (state.authMethod === 'sms'){
+
+                }
+                if (state.authMethod === 'email'){
+
+                }
+                if (state.authMethod === 'google'){
+
+                }
+                if (state.authMethod === 'linkedin'){
+
+                }
+            }
+            if (route === 'linkedin'){
+                if (state.authMethod === 'sms'){
+
+                }
+                if (state.authMethod === 'email'){
+
+                }
+                if (state.authMethod === 'google'){
+
+                }
+                if (state.authMethod === 'linkedin'){
+
+                }
+            }
+        },
+        changeActiveButtons: (state, payload) => {
+
+        },
     },
     actions: {
         changeTheme: (context, payload) => {
