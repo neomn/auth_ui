@@ -7,10 +7,12 @@ export const store = new Vuex.Store({
         selectedNavButton: 'login',
         authMethod: 'sms',
         activeFormInputs: {
-            sms_login,
-            email_login,
-            google_login,
-            linkedin_login,
+            phone_number: {display: false, value: ''},
+            email: {display: false, value: ''},
+            first_name: {display: false, value: ''},
+            last_name: {display: false, value: ''},
+            password: {display: false, value: ''},
+            confirm_password: {display: false, value: ''},
         },
     },
     getters: {
