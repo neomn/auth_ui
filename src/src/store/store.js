@@ -78,9 +78,6 @@ export const store = new Vuex.Store({
                 }
             }
         },
-        changeActiveButtons: (state, payload) => {
-
-        },
     },
     actions: {
         changeTheme: (context, payload) => {
@@ -94,7 +91,7 @@ export const store = new Vuex.Store({
         },
         changeActiveInputs: (context, payload) => {
             context.commit('changeActiveInputs', payload)
-        }
+        },
     },
     modules: {
 

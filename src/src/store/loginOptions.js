@@ -25,7 +25,7 @@ function inputsForLoginUsingEmail() {
     store.state.activeFormInputs.one_time_token.display = false
 
     store.state.activeButtons.login.display = true
-    store.state.activeButtons.register.display = false
+    store.state.activeButtons.register.display = true
     store.state.activeButtons.recover.display = false
 }
 
@@ -38,7 +38,7 @@ function inputsForLoginUsingGoogle() {
     store.state.activeFormInputs.confirm_password.display = false
     store.state.activeFormInputs.one_time_token.display = false
 
-    store.state.activeButtons.login.display = true
+    store.state.activeButtons.login.display = false
     store.state.activeButtons.register.display = false
     store.state.activeButtons.recover.display = false
 }
@@ -52,7 +52,7 @@ function inputsForLoginUsinglinkedin() {
     store.state.activeFormInputs.confirm_password.display = false
     store.state.activeFormInputs.one_time_token.display = false
 
-    store.state.activeButtons.login.display = true
+    store.state.activeButtons.login.display = false
     store.state.activeButtons.register.display = false
     store.state.activeButtons.recover.display = false
 }
