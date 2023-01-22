@@ -29,6 +29,7 @@ export default{
   computed: {
     authMethod(){return this.$store.getters.authMethod },
     activeFormInputs(){return this.$store.getters.activeFormInputs},
+    activeButtons(){return this.$store.getters.activeButtons},
   },
   mounted() {
     console.log('test>> ')

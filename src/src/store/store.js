@@ -7,11 +7,11 @@ export const store = new Vuex.Store({
         selectedNavButton: 'login',
         authMethod: 'sms',
         activeFormInputs: {
-            phone_number: {display: false, value: ''},
+            phone_number: {display: true, value: ''},
             email: {display: false, value: ''},
             first_name: {display: false, value: ''},
             last_name: {display: false, value: ''},
-            password: {display: false, value: ''},
+            password: {display: true, value: ''},
             confirm_password: {display: false, value: ''},
         },
         activeButtons: {
