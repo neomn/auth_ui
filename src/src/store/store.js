@@ -54,70 +54,25 @@ export const store = new Vuex.Store({
         },
         changeActiveInputs:(state, payload) => {
            let route = payload
-
            if (route === 'login'){
-
-               if (state.authMethod === 'sms'){
-                   state.activeFormInputs.phone_number.display = true
-                   state.activeFormInputs.email.display = false
-                   state.activeFormInputs.first_name.display = false
-                   state.activeFormInputs.last_name.display = false
-                   state.activeFormInputs.password.display = true
-                   state.activeFormInputs.confirm_password.display = false
-                   state.activeFormInputs.one_time_token.display = false
-               }
-               if (state.authMethod === 'email'){
-                   state.activeFormInputs.phone_number.display = false
-                   state.activeFormInputs.email.display = true
-                   state.activeFormInputs.first_name.display = false
-                   state.activeFormInputs.last_name.display = false
-                   state.activeFormInputs.password.display = true
-                   state.activeFormInputs.confirm_password.display = false
-                   state.activeFormInputs.one_time_token.display = false
-               }
-               if (state.authMethod === 'google'){
-                   Object.entries(state.activeFormInputs).forEach(input => {input.display = false})
-               }
-               if (state.authMethod === 'linkedin'){
-                   state.activeFormInputs.phone_number.display = false
-                   state.activeFormInputs.email.display = false
-                   state.activeFormInputs.first_name.display = false
-                   state.activeFormInputs.last_name.display = false
-                   state.activeFormInputs.password.display = false
-                   state.activeFormInputs.confirm_password.display = false
-                   state.activeFormInputs.one_time_token.display = false
-               }
+               if (state.authMethod === 'sms'){inputsForLoginUsingSms()}
+               if (state.authMethod === 'email'){}
+               if (state.authMethod === 'google'){ Object.entries(state.activeFormInputs).forEach(input => {input.display = false})}
+               if (state.authMethod === 'linkedin'){}
            }
 
-            if (route === 'register'){
-
-                if (state.authMethod === 'sms'){
-
-                }
-                if (state.authMethod === 'email'){
-
-                }
-                if (state.authMethod === 'google'){
-
-                }
-                if (state.authMethod === 'linkedin'){
-
-                }
+           if (route === 'register'){
+               if (state.authMethod === 'sms'){}
+                if (state.authMethod === 'email'){}
+                if (state.authMethod === 'google'){}
+                if (state.authMethod === 'linkedin'){}
             }
 
             if (route === 'linkedin'){
-
-                if (state.authMethod === 'sms'){
-
-                }
-                if (state.authMethod === 'email'){
-
-                }
-                if (state.authMethod === 'google'){
-
-                }
+                if (state.authMethod === 'sms'){}
+                if (state.authMethod === 'email'){}
+                if (state.authMethod === 'google'){}
                 if (state.authMethod === 'linkedin'){
-
                 }
             }
         },
