@@ -5,6 +5,8 @@ import {
     inputsForLoginUsingGoogle,
     inputsForLoginUsinglinkedin} from "./loginOptions.js";
 
+
+
 export const store = new Vuex.Store({
     state: {
         theme: 'dark',
@@ -55,10 +57,10 @@ export const store = new Vuex.Store({
         changeActiveInputs:(state, payload) => {
            let route = payload
            if (route === 'login'){
-               if (state.authMethod === 'sms'){inputsForLoginUsingSms()}
-               if (state.authMethod === 'email'){}
-               if (state.authMethod === 'google'){ Object.entries(state.activeFormInputs).forEach(input => {input.display = false})}
-               if (state.authMethod === 'linkedin'){}
+               if (state.authMethod === 'sms'){ inputsForLoginUsingSms() }
+               if (state.authMethod === 'email'){ inputsForLoginUsingEmail() }
+               if (state.authMethod === 'google'){ inputsForLoginUsingGoogle() }
+               if (state.authMethod === 'linkedin'){ inputsForLoginUsinglinkedin() }
            }
 
            if (route === 'register'){

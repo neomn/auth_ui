@@ -35,31 +35,7 @@ export default{
 
   },
   methods: {
-    setWhichInputsShouldBeDisplayed(){
-      if (this.$route.name === 'login'){
 
-        if (this.$store.getters.authMethod === 'sms')
-          this.activeInputs = sms_login
-
-        if (this.$store.getters.authMethod === 'email')
-          this.activeInputs = email_login
-
-        if (this.$store.getters.authMethod === 'google')
-          this.activeInputs = google_login
-
-        if (this.$store.getters.authMethod === 'linkedin')
-          this.activeInputs = linkedin_login
-      }
-
-      if (this.$route.name === 'register'){
-
-      }
-
-      if (this.$route.name === 'register'){
-
-      }
-
-    }
   },
 }
 
