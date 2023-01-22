@@ -32,8 +32,7 @@ export default{
     activeButtons(){return this.$store.getters.activeButtons},
   },
   mounted() {
-    console.log('test>> ')
-    // console.log(this.activeFormInputs.sms_login.hasOwnProperty('phone_number'))
+
   },
   methods: {
     setWhichInputsShouldBeDisplayed(){
