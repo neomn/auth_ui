@@ -50,6 +50,15 @@ export default{
         if (this.$store.getters.authMethod === 'linkedin')
           this.activeInputs = linkedin_login
       }
+
+      if (this.$route.name === 'register'){
+
+      }
+
+      if (this.$route.name === 'register'){
+
+      }
+
     }
   },
 }
