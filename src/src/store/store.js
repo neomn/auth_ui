@@ -33,6 +33,9 @@ export const store = new Vuex.Store({
         activeFormInputs: state => {
             return state.activeFormInputs
         },
+        activeButtons: state => {
+            return state.activeButtons
+        },
     },
     mutations: {
         changeTheme: (state, payload) => {
