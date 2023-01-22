@@ -1,5 +1,9 @@
 import Vuex from 'vuex'
-import {sms_login, email_login, google_login, linkedin_login} from "./loginOptions.js";
+import {
+    inputsForLoginUsingSms,
+    inputsForLoginUsingEmail,
+    inputsForLoginUsingGoogle,
+    inputsForLoginUsinglinkedin} from "./loginOptions.js";
 
 export const store = new Vuex.Store({
     state: {

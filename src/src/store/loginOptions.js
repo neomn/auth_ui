@@ -1,25 +1,17 @@
-const sms_login = {
-    phone_number:'',
-    password:'',
-    two_factor_auth: {
-        one_time_token:'',
-    },
-}
-
-const email_login = {
-    email:'',
-    password:'',
-    two_factor_auth: {
-        one_time_token:'',
-    }
-}
-
-const google_login = {
+function inputsForLoginUsingSms() {
 
 }
 
-const linkedin_login = {
+function inputsForLoginUsingEmail() {
 
 }
 
-export {sms_login, email_login, google_login, linkedin_login}
+function inputsForLoginUsingGoogle() {
+
+}
+
+function inputsForLoginUsinglinkedin() {
+
+}
+
+export {inputsForLoginUsingSms, inputsForLoginUsingEmail, inputsForLoginUsingGoogle, inputsForLoginUsinglinkedin}
