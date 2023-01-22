@@ -14,6 +14,11 @@ export const store = new Vuex.Store({
             password: {display: false, value: ''},
             confirm_password: {display: false, value: ''},
         },
+        activeButtons: {
+            login: false,
+            register: false,
+            recover: false,
+        }
     },
     getters: {
         theme: state => {
