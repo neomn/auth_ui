@@ -1,5 +1,7 @@
 import Vuex from 'vuex'
 import {displayLoginInputs} from "./loginOptions.js";
+import {displayRegisterInputs} from "./registerOptions.js";
+import {displayRecoverInputs} from "./recoverOptions.js";
 
 export const store = new Vuex.Store({
     state: {
@@ -49,9 +51,9 @@ export const store = new Vuex.Store({
             state.selectedNavButton = payload
         },
         changeActiveInputs:(state, payload) => {
-            let route = payload
-
-            if (route === 'login'){ displayLoginInputs(state) }
+            if (payload === 'login'){ displayLoginInputs(state) }
+            if (payload === 'register'){ displayLoginInputs(state) }
+            if (payload === 'recover'){ displayLoginInputs(state) }
         },
     },
     actions: {
