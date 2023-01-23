@@ -1,5 +1,5 @@
 import Vuex from 'vuex'
-import {displaySmsInputsForLogin} from "./loginOptions.js";
+import {displayLoginInputs} from "./loginOptions.js";
 
 export const store = new Vuex.Store({
     state: {
@@ -51,7 +51,7 @@ export const store = new Vuex.Store({
         changeActiveInputs:(state, payload) => {
             let route = payload
 
-            if (route === 'login'){ displaySmsInputsForLogin(state) }
+            if (route === 'login'){ displayLoginInputs(state) }
         },
     },
     actions: {
