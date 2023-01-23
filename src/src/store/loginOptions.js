@@ -12,7 +12,6 @@ function displayLoginInputs(state){
 }
 
 function displaySmsInputs(state){
-    console.log(state.authMethod)
     if (inputsForSms.formInputs.length > 0){
         Object.entries(state.activeFormInputs).forEach((formInput) => {
             inputsForSms.formInputs.includes(formInput[0]) ? formInput[1].display = true : formInput[1].display = false
@@ -28,7 +27,6 @@ function displaySmsInputs(state){
 
 
 function displayEmailInputs(state) {
-    console.log(state.authMethod)
     if (inputsForEmail.formInputs.length > 0){
         Object.entries(state.activeFormInputs).forEach((formInput) => {
             inputsForEmail.formInputs.includes(formInput[0]) ? formInput[1].display = true : formInput[1].display = false
@@ -44,7 +42,17 @@ function displayEmailInputs(state) {
 
 
 function displayGoogleInputs(state) {
+    if (inputsForGoogle.formInputs.length > 0){
+        Object.entries(state.activeFormInputs).forEach((formInput) => {
+            inputsForGoogle.formInputs.includes(formInput[0]) ? formInput[1].display = true : formInput[1].display = false
+        })
+    } else Object.entries(state.activeFormInputs).forEach((formInput) => { formInput[1].display = false })
 
+    if (inputsForGoogle.buttons.length > 0){
+        Object.entries(state.activeButtons).forEach((button) => {
+            inputsForGoogle.buttons.includes(button[0]) ? button[1].display = true : button[1].display = false
+        })
+    } else  Object.entries(state.activeButtons).forEach((button) => {button[1].display = false })
 }
 
 
