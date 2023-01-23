@@ -1,9 +1,11 @@
 import Vuex from 'vuex'
-import {
-    inputsForLoginUsingSms,
-    inputsForLoginUsingEmail,
-    inputsForLoginUsingGoogle,
-    inputsForLoginUsinglinkedin} from "./loginOptions.js";
+// import {
+//     inputsForLoginUsingSms,
+//     inputsForLoginUsingEmail,
+//     inputsForLoginUsingGoogle,
+//     inputsForLoginUsinglinkedin} from "./loginOptions.js";
+
+import {displaySmsInputsForLogin} from "./loginOptions.js";
 
 
 
@@ -55,28 +57,31 @@ export const store = new Vuex.Store({
             state.selectedNavButton = payload
         },
         changeActiveInputs:(state, payload) => {
-           let route = payload
-           if (route === 'login'){
-               if (state.authMethod === 'sms'){ inputsForLoginUsingSms() }
-               if (state.authMethod === 'email'){ inputsForLoginUsingEmail() }
-               if (state.authMethod === 'google'){ inputsForLoginUsingGoogle() }
-               if (state.authMethod === 'linkedin'){ inputsForLoginUsinglinkedin() }
-           }
+            let route = payload
 
-           if (route === 'register'){
-               if (state.authMethod === 'sms'){}
-                if (state.authMethod === 'email'){}
-                if (state.authMethod === 'google'){}
-                if (state.authMethod === 'linkedin'){}
-            }
+            if (route === 'login'){ displaySmsInputsForLogin(state) }
 
-            if (route === 'linkedin'){
-                if (state.authMethod === 'sms'){}
-                if (state.authMethod === 'email'){}
-                if (state.authMethod === 'google'){}
-                if (state.authMethod === 'linkedin'){
-                }
-            }
+           // if (route === 'login'){
+           //     if (state.authMethod === 'sms'){ inputsForLoginUsingSms() }
+           //     if (state.authMethod === 'email'){ inputsForLoginUsingEmail() }
+           //     if (state.authMethod === 'google'){ inputsForLoginUsingGoogle() }
+           //     if (state.authMethod === 'linkedin'){ inputsForLoginUsinglinkedin() }
+           // }
+
+           // if (route === 'register'){
+           //     if (state.authMethod === 'sms'){}
+           //      if (state.authMethod === 'email'){}
+           //      if (state.authMethod === 'google'){}
+           //      if (state.authMethod === 'linkedin'){}
+           //  }
+           //
+           //  if (route === 'linkedin'){
+           //      if (state.authMethod === 'sms'){}
+           //      if (state.authMethod === 'email'){}
+           //      if (state.authMethod === 'google'){}
+           //      if (state.authMethod === 'linkedin'){
+           //      }
+           //  }
         },
     },
     actions: {

@@ -25,9 +25,8 @@ export default {
   methods: {
     async onClickNavButtons(clickedButton){
       await this.$router.push(clickedButton)
-      let route = this.$route.name
       this.$store.dispatch('changeSelectedNavButton', clickedButton)
-      this.$store.dispatch('changeActiveInputs', route)
+      this.$store.dispatch('changeActiveInputs', clickedButton)
     },
   }
 }
