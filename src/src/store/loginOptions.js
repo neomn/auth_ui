@@ -57,7 +57,17 @@ function displayGoogleInputs(state) {
 
 
 function displayLinkedinInputs(state) {
+    if (inputsForLinkedin.formInputs.length > 0){
+        Object.entries(state.activeFormInputs).forEach((formInput) => {
+            inputsForLinkedin.formInputs.includes(formInput[0]) ? formInput[1].display = true : formInput[1].display = false
+        })
+    } else Object.entries(state.activeFormInputs).forEach((formInput) => { formInput[1].display = false })
 
+    if (inputsForLinkedin.buttons.length > 0){
+        Object.entries(state.activeButtons).forEach((button) => {
+            inputsForLinkedin.buttons.includes(button[0]) ? button[1].display = true : button[1].display = false
+        })
+    } else  Object.entries(state.activeButtons).forEach((button) => {button[1].display = false })
 }
 
 export {displayLoginInputs}
