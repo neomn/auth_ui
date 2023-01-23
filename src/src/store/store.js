@@ -1,11 +1,10 @@
 import Vuex from 'vuex'
-import router from "../main.js";
-
 import {
     inputsForLoginUsingSms,
     inputsForLoginUsingEmail,
     inputsForLoginUsingGoogle,
     inputsForLoginUsinglinkedin} from "./loginOptions.js";
+
 
 
 export const store = new Vuex.Store({
@@ -38,7 +37,7 @@ export const store = new Vuex.Store({
         selectedNavButton: state => {
             return state.selectedNavButton
         },
-        activeFormInputs: (state) => {
+        activeFormInputs: state => {
             return state.activeFormInputs
         },
         activeButtons: state => {
@@ -56,7 +55,6 @@ export const store = new Vuex.Store({
             state.selectedNavButton = payload
         },
         changeActiveInputs:(state, payload) => {
-            console.log(router.currentRoute.value)
            let route = payload
            if (route === 'login'){
                if (state.authMethod === 'sms'){ inputsForLoginUsingSms() }
@@ -91,7 +89,7 @@ export const store = new Vuex.Store({
         changeSelectedNavButton: (context, payload) => {
             context.commit('changeSelectedNavButton', payload)
         },
-        changeActiveInputs: (context, payload, rootState) => {
+        changeActiveInputs: (context, payload) => {
             context.commit('changeActiveInputs', payload)
         },
     },

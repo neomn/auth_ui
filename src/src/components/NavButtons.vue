@@ -24,12 +24,10 @@ export default {
   },
   methods: {
     onClickNavButtons(clickedButton){
-
       let route = this.$route.name
+      console.log(route)
       this.$store.dispatch('changeSelectedNavButton', clickedButton)
       this.$store.dispatch('changeActiveInputs', route)
-
-      // console.log(this.$route.name)
     },
   }
 }
