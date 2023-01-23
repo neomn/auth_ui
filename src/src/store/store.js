@@ -54,28 +54,6 @@ export const store = new Vuex.Store({
             let route = payload
 
             if (route === 'login'){ displaySmsInputsForLogin(state) }
-
-           // if (route === 'login'){
-           //     if (state.authMethod === 'sms'){ inputsForLoginUsingSms() }
-           //     if (state.authMethod === 'email'){ inputsForLoginUsingEmail() }
-           //     if (state.authMethod === 'google'){ inputsForLoginUsingGoogle() }
-           //     if (state.authMethod === 'linkedin'){ inputsForLoginUsinglinkedin() }
-           // }
-
-           // if (route === 'register'){
-           //     if (state.authMethod === 'sms'){}
-           //      if (state.authMethod === 'email'){}
-           //      if (state.authMethod === 'google'){}
-           //      if (state.authMethod === 'linkedin'){}
-           //  }
-           //
-           //  if (route === 'linkedin'){
-           //      if (state.authMethod === 'sms'){}
-           //      if (state.authMethod === 'email'){}
-           //      if (state.authMethod === 'google'){}
-           //      if (state.authMethod === 'linkedin'){
-           //      }
-           //  }
         },
     },
     actions: {
