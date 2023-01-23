@@ -1,8 +1,6 @@
 import Vuex from 'vuex'
 import {displaySmsInputsForLogin} from "./loginOptions.js";
 
-
-
 export const store = new Vuex.Store({
     state: {
         theme: 'dark',
