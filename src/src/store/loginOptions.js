@@ -1,6 +1,4 @@
 
-// import {store} from "./store.js";
-
 const inputsForSms = {formInputs: ['phone_number'], buttons: ['send_sms']}
 const inputsForEmail = {formInputs: ['phone_number'], buttons: ['send_sms']}
 const inputsForGoogle = {formInputs: ['phone_number'], buttons: ['send_sms']}
@@ -75,5 +73,4 @@ function inputsForLoginUsinglinkedin() {
     store.state.activeButtons.recover.display = false
 }
 
-// export {inputsForLoginUsingSms, inputsForLoginUsingEmail, inputsForLoginUsingGoogle, inputsForLoginUsinglinkedin}
 export {displaySmsInputsForLogin}

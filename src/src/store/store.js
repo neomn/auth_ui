@@ -1,10 +1,4 @@
 import Vuex from 'vuex'
-// import {
-//     inputsForLoginUsingSms,
-//     inputsForLoginUsingEmail,
-//     inputsForLoginUsingGoogle,
-//     inputsForLoginUsinglinkedin} from "./loginOptions.js";
-
 import {displaySmsInputsForLogin} from "./loginOptions.js";
 
 
