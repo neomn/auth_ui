@@ -1,13 +1,13 @@
 <template>
   <div class="flex flex-col content-end text-white bg-gray-800 overflow-hidden ">
     <div id="inputs" class="flex flex-col justify-start items-center basis-4/6 w-full mt-2 sm:pt-10 overflow-x-hidden overflow-y-scroll">
-      <FormInput id="phone_number" v-if="activeFormInputs.phone_number.display" class=""/>
-      <FormInput id="email" v-if="activeFormInputs.email.display" class=""/>
-      <FormInput id="password" v-if="activeFormInputs.password.display" class=""/>
-      <FormInput id="confirm_password" v-if="activeFormInputs.confirm_password.display" class=""/>
-      <FormInput id="first_name" v-if="activeFormInputs.first_name.display" class=""/>
-      <FormInput id="last_name" v-if="activeFormInputs.last_name.display" class=""/>
-      <FormInput id="one_time_token" v-if="activeFormInputs.one_time_token.display" class=""/>
+      <FormInput id="phone_number" :placeholder="Object.keys(activeFormInputs)[0]" v-if="activeFormInputs.phone_number.display" class=""/>
+      <FormInput id="email" :placeholder="Object.keys(activeFormInputs)[1]" v-if="activeFormInputs.email.display" class=""/>
+      <FormInput id="first_name" :placeholder="Object.keys(activeFormInputs)[2]" v-if="activeFormInputs.first_name.display" class=""/>
+      <FormInput id="last_name" :placeholder="Object.keys(activeFormInputs)[3]" v-if="activeFormInputs.last_name.display" class=""/>
+      <FormInput id="password" :placeholder="Object.keys(activeFormInputs)[4]" v-if="activeFormInputs.password.display" class=""/>
+      <FormInput id="confirm_password" :placeholder="Object.keys(activeFormInputs)[5]" v-if="activeFormInputs.confirm_password.display" class=""/>
+      <FormInput id="one_time_token" :placeholder="Object.keys(activeFormInputs)[6]" v-if="activeFormInputs.one_time_token.display" class=""/>
     </div>
     <div id="submitButton" class=" basis-2/6 flex justify-around items-center w-full">
       <Button id="login" :text="Object.keys(activeButtons)[0]" v-if="activeButtons.login.display"/>
