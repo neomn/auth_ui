@@ -1,4 +1,6 @@
 
+const activeAuthMethods = ['sms','email']
+
 const inputsForSms = {formInputs: ['phone_number'], buttons: ['recover']}
 const inputsForEmail = {formInputs: ['email'], buttons: ['recover']}
 const inputsForGoogle = {formInputs: [], buttons: []}
