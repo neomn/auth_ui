@@ -52,8 +52,8 @@ export const store = new Vuex.Store({
         },
         changeActiveInputs:(state, payload) => {
             if (payload === 'login'){ displayLoginInputs(state) }
-            if (payload === 'register'){ displayLoginInputs(state) }
-            if (payload === 'recover'){ displayLoginInputs(state) }
+            if (payload === 'register'){ displayRegisterInputs(state) }
+            if (payload === 'recover'){ displayRecoverInputs(state) }
         },
     },
     actions: {
