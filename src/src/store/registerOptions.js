@@ -1,6 +1,6 @@
 
-const inputsForSms = {formInputs: ['phone_number'], buttons: ['login']}
-const inputsForEmail = {formInputs: ['email','password'], buttons: ['login','register']}
+const inputsForSms = {formInputs: ['first_name','last_name','phone_number','password'], buttons: ['register']}
+const inputsForEmail = {formInputs: ['first_name','last_name','email','password'], buttons: ['register']}
 const inputsForGoogle = {formInputs: [], buttons: []}
 const inputsForLinkedin = {formInputs: [], buttons: []}
 
