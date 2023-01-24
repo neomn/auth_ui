@@ -22,7 +22,13 @@ export const store = new Vuex.Store({
             register: {display: false},
             recover: {display: false},
             check: {display: false},
-        }
+        },
+        authMethods: {
+            sms: { display: true },
+            email: { display: true },
+            google: { display: true },
+            linkedin: { display: true },
+        },
     },
     getters: {
         theme: state => {
