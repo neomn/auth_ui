@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col content-end text-white bg-gray-800 overflow-hidden ">
-    <div id="inputs" class="flex flex-col justify-start items-center basis-4/6 w-full mt-2 sm:pt-10 overflow-x-hidden overflow-y-scroll">
+  <div v-auto-animate class="flex flex-col content-end text-white bg-gray-800 overflow-hidden ">
+    <div  id="inputs" class="flex flex-col justify-start items-center basis-4/6 w-full mt-2 sm:pt-10 overflow-x-hidden overflow-y-scroll">
       <FormInput id="phone_number" :placeholder="Object.keys(activeFormInputs)[0]" v-if="activeFormInputs.phone_number.display" class=""/>
       <FormInput id="email" :placeholder="Object.keys(activeFormInputs)[1]" v-if="activeFormInputs.email.display" class=""/>
       <FormInput id="first_name" :placeholder="Object.keys(activeFormInputs)[2]" v-if="activeFormInputs.first_name.display" class=""/>
