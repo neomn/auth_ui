@@ -10,10 +10,9 @@
       <FormInput id="one_time_token" v-if="activeFormInputs.one_time_token.display" class=""/>
     </div>
     <div id="submitButton" class=" basis-2/6 flex justify-around items-center w-full">
-      <Button id="login"  v-if="activeButtons.login.display"/>
+      <Button id="login" v-if="activeButtons.login.display"/>
       <Button id="register" v-if="activeButtons.register.display"/>
       <Button id="recover" v-if="activeButtons.recover.display"/>
-      <Button id="check" v-if="activeButtons.check.display"/>
     </div>
   </div>
 </template>

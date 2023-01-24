@@ -21,7 +21,6 @@ export const store = new Vuex.Store({
             login: {display: true},
             register: {display: false},
             recover: {display: false},
-            check: {display: false},
         }
     },
     getters: {
