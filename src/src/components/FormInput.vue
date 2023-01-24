@@ -9,8 +9,5 @@
 export default {
   name: "FormInput",
   props: ['placeholder'],
-  mounted() {
-    console.log(this.placeholder)
-  }
 }
 </script>
