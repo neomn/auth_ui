@@ -2,6 +2,8 @@ import Vuex from 'vuex'
 import {displayLoginInputs} from "./loginOptions.js";
 import {displayRegisterInputs} from "./registerOptions.js";
 import {displayRecoverInputs} from "./recoverOptions.js";
+import { authMethodsDisplayOptions } from "./authMethodsDisplayOptions.js";
+import {routes} from "../routes.js";
 
 export const store = new Vuex.Store({
     state: {
@@ -46,6 +48,9 @@ export const store = new Vuex.Store({
         activeButtons: state => {
             return state.activeButtons
         },
+        authMethods: state => {
+          return state.authMethod
+        },
     },
     mutations: {
         changeTheme: (state, payload) => {
@@ -61,6 +66,9 @@ export const store = new Vuex.Store({
             if (payload === 'login'){ displayLoginInputs(state) }
             if (payload === 'register'){ displayRegisterInputs(state) }
             if (payload === 'recover'){ displayRecoverInputs(state) }
+        },
+        setWhichAuthMethodsToDisplay: (state, route) => {
+            authMethodsDisplayOptions(state, route)
         },
     },
     actions: {
