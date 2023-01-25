@@ -36,9 +36,6 @@ export const store = new Vuex.Store({
         theme: state => {
             return state.theme
         },
-        authMethod: state => {
-            return state.currentAuthMethod
-        },
         selectedNavButton: state => {
             return state.selectedNavButton
         },
