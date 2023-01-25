@@ -1,13 +1,18 @@
 
 function manage(state, options){
+
+
+
     setWhichAuthMethodsShouldBeDisplayed(state, options.authMethods)
     setWhichFormInputsShouldBeDisplayed(state, options.formInputs)
     setWhichButtonsShouldBeDisplayed(state, options.buttons)
 }
 
 function setWhichAuthMethodsShouldBeDisplayed(state, authMethodsToDisplay){
-    if (authMethodsToDisplay.length <= 0)
+    if (authMethodsToDisplay.length <= 0){
         Object.keys(state.authMethods).forEach((method) => { state.authMethods[method].display = false })
+        return
+    }
     let authMethods  = Object.keys(state.authMethods)
     authMethods.forEach( method => {
         authMethodsToDisplay.includes(method) ?
@@ -16,8 +21,10 @@ function setWhichAuthMethodsShouldBeDisplayed(state, authMethodsToDisplay){
 }
 
 function setWhichFormInputsShouldBeDisplayed(state, formInputsToDisplay){
-    if (formInputsToDisplay.length <= 0)
+    if (formInputsToDisplay.length <= 0){
         Object.keys(state.activeFormInputs).forEach((input) => { state.activeFormInputs[input].display = false })
+        return
+    }
     Object.keys(formInputsToDisplay).forEach(input => {
        if ( state.currentAuthMethod === input )
            formInputsToDisplay = formInputsToDisplay[input]

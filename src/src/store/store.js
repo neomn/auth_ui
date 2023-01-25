@@ -1,5 +1,7 @@
 import Vuex from 'vuex'
 import { loginOptions } from "./loginOptions.js";
+import { registerOptions } from "./registerOptions.js";
+import { recoverOptions } from "./recoverOptions.js";
 // import {displayRegisterInputs, displayRegisterAuthMethods} from "./registerOptions.js";
 // import {displayRecoverInputs, displayRecoverAuthMethods} from "./recoverOptions.js";
 import { manage } from "./displayManager.js";
@@ -78,6 +80,8 @@ export const store = new Vuex.Store({
         // },
         updateInputComponent: (state, route) => {
             if (route === 'login'){ manage (state, loginOptions) }
+            if (route === 'register'){ manage (state, registerOptions) }
+            if (route === 'recover'){ manage (state, recoverOptions) }
             // if (route === 'register'){ displayRegisterAuthMethods(state) }
             // if (route === 'recover'){ displayRecoverAuthMethods(state) }
         },
