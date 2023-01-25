@@ -1,5 +1,5 @@
 
-const activeAuthMethods = ['sms','email','google','linkedin']
+const loginAuthMethods = ['sms','email','google','linkedin']
 
 const inputsForSms = {formInputs: ['phone_number','password'], buttons: ['login']}
 const inputsForEmail = {formInputs: ['email','password'], buttons: ['login']}
@@ -72,4 +72,9 @@ function displayLinkedinInputs(state) {
     } else  Object.entries(state.activeButtons).forEach((button) => {button[1].display = false })
 }
 
-export {displayLoginInputs}
+function displayLoginAuthMethods(state){
+
+}
+
+
+export {displayLoginInputs, displayLoginAuthMethods}

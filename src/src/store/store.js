@@ -1,7 +1,7 @@
 import Vuex from 'vuex'
-import {displayLoginInputs} from "./loginOptions.js";
-import {displayRegisterInputs} from "./registerOptions.js";
-import {displayRecoverInputs} from "./recoverOptions.js";
+import {displayLoginInputs, displayLoginAuthMethods} from "./loginOptions.js";
+import {displayRegisterInputs, displayRegisterAuthMethods} from "./registerOptions.js";
+import {displayRecoverInputs, displayRecoverAuthMethods} from "./recoverOptions.js";
 import { authMethodsDisplayOptions } from "./authMethodsDisplayOptions.js";
 import {routes} from "../routes.js";
 
@@ -67,8 +67,10 @@ export const store = new Vuex.Store({
             if (payload === 'register'){ displayRegisterInputs(state) }
             if (payload === 'recover'){ displayRecoverInputs(state) }
         },
-        setWhichAuthMethodsToDisplay: (state, route) => {
-            authMethodsDisplayOptions(state, route)
+        setWhichAuthMethodsToDisplay: (state, currentRoute) => {
+            if (currentRoute === 'login'){ displayLoginAuthMethods(state) }
+            if (currentRoute === 'register'){ displayRegisterAuthMethods(state) }
+            if (currentRoute === 'recover'){ displayRecoverAuthMethods(state) }
         },
     },
     actions: {
