@@ -17,7 +17,8 @@ export default {
     onClickAuthMethod(method){
       let route = this.$route.name
       this.$store.dispatch('changeCurrentAuthMethod', method)
-      this.$store.dispatch('changeActiveInputs', route)
+      // this.$store.dispatch('changeActiveInputs', route)
+      this.$store.dispatch('updateInputComponent', route)
     }
   }
 }
