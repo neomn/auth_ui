@@ -50,6 +50,9 @@ export const store = new Vuex.Store({
         currentAuthMethod: state => {
           return state.currentAuthMethod
         },
+        authMethods: (state) => {
+            return state.authMethods
+        }
     },
 
     mutations: {
