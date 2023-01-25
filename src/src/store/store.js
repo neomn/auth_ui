@@ -7,7 +7,7 @@ export const store = new Vuex.Store({
     state: {
         theme: 'dark',
         selectedNavButton: 'login',
-        authMethod: 'sms',
+        currentAuthMethod: 'sms',
         activeFormInputs: {
             phone_number: {display: true, value: ''},
             email: {display: false, value: ''},
@@ -36,7 +36,7 @@ export const store = new Vuex.Store({
             return state.theme
         },
         authMethod: state => {
-            return state.authMethod
+            return state.currentAuthMethod
         },
         selectedNavButton: state => {
             return state.selectedNavButton
@@ -47,8 +47,8 @@ export const store = new Vuex.Store({
         activeButtons: state => {
             return state.activeButtons
         },
-        authMethods: state => {
-          return state.authMethod
+        currentAuthMethod: state => {
+          return state.currentAuthMethod
         },
     },
 
@@ -56,8 +56,8 @@ export const store = new Vuex.Store({
         changeTheme: (state, payload) => {
             state.theme = payload
         },
-        changeAuthMethod: (state, payload) => {
-            state.authMethod = payload
+        changeCurrentAuthMethod: (state, payload) => {
+            state.currentAuthMethod = payload
         },
         changeSelectedNavButton: (state, payload) => {
             state.selectedNavButton = payload
@@ -78,8 +78,8 @@ export const store = new Vuex.Store({
         changeTheme: (context, payload) => {
             context.commit('changeTheme', payload)
         },
-        changeAuthMethod: (context, payload) => {
-            context.commit('changeAuthMethod', payload)
+        changeCurrentAuthMethod: (context, payload) => {
+            context.commit('changeCurrentAuthMethod', payload)
         },
         changeSelectedNavButton: (context, payload) => {
             context.commit('changeSelectedNavButton', payload)
