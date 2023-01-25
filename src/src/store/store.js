@@ -1,7 +1,8 @@
 import Vuex from 'vuex'
-import {displayLoginInputs, displayLoginAuthMethods} from "./loginOptions.js";
-import {displayRegisterInputs, displayRegisterAuthMethods} from "./registerOptions.js";
-import {displayRecoverInputs, displayRecoverAuthMethods} from "./recoverOptions.js";
+import { loginOptions } from "./loginOptions.js";
+// import {displayRegisterInputs, displayRegisterAuthMethods} from "./registerOptions.js";
+// import {displayRecoverInputs, displayRecoverAuthMethods} from "./recoverOptions.js";
+import { manage } from "./displayManager.js";
 
 export const store = new Vuex.Store({
     state: {
@@ -65,15 +66,20 @@ export const store = new Vuex.Store({
         changeSelectedNavButton: (state, payload) => {
             state.selectedNavButton = payload
         },
-        changeActiveInputs:(state, payload) => {
-            if (payload === 'login'){ displayLoginInputs(state) }
-            if (payload === 'register'){ displayRegisterInputs(state) }
-            if (payload === 'recover'){ displayRecoverInputs(state) }
-        },
-        setWhichAuthMethodsToDisplay: (state, currentRoute) => {
-            if (currentRoute === 'login'){ displayLoginAuthMethods(state) }
-            if (currentRoute === 'register'){ displayRegisterAuthMethods(state) }
-            if (currentRoute === 'recover'){ displayRecoverAuthMethods(state) }
+        // changeActiveInputs:(state, payload) => {
+        //     if (payload === 'login'){ displayLoginOptions(state) }
+        //     if (payload === 'register'){ displayRegisterInputs(state) }
+        //     if (payload === 'recover'){ displayRecoverInputs(state) }
+        // },
+        // setWhichAuthMethodsToDisplay: (state, currentRoute) => {
+        //     if (currentRoute === 'login'){ displayLoginAuthMethods(state) }
+        //     if (currentRoute === 'register'){ displayRegisterAuthMethods(state) }
+        //     if (currentRoute === 'recover'){ displayRecoverAuthMethods(state) }
+        // },
+        updateInputComponent: (state, route) => {
+            if (route === 'login'){ manage (state, loginOptions) }
+            // if (route === 'register'){ displayRegisterAuthMethods(state) }
+            // if (route === 'recover'){ displayRecoverAuthMethods(state) }
         },
     },
 
@@ -87,12 +93,15 @@ export const store = new Vuex.Store({
         changeSelectedNavButton: (context, payload) => {
             context.commit('changeSelectedNavButton', payload)
         },
-        changeActiveInputs: (context, payload) => {
-            context.commit('changeActiveInputs', payload)
+        // changeActiveInputs: (context, payload) => {
+        //     context.commit('changeActiveInputs', payload)
+        // },
+        // setWhichAuthMethodsToDisplay: (context, currentRoute) => {
+        //     context.commit('setWhichAuthMethodsToDisplay', currentRoute)
+        // },
+        updateInputComponent: (context, route) => {
+            context.commit('updateInputComponent', route)
         },
-        setWhichAuthMethodsToDisplay: (context, currentRoute) => {
-            context.commit('setWhichAuthMethodsToDisplay', currentRoute)
-        }
     },
 
     modules: {

@@ -1,12 +1,29 @@
+import { manage } from "./displayManager.js";
 
-const loginAuthMethods = ['sms','email','google','linkedin']
 
-const inputsForSms = {formInputs: ['phone_number','password'], buttons: ['login']}
-const inputsForEmail = {formInputs: ['email','password'], buttons: ['login']}
-const inputsForGoogle = {formInputs: [], buttons: []}
-const inputsForLinkedin = {formInputs: [], buttons: []}
+const loginOptions = {
+    loginAuthMethods: ['sms','email','google','linkedin'],
+    loginFormInputs: {
+        sms: ['phone_number','password'],
+        email: ['email','password'],
+        google: [],
+        linkedin: [],
+    },
+    loginButtons: {
+        sms: ['login'],
+        email: ['login'],
+        google: [],
+        linkedin: [],
+    },
+}
 
-function displayLoginInputs(state){
+
+// const inputsForSms = {formInputs: ['phone_number','password'], buttons: ['login'], authMethods: ['sms','email','google','linkedin']}
+// const inputsForEmail = {formInputs: ['email','password'], buttons: ['login']}
+// const inputsForGoogle = {formInputs: [], buttons: []}
+// const inputsForLinkedin = {formInputs: [], buttons: []}
+
+function displayLoginOptions(state){
     if (state.currentAuthMethod === 'sms') {displaySmsInputs(state)}
     if (state.currentAuthMethod === 'email') {displayEmailInputs(state)}
     if (state.currentAuthMethod === 'google') {displayGoogleInputs(state)}
@@ -83,4 +100,4 @@ function displayLoginAuthMethods(state){
         authMethods.forEach(method => {state.authMethods[method].display = false})
 }
 
-export {displayLoginInputs, displayLoginAuthMethods}
+export { loginOptions , displayLoginOptions }

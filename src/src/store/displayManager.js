@@ -1,5 +1,10 @@
 
+function manage(state, options){
+    console.log('test')
+}
+
 function setWhichFormInputsShouldBeDisplayed(state, inputsToDisplay){
+
 
 }
 
@@ -11,9 +16,5 @@ function setWhichButtonsShouldBeDisplayed(state, buttonsToDisplay){
 
 }
 
-export {
-    setWhichFormInputsShouldBeDisplayed,
-    setWhichAuthMethodsShouldBeDisplayed,
-    setWhichButtonsShouldBeDisplayed
-}
+export { manage }
 
