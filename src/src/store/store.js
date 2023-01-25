@@ -84,6 +84,9 @@ export const store = new Vuex.Store({
         changeActiveInputs: (context, payload) => {
             context.commit('changeActiveInputs', payload)
         },
+        setWhichAuthMethodsToDisplay: (context, currentRoute) => {
+            context.commit('setWhichAuthMethodsToDisplay', currentRoute)
+        }
     },
     modules: {
 
