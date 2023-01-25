@@ -73,7 +73,14 @@ function displayLinkedinInputs(state) {
 }
 
 function displayRegisterAuthMethods(state){
-
+    let authMethods = Object.keys(state.authMethods)
+    authMethods.forEach(method => {
+        registerAuthMethods.includes(method) ?
+            state.authMethods[method].display = true :
+            state.authMethods[method].display = false
+    })
+    if (registerAuthMethods.length <= 0)
+        authMethods.forEach(method => {state.authMethods[method].display = false})
 }
 
 

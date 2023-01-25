@@ -73,7 +73,14 @@ function displayLinkedinInputs(state) {
 }
 
 function displayRecoverAuthMethods(state){
-
+    let authMethods = Object.keys(state.authMethods)
+    authMethods.forEach(method => {
+        recoverAuthMethods.includes(method) ?
+            state.authMethods[method].display = true :
+            state.authMethods[method].display = false
+    })
+    if (recoverAuthMethods.length <= 0)
+        authMethods.forEach(method => {state.authMethods[method].display = false})
 }
 
 

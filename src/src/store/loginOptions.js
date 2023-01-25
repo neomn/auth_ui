@@ -1,5 +1,5 @@
 
-const loginAuthMethods = ['sms','email','google']
+const loginAuthMethods = ['sms','email','google','linkedin']
 
 const inputsForSms = {formInputs: ['phone_number','password'], buttons: ['login']}
 const inputsForEmail = {formInputs: ['email','password'], buttons: ['login']}
