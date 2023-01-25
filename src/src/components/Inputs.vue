@@ -10,10 +10,10 @@
       <FormInput id="one_time_token" :placeholder="Object.keys(activeFormInputs)[6]" v-if="activeFormInputs.one_time_token.display" class=""/>
     </div>
     <div v-auto-animate id="submitButton" class=" basis-2/6 flex justify-around items-center w-full">
-      <Button id="login" :text="Object.keys(activeButtons)[0]" v-if="activeButtons.login.display"/>
-      <Button id="register" :text="Object.keys(activeButtons)[1]" v-if="activeButtons.register.display"/>
-      <Button id="recover" :text="Object.keys(activeButtons)[2]" v-if="activeButtons.recover.display"/>
-      <Button id="check" :text="Object.keys(activeButtons)[3]" v-if="activeButtons.check.display"/>
+      <Button id="login" :text="Object.keys(buttons)[0]" v-if="buttons.login.display"/>
+      <Button id="register" :text="Object.keys(buttons)[1]" v-if="buttons.register.display"/>
+      <Button id="recover" :text="Object.keys(buttons)[2]" v-if="buttons.recover.display"/>
+      <Button id="check" :text="Object.keys(buttons)[3]" v-if="buttons.check.display"/>
     </div>
   </div>
 </template>
@@ -29,7 +29,7 @@ export default{
   computed: {
     authMethod(){return this.$store.getters.authMethod },
     activeFormInputs(){return this.$store.getters.activeFormInputs},
-    activeButtons(){return this.$store.getters.activeButtons},
+    buttons(){return this.$store.getters.buttons},
   },
   mounted() {
 

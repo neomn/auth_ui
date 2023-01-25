@@ -38,17 +38,17 @@ function setWhichFormInputsShouldBeDisplayed(state, formInputsToDisplay){
 
 function setWhichButtonsShouldBeDisplayed(state, buttonsToDisplay){
     if (buttonsToDisplay.length <= 0){
-        Object.keys(state.activeButtons).forEach((buttons) => { state.activeButtons[buttons].display = false })
+        Object.keys(state.buttons).forEach((buttons) => { state.buttons[buttons].display = false })
         return
     }
     Object.keys(buttonsToDisplay).forEach(method => {
         if ( state.currentAuthMethod === method )
             buttonsToDisplay = buttonsToDisplay[method]
     })
-    let buttons  = Object.keys(state.activeButtons)
+    let buttons  = Object.keys(state.buttons)
     buttons.forEach( button => {
         buttonsToDisplay.includes(button) ?
-            state.activeButtons[button].display = true : state.activeButtons[button].display = false
+            state.buttons[button].display = true : state.buttons[button].display = false
     })
 }
 

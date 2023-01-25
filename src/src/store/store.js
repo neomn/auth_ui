@@ -18,7 +18,7 @@ export const store = new Vuex.Store({
             confirm_password: {display: false, value: ''},
             one_time_token: {display: false, value: ''},
         },
-        activeButtons: {
+        buttons: {
             login: {display: true},
             register: {display: false},
             recover: {display: false},
@@ -45,8 +45,8 @@ export const store = new Vuex.Store({
         activeFormInputs: state => {
             return state.activeFormInputs
         },
-        activeButtons: state => {
-            return state.activeButtons
+        buttons: state => {
+            return state.buttons
         },
         currentAuthMethod: state => {
           return state.currentAuthMethod
