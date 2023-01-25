@@ -2,8 +2,6 @@ import Vuex from 'vuex'
 import {displayLoginInputs, displayLoginAuthMethods} from "./loginOptions.js";
 import {displayRegisterInputs, displayRegisterAuthMethods} from "./registerOptions.js";
 import {displayRecoverInputs, displayRecoverAuthMethods} from "./recoverOptions.js";
-import { authMethodsDisplayOptions } from "./authMethodsDisplayOptions.js";
-import {routes} from "../routes.js";
 
 export const store = new Vuex.Store({
     state: {
@@ -32,6 +30,7 @@ export const store = new Vuex.Store({
             linkedin: { display: true },
         },
     },
+
     getters: {
         theme: state => {
             return state.theme
@@ -52,6 +51,7 @@ export const store = new Vuex.Store({
           return state.authMethod
         },
     },
+
     mutations: {
         changeTheme: (state, payload) => {
             state.theme = payload
@@ -73,6 +73,7 @@ export const store = new Vuex.Store({
             if (currentRoute === 'recover'){ displayRecoverAuthMethods(state) }
         },
     },
+
     actions: {
         changeTheme: (context, payload) => {
             context.commit('changeTheme', payload)
@@ -90,6 +91,7 @@ export const store = new Vuex.Store({
             context.commit('setWhichAuthMethodsToDisplay', currentRoute)
         }
     },
+
     modules: {
 
     }

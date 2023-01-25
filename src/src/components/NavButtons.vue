@@ -27,6 +27,7 @@ export default {
       await this.$router.push(clickedButton)
       this.$store.dispatch('changeSelectedNavButton', clickedButton)
       this.$store.dispatch('changeActiveInputs', clickedButton)
+      this.$store.dispatch('setWhichAuthMethodsToDisplay', clickedButton)
     },
   }
 }
