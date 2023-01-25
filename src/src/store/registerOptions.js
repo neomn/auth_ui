@@ -7,10 +7,10 @@ const inputsForGoogle = {formInputs: [], buttons: []}
 const inputsForLinkedin = {formInputs: [], buttons: []}
 
 function displayRegisterInputs(state){
-    if (state.authMethod === 'sms') {displaySmsInputs(state)}
-    if (state.authMethod === 'email') {displayEmailInputs(state)}
-    if (state.authMethod === 'google') {displayGoogleInputs(state)}
-    if (state.authMethod === 'linkedin') {displayLinkedinInputs(state)}
+    if (state.currentAuthMethod === 'sms') {displaySmsInputs(state)}
+    if (state.currentAuthMethod === 'email') {displayEmailInputs(state)}
+    if (state.currentAuthMethod === 'google') {displayGoogleInputs(state)}
+    if (state.currentAuthMethod === 'linkedin') {displayLinkedinInputs(state)}
 }
 
 function displaySmsInputs(state){
