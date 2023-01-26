@@ -1,19 +1,14 @@
 
 function manage(state, options){
-    check(state, options)
+    currentAuthMethodIsNotAvailableInRequestedRouteAuthMethods(state, options)
     setWhichAuthMethodsShouldBeDisplayed(state, options.authMethods)
     setWhichFormInputsShouldBeDisplayed(state, options.formInputs)
     setWhichButtonsShouldBeDisplayed(state, options.buttons)
 }
 
-function check(state, options){
+function currentAuthMethodIsNotAvailableInRequestedRouteAuthMethods(state, options){
     let currentAuthMethod = state.currentAuthMethod
-    let activeAuthMethodsInRequestedRoute = Object.keys(state.authMethods).filter((method) => {
-        return state.authMethods[method].display === true
-    })
-
-    console.log('current auth method >> ' + currentAuthMethod + '\n')
-    console.log('active auth methods in current route >> ' + activeAuthMethodsInRequestedRoute + '\n')
+    let activeAuthMethodsInRequestedRoute = options.authMethods
 
     if (!activeAuthMethodsInRequestedRoute.includes(currentAuthMethod))
         state.currentAuthMethod = activeAuthMethodsInRequestedRoute[0]
