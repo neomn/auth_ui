@@ -9,7 +9,7 @@ export const store = new Vuex.Store({
         theme: 'dark',
         selectedNavButton: 'login',
         currentAuthMethod: 'sms',
-        activeFormInputs: {
+        formInputs: {
             phone_number: {display: true, value: ''},
             email: {display: false, value: ''},
             first_name: {display: false, value: ''},
