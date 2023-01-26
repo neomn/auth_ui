@@ -1,11 +1,9 @@
 
 function manage(state, options){
-
-
-
     setWhichAuthMethodsShouldBeDisplayed(state, options.authMethods)
     setWhichFormInputsShouldBeDisplayed(state, options.formInputs)
     setWhichButtonsShouldBeDisplayed(state, options.buttons)
+    check(state)
 }
 
 function setWhichAuthMethodsShouldBeDisplayed(state, authMethodsToDisplay){
@@ -50,6 +48,10 @@ function setWhichButtonsShouldBeDisplayed(state, buttonsToDisplay){
         buttonsToDisplay.includes(button) ?
             state.buttons[button].display = true : state.buttons[button].display = false
     })
+}
+
+function check(){
+
 }
 
 export { manage }

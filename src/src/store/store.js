@@ -83,6 +83,7 @@ export const store = new Vuex.Store({
         updateInputComponent: (context, route) => {
             context.commit('updateInputComponent', route)
         },
+
     },
 
     modules: {
