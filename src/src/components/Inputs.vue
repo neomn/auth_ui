@@ -27,7 +27,6 @@ import Button from "./Button.vue";
 export default{
   components: {FormInput, Button},
   computed: {
-    authMethod(){return this.$store.getters.authMethod },
     formInputs(){return this.$store.getters.formInputs},
     buttons(){return this.$store.getters.buttons},
   },
