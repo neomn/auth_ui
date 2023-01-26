@@ -1,13 +1,13 @@
 
 function manage(state, options){
-    if (currentAuthMethodIsNotAvailableInRequestedRouteAuthMethods(state, options))
+    if (requestedRouteAuthMethodsDoesNotIncludeCurrentAuthMethod(state, options))
         selectFirstAuthMethodAsCurrentAuthMethod(state, options.authMethods)
     setWhichAuthMethodsShouldBeDisplayed(state, options.authMethods)
     setWhichFormInputsShouldBeDisplayed(state, options.formInputs)
     setWhichButtonsShouldBeDisplayed(state, options.buttons)
 }
 
-function currentAuthMethodIsNotAvailableInRequestedRouteAuthMethods(state, options){
+function requestedRouteAuthMethodsDoesNotIncludeCurrentAuthMethod(state, options){
     let currentAuthMethod = state.currentAuthMethod
     let availableAuthMethodsInRequestedRoute = options.authMethods
     return !availableAuthMethodsInRequestedRoute.includes(currentAuthMethod)
