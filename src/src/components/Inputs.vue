@@ -32,7 +32,7 @@ export default{
     buttons(){return this.$store.getters.buttons},
   },
   mounted() {
-
+    this.$store.dispatch('updateInputComponent', this.$route.name)
   },
   methods: {
 
