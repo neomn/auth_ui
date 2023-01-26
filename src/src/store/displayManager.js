@@ -50,7 +50,13 @@ function setWhichButtonsShouldBeDisplayed(state, buttonsToDisplay){
     })
 }
 
-function check(){
+function check(state){
+    let currentAuthMethod = state.currentAuthMethod
+    let activeAuthMethodsInCurrentRoute = Object.keys(state.authMethods).filter((method) => {
+        if ( state.authMethods[method].display === true)
+            return method
+    })
+    console.log(activeAuthMethodsInCurrentRoute)
 
 }
 
