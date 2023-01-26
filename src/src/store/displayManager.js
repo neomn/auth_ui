@@ -32,17 +32,17 @@ function setWhichAuthMethodsShouldBeDisplayed(state, authMethodsToDisplay){
 
 function setWhichFormInputsShouldBeDisplayed(state, formInputsToDisplay){
     if (formInputsToDisplay.length <= 0){
-        Object.keys(state.activeFormInputs).forEach((input) => { state.activeFormInputs[input].display = false })
+        Object.keys(state.formInputs).forEach((input) => { state.formInputs[input].display = false })
         return
     }
     Object.keys(formInputsToDisplay).forEach(input => {
        if ( state.currentAuthMethod === input )
            formInputsToDisplay = formInputsToDisplay[input]
     })
-    let input  = Object.keys(state.activeFormInputs)
+    let input  = Object.keys(state.formInputs)
     input.forEach( input => {
         formInputsToDisplay.includes(input) ?
-            state.activeFormInputs[input].display = true : state.activeFormInputs[input].display = false
+            state.formInputs[input].display = true : state.formInputs[input].display = false
     })
 }
 

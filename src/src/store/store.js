@@ -39,8 +39,8 @@ export const store = new Vuex.Store({
         selectedNavButton: state => {
             return state.selectedNavButton
         },
-        activeFormInputs: state => {
-            return state.activeFormInputs
+        formInputs: state => {
+            return state.formInputs
         },
         buttons: state => {
             return state.buttons
