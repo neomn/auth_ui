@@ -19,10 +19,10 @@ export const store = new Vuex.Store({
             one_time_token: {display: false, value: ''},
         },
         buttons: {
-            login: {display: true},
-            register: {display: false},
-            recover: {display: false},
-            check: {display: false},
+            login: {placeHolder: '', display: true},
+            register: {placeHolder: '', display: false},
+            recover: {placeHolder: '', display: false},
+            check: {placeHolder: '', display: false},
         },
         authMethods: {
             sms: { display: true },
