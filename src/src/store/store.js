@@ -30,6 +30,13 @@ export const store = new Vuex.Store({
             google: { display: true },
             linkedin: { display: true },
         },
+        assets: {
+            icons: {
+                formInputs: {},
+                navButtons: {},
+                buttons: {},
+            },
+        },
     },
 
     getters: {
