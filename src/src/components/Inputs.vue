@@ -10,10 +10,10 @@
       <FormInput id="one_time_token" :placeholder="formInputs.one_time_token.placeHolder" v-if="formInputs.one_time_token.display" class=""/>
     </div>
     <div v-auto-animate id="submitButton" class=" basis-2/6 flex justify-around items-center w-full">
-      <Button id="login" :text="Object.keys(buttons)[0]" v-if="buttons.login.display"/>
-      <Button id="register" :text="Object.keys(buttons)[1]" v-if="buttons.register.display"/>
-      <Button id="recover" :text="Object.keys(buttons)[2]" v-if="buttons.recover.display"/>
-      <Button id="check" :text="Object.keys(buttons)[3]" v-if="buttons.check.display"/>
+      <Button id="login" :text="buttons.login.placeHolder" v-if="buttons.login.display"/>
+      <Button id="register" :text="buttons.register.placeHolder" v-if="buttons.register.display"/>
+      <Button id="recover" :text="buttons.recover.placeHolder" v-if="buttons.recover.display"/>
+      <Button id="check" :text="buttons.check.placeholder" v-if="buttons.check.display"/>
     </div>
   </div>
 </template>
