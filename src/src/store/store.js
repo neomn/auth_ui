@@ -32,6 +32,9 @@ export const store = new Vuex.Store({
         },
         assets: {
             icons: {
+                brand: {
+                  logo: "/src/assets/icons/iot.png",
+                },
                 formInputs: {
                     phone_number: "/src/assets/icons/",
                     email: "/src/assets/icons/formInput-email.png",

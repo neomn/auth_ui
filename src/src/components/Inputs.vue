@@ -29,6 +29,7 @@ export default{
   computed: {
     formInputs(){return this.$store.getters.formInputs},
     buttons(){return this.$store.getters.buttons},
+    icons(){return this.$store.assets.icons}
   },
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
