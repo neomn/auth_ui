@@ -32,7 +32,15 @@ export const store = new Vuex.Store({
         },
         assets: {
             icons: {
-                formInputs: {},
+                formInputs: {
+                    phone_number: "/src/assets/icons/",
+                    email: "/src/assets/icons/formInput-email.png",
+                    first_name: "",
+                    last_name: "",
+                    password: "",
+                    confirm_password: "",
+                    one_time_token: "",
+                },
                 navButtons: {},
                 buttons: {},
             },
@@ -57,6 +65,9 @@ export const store = new Vuex.Store({
         },
         authMethods: (state) => {
             return state.authMethods
+        },
+        icons: state => {
+            return state.assets.icons
         }
     },
 
