@@ -5,7 +5,7 @@
       <FormInput id="email" :placeholder="formInputs.email.placeHolder" v-if="formInputs.email.display" class=""/>
       <FormInput id="first_name" :placeholder="formInputs.first_name.placeHolder" v-if="formInputs.first_name.display" class=""/>
       <FormInput id="last_name" :placeholder="formInputs.last_name.placeHolder" v-if="formInputs.last_name.display" class=""/>
-      <FormInput id="password" :placeholder="formInputs.password.placeHolder" v-if="formInputs.password.display" class=""/>
+      <FormInput id="password"  :placeholder="formInputs.password.placeHolder" v-if="formInputs.password.display" class=""/>
       <FormInput id="confirm_password" :placeholder="formInputs.confirm_password.placeHolder" v-if="formInputs.confirm_password.display" class=""/>
       <FormInput id="one_time_token" :placeholder="formInputs.one_time_token.placeHolder" v-if="formInputs.one_time_token.display" class=""/>
     </div>
@@ -29,7 +29,7 @@ export default{
   computed: {
     formInputs(){return this.$store.getters.formInputs},
     buttons(){return this.$store.getters.buttons},
-    icons(){return this.$store.assets.icons}
+    icons(){return this.$store.getters.icons}
   },
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
