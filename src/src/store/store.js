@@ -36,7 +36,7 @@ export const store = new Vuex.Store({
                   logo: "/src/assets/icons/iot.png",
                 },
                 formInputs: {
-                    phone_number: "/src/assets/icons/",
+                    phone_number: "/src/assets/icons/mobile-4.png",
                     email: "/src/assets/icons/formInput-email.png",
                     first_name: "/src/assets/icons/formInput-personal-info.png",
                     last_name: "/src/assets/icons/formInput-personal-info.png",
