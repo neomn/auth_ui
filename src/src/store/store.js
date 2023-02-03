@@ -38,8 +38,8 @@ export const store = new Vuex.Store({
                 formInputs: {
                     phone_number: "/src/assets/icons/formInput-mobile.png",
                     email: "/src/assets/icons/formInput-email.png",
-                    first_name: "/src/assets/icons/formInput-personal-info.png",
-                    last_name: "/src/assets/icons/formInput-personal-info.png",
+                    first_name: "/src/assets/icons/formInput-user-info.png",
+                    last_name: "/src/assets/icons/formInput-user-info.png",
                     password: "/src/assets/icons/formInput-password.png",
                     confirm_password: "/src/assets/icons/formInput-password.png",
                     one_time_token: "",
