@@ -34,9 +34,6 @@ export default{
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
   },
-  methods: {
-
-  },
 }
 
 </script>
