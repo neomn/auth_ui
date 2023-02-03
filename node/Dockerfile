@@ -6,5 +6,6 @@ RUN /bin/sh -c "cd /app  &&\
                 npm install vuex@4.1.0 &&\
                 npm install @formkit/auto-animate@1.0.0-beta.5 &&\
                 npm install -D vuelidate@0.7.7 &&\
+                npm install -D jest@29.4.1 &&\
                 npm install &&\
                 npx tailwindcss init"
