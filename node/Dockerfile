@@ -5,5 +5,6 @@ RUN /bin/sh -c "cd /app  &&\
                 npm install vue-router@4.1.6 &&\
                 npm install vuex@4.1.0 &&\
                 npm install @formkit/auto-animate@1.0.0-beta.5 &&\
+                npm install -D vuelidate@0.7.7 &&\
                 npm install &&\
                 npx tailwindcss init"
