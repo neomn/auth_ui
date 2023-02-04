@@ -71,6 +71,9 @@ export const store = new Vuex.Store({
             if (route === 'register')   { manage (state, registerOptions) }
             if (route === 'recover')    { manage (state, recoverOptions) }
         },
+        updateFormInputValue: (state, payload) => {
+            state.formInputs[payload.storeId].value = payload.value
+        },
     },
 
     actions: {
@@ -78,6 +81,7 @@ export const store = new Vuex.Store({
         changeCurrentAuthMethod: (context, payload) => { context.commit('changeCurrentAuthMethod', payload) },
         changeSelectedNavButton: (context, payload) => { context.commit('changeSelectedNavButton', payload) },
         updateInputComponent: (context, route) => { context.commit('updateInputComponent', route) },
+        updateFormInputValue: (context, payload) => { context.commit('updateFormInputValue', payload) },
     },
 
     modules: {
