@@ -72,7 +72,7 @@ export const store = new Vuex.Store({
             if (route === 'recover')    { manage (state, recoverOptions) }
         },
         updateFormInputValue: (state, payload) => {
-            state.formInputs[payload.storeId].value = payload.value
+            state.formInputs[payload.inputId].value = payload.value
         },
     },
 
