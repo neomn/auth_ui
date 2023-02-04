@@ -24,10 +24,15 @@
 import FormInput from "./FormInput.vue";
 import Button from "./Button.vue";
 import { useVuelidate } from '@vuelidate/core'
-// import { required } from '@vuelidate/validators'
+import { required } from '@vuelidate/validators'
 
 
 export default{
+  setup() {
+    return {
+      v$: useVuelidate()
+    }
+  },
   components: {FormInput, Button},
   computed: {
     formInputs(){return this.$store.getters.formInputs},
@@ -44,7 +49,7 @@ export default{
   },
   methods: {
     login(){
-      // this.v$.validate()
+      this.v$.validate()
     }
   },
 }
