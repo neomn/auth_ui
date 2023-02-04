@@ -5,6 +5,7 @@ import { recoverOptions } from "./recoverOptions.js";
 import { manage } from "./displayManager.js";
 
 export const store = new Vuex.Store({
+    strict: true,
     state: {
         theme: 'dark',
         selectedNavButton: 'login',
