@@ -43,7 +43,6 @@ export default{
     formInputs(){return this.$store.getters.formInputs},
     buttons(){return this.$store.getters.buttons},
     icons(){return this.$store.getters.icons},
-    // phone_number(){  }
   },
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
