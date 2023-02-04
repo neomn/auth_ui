@@ -14,7 +14,6 @@
       <Button id="register" :text="buttons.register.placeHolder" v-if="buttons.register.display"/>
       <Button id="recover" :text="buttons.recover.placeHolder" v-if="buttons.recover.display"/>
       <Button id="check" :text="buttons.check.placeholder" v-if="buttons.check.display"/>
-<!--      <p>{{ phone_number }}</p>-->
     </div>
   </div>
 </template>
@@ -24,6 +23,9 @@
 <script>
 import FormInput from "./FormInput.vue";
 import Button from "./Button.vue";
+import { useVuelidate } from '@vuelidate/core'
+// import { required } from '@vuelidate/validators'
+
 
 export default{
   components: {FormInput, Button},
@@ -35,8 +37,15 @@ export default{
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
   },
+  validations(){
+    return {
+
+    }
+  },
   methods: {
-    login(){console.log(this.formInputs.phone_number.value)}
+    login(){
+      // this.v$.validate()
+    }
   },
 }
 
