@@ -9,5 +9,8 @@
 export default {
   name: "FormInput",
   props: ['icon', 'type', 'placeholder'],
+  computed: {
+
+  }
 }
 </script>

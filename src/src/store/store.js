@@ -63,36 +63,21 @@ export const store = new Vuex.Store({
     },
 
     mutations: {
-        changeTheme: (state, payload) => {
-            state.theme = payload
-        },
-        changeCurrentAuthMethod: (state, payload) => {
-            state.currentAuthMethod = payload
-        },
-        changeSelectedNavButton: (state, payload) => {
-            state.selectedNavButton = payload
-        },
+        changeTheme: (state, payload) => { state.theme = payload },
+        changeCurrentAuthMethod: (state, payload) => { state.currentAuthMethod = payload },
+        changeSelectedNavButton: (state, payload) => { state.selectedNavButton = payload },
         updateInputComponent: (state, route) => {
-            if (route === 'login'){ manage (state, loginOptions) }
-            if (route === 'register'){ manage (state, registerOptions) }
-            if (route === 'recover'){ manage (state, recoverOptions) }
+            if (route === 'login')      { manage (state, loginOptions) }
+            if (route === 'register')   { manage (state, registerOptions) }
+            if (route === 'recover')    { manage (state, recoverOptions) }
         },
     },
 
     actions: {
-        changeTheme: (context, payload) => {
-            context.commit('changeTheme', payload)
-        },
-        changeCurrentAuthMethod: (context, payload) => {
-            context.commit('changeCurrentAuthMethod', payload)
-        },
-        changeSelectedNavButton: (context, payload) => {
-            context.commit('changeSelectedNavButton', payload)
-        },
-        updateInputComponent: (context, route) => {
-            context.commit('updateInputComponent', route)
-        },
-
+        changeTheme: (context, payload) => { context.commit('changeTheme', payload) },
+        changeCurrentAuthMethod: (context, payload) => { context.commit('changeCurrentAuthMethod', payload) },
+        changeSelectedNavButton: (context, payload) => { context.commit('changeSelectedNavButton', payload) },
+        updateInputComponent: (context, route) => { context.commit('updateInputComponent', route) },
     },
 
     modules: {
