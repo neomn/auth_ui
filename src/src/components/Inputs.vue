@@ -33,23 +33,32 @@ export default{
       v$: useVuelidate()
     }
   },
+  data(){
+    return {
+      test:'',
+    }
+  },
   components: {FormInput, Button},
   computed: {
     formInputs(){return this.$store.getters.formInputs},
     buttons(){return this.$store.getters.buttons},
     icons(){return this.$store.getters.icons},
+    // phone_number(){  }
   },
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
   },
   validations(){
     return {
-
+      test: { required }
     }
   },
   methods: {
     login(){
-      this.v$.validate()
+      if (this.v$.error)
+        alert('validation error')
+      else
+        alert('successful')
     }
   },
 }
