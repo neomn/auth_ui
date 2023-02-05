@@ -45,7 +45,13 @@ export default{
   },
   validations(){
     return {
-      first_name: { required }
+      phone_number: {},
+      email: {},
+      first_name: { required },
+      last_name: { required },
+      password: { required },
+      confirm_password: { required },
+      one_time_token: { required },
     }
   },
   methods: {
