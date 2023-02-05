@@ -24,13 +24,13 @@
 import FormInput from "./FormInput.vue";
 import Button from "./Button.vue";
 import { useVuelidate } from '@vuelidate/core'
-import { required } from '@vuelidate/validators'
+// import { required } from '@vuelidate/validators'
 
 
 export default{
-  setup () {
-    return { v$: useVuelidate() }
-  },
+  // setup () {
+  //   return { v$: useVuelidate() }
+  // },
   data(){
     return {
       first_name:'',
@@ -49,17 +49,21 @@ export default{
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
   },
-  validations(){
-    return {
-      test: { required }
-    }
-  },
+  // validations(){
+  //   return {
+  //     first_name: { required },
+  //     last_name: { required },
+  //     phone_number: { required },
+  //     email: { required },
+  //     password: { required },
+  //   }
+  // },
   methods: {
     login(){
-      if (this.v$.error)
-        alert('validation error')
-      else
-        alert('successful')
+      // if (this.$v.error)
+      //   alert('validation error')
+      // else
+      //   alert('successful')
     }
   },
 }
