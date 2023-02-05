@@ -25,7 +25,7 @@ import FormInput from "./FormInput.vue";
 import Button from "./Button.vue";
 
 import useVuelidate from '@vuelidate/core'
-import { required, minLength } from "@vuelidate/validators";
+import { required } from "@vuelidate/validators";
 
 export default{
   data(){
@@ -50,7 +50,7 @@ export default{
   },
   methods: {
     login(){
-      this.v$.$touch()
+      this.v$.$validate()
       if (this.v$.$error){
         console.log(this.v$.$errors[0].$message)
       }
