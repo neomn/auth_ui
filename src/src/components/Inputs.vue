@@ -24,9 +24,15 @@
 import FormInput from "./FormInput.vue";
 import Button from "./Button.vue";
 
+import useVuelidate from '@vuelidate/core'
+import { required } from "@vuelidate/validators";
+
 export default{
   data(){
     return {
+      v$: useVuelidate(),
+      test: '',
+
       first_name:'',
       last_name:'',
       phone_number:'',
@@ -50,10 +56,12 @@ export default{
   },
   methods: {
     login(){
-      if (this.v$.error)
-        alert('validation error')
-      else
-        alert('successful')
+      console.log(this.v$)
+
+      // if (this.v$.error)
+      //   alert('validation error')
+      // else
+      //   alert('successful')
     }
   },
 }
