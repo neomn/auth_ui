@@ -23,14 +23,8 @@
 <script>
 import FormInput from "./FormInput.vue";
 import Button from "./Button.vue";
-import { useVuelidate } from '@vuelidate/core'
-import { required } from '@vuelidate/validators'
-
 
 export default{
-  setup () {
-    return { v$: useVuelidate() }
-  },
   data(){
     return {
       first_name:'',
