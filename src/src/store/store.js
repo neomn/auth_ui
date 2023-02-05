@@ -13,7 +13,7 @@ export const store = new Vuex.Store({
         formInputs: {
             phone_number:       {placeHolder: 'Phone Number', display: true, type: 'number', max_length: '12', value: ''},
             email:              {placeHolder: 'Email', display: false, type: 'email', max_length: '50', value: ''},
-            first_name:         {placeHolder: 'First Name', display: false, type: 'text', max_length: '30', value: ''},
+            first_name:         {placeHolder: 'First Name', display: false, type: 'text', max_length: '30', value: 'neomntest'},
             last_name:          {placeHolder: 'Last Name', display: false, type: 'text', max_length: '30', value: ''},
             password:           {placeHolder: 'Password', display: true, type: 'password', max_length: '20', value: ''},
             confirm_password:   {placeHolder: 'Enter Password Again', display: false, type: 'password', max_length: '20',  value: ''},
