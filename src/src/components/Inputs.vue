@@ -31,13 +31,6 @@ export default{
   data(){
     return {
       v$: useVuelidate(),
-      test: '',
-
-      first_name:'',
-      last_name:'',
-      phone_number:'',
-      email:'',
-      password:'',
     }
   },
   components: {FormInput, Button},
@@ -45,13 +38,14 @@ export default{
     formInputs(){return this.$store.getters.formInputs},
     buttons(){return this.$store.getters.buttons},
     icons(){return this.$store.getters.icons},
+    first_name(){ return this.$store.getters.first_name.value}
   },
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
   },
   validations(){
     return {
-      test: { required }
+      first_name: { required }
     }
   },
   methods: {
