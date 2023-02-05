@@ -38,23 +38,19 @@ export default{
     formInputs(){return this.$store.getters.formInputs},
     buttons(){return this.$store.getters.buttons},
     icons(){return this.$store.getters.icons},
-    firstName(){ return this.$store.getters.formInputs.first_name.value}
+    first_name(){ return this.$store.getters.formInputs.first_name.value}
   },
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
-    console.log(this.firstName)
   },
   validations(){
     return {
-      first_name: { required, minLength:10, }
+      first_name: { required }
     }
   },
   methods: {
     login(){
-      // console.log(this.first_name)
       this.v$.$touch()
-      console.log(this.v$)
-
       if (this.v$.$error){
         console.log(this.v$.$errors[0].$message)
       }
