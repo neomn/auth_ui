@@ -28,13 +28,12 @@ import { required } from '@vuelidate/validators'
 
 
 export default{
-  setup() {
-    return {
-      v$: useVuelidate()
-    }
+  setup () {
+    return { v$: useVuelidate() }
   },
   data(){
     return {
+      v$: useVuelidate(),
       test:'',
     }
   },
