@@ -1,6 +1,5 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
-import { Vuelidate } from "vuelidate"
 import { autoAnimatePlugin } from "@formkit/auto-animate/vue";
 import { store } from "./store/store.js"
 import { routes } from './routes'
