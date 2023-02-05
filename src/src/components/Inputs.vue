@@ -25,7 +25,7 @@ import FormInput from "./FormInput.vue";
 import Button from "./Button.vue";
 
 import useVuelidate from '@vuelidate/core'
-import { required, minLength, maxLength, numeric } from "@vuelidate/validators";
+import { required, minLength, maxLength, numeric, email, } from "@vuelidate/validators";
 
 export default{
   data(){
@@ -47,10 +47,15 @@ export default{
     return {
       phone_number: {
         required,
+        numeric,
         minLength: minLength(11),
         maxLength: maxLength(11),
       },
-      email: {},
+      email: {
+        required,
+        email,
+        maxLength: maxLength(64),
+      },
       first_name: { required },
       last_name: { required },
       password: { required },
