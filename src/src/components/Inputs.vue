@@ -38,6 +38,7 @@ export default{
     formInputs(){return this.$store.getters.formInputs},
     buttons(){return this.$store.getters.buttons},
     icons(){return this.$store.getters.icons},
+    phone_number(){ return this.$store.getters.formInputs.phone_number.value},
     first_name(){ return this.$store.getters.formInputs.first_name.value}
   },
   mounted() {
@@ -83,18 +84,14 @@ export default{
   },
   methods: {
     login(){
-
+      this.v$.$reset()
       Object.values(this.formInputs).forEach((input) => {
-        console.log(input)
-        // console.log(input.id)
 
-        // if (input.display) this.v$.$input.$touch()
+        if (input.display)
+          this.v$.phone_number.$touch()
+          // this.v$[input.inputId].$touch()
       })
-
-      if (this.v$.$error)
-        console.log(this.v$.$errors[0].$message)
-      else
-        alert('successful')
+      console.log(this.v$)
     },
 
 

@@ -84,8 +84,6 @@ export const store = new Vuex.Store({
         updateFormInputValue: (context, payload) => { context.commit('updateFormInputValue', payload) },
     },
 
-    modules: {
-
-    }
+    modules: {}
 })
 
