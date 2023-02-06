@@ -93,22 +93,25 @@ export default{
 
     login(){
       this.touchVisibleInputs()
+
     },
 
 
     register(){
-
+      this.touchVisibleInputs()
     },
 
 
     recover(){
-
+      this.touchVisibleInputs()
     },
     touchVisibleInputs(){
+      this.v$.$reset()
       Object.values(this.formInputs).forEach((input) => {
         if (input.display)
           this.v$[input.inputId].$touch()
       })
+      console.log(this.v$.$errors)
     },
   },
 }
