@@ -84,12 +84,22 @@ export default{
   methods: {
     login(){
       this.v$.$validate()
-      if (this.v$.$error){
+
+      if (this.v$.$error)
         console.log(this.v$.$errors[0].$message)
-      }
       else
         alert('successful')
-    }
+    },
+
+
+    register(){
+
+    },
+
+
+    recover(){
+
+    },
   },
 }
 
