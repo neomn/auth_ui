@@ -83,7 +83,13 @@ export default{
   },
   methods: {
     login(){
-      this.v$.$validate()
+
+      Object.values(this.formInputs).forEach((input) => {
+        console.log(input)
+        // console.log(input.id)
+
+        // if (input.display) this.v$.$input.$touch()
+      })
 
       if (this.v$.$error)
         console.log(this.v$.$errors[0].$message)
