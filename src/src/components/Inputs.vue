@@ -68,9 +68,17 @@ export default{
         minLength: minLength(32),
         maxLength: maxLength(32),
       },
-      password: { required },
-      confirm_password: { required },
-      one_time_token: { required },
+      password: {
+        required,
+        minLength: minLength(8),
+        maxLength: maxLength(32),
+      },
+      one_time_token: {
+        required,
+        numeric,
+        minLength: minLength(6),
+        maxLength: maxLength(6),
+      },
     }
   },
   methods: {
