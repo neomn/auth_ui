@@ -74,6 +74,9 @@ export const store = new Vuex.Store({
         updateFormInputValue: (state, payload) => {
             state.formInputs[payload.inputId].value = payload.value
         },
+        updateFormInputValidateAndDirtyProperties: () => {
+
+        },
     },
 
     actions: {
@@ -82,6 +85,7 @@ export const store = new Vuex.Store({
         changeSelectedNavButton: (context, payload) => { context.commit('changeSelectedNavButton', payload) },
         updateInputComponent: (context, route) => { context.commit('updateInputComponent', route) },
         updateFormInputValue: (context, payload) => { context.commit('updateFormInputValue', payload) },
+        updateFormInputValidateAndDirtyProperties: (context, payload) => {context.commit('updateFormInputValidateAndDirtyProperties',payload)}
     },
 
     modules: {}
