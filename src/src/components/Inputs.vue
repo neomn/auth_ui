@@ -39,7 +39,7 @@ export default{
     buttons(){return this.$store.getters.buttons},
     icons(){return this.$store.getters.icons},
     phone_number(){ return this.$store.getters.formInputs.phone_number.value},
-    phone_number(){ return this.$store.getters.formInputs.phone_number.value},
+    email(){ return this.$store.getters.formInputs.email.value},
     first_name(){ return this.$store.getters.formInputs.first_name.value},
     last_name(){ return this.$store.getters.formInputs.last_name.value},
     password(){ return this.$store.getters.formInputs.password.value},
