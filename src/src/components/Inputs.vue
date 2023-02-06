@@ -39,7 +39,11 @@ export default{
     buttons(){return this.$store.getters.buttons},
     icons(){return this.$store.getters.icons},
     phone_number(){ return this.$store.getters.formInputs.phone_number.value},
-    first_name(){ return this.$store.getters.formInputs.first_name.value}
+    phone_number(){ return this.$store.getters.formInputs.phone_number.value},
+    first_name(){ return this.$store.getters.formInputs.first_name.value},
+    first_name(){ return this.$store.getters.formInputs.first_name.value},
+    first_name(){ return this.$store.getters.formInputs.first_name.value},
+    one_time_token(){ return this.$store.getters.formInputs.one_time_token.value}
   },
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
