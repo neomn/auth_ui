@@ -62,7 +62,12 @@ export default{
         minLength: minLength(32),
         maxLength: maxLength(32),
       },
-      last_name: { required },
+      last_name: {
+        required,
+        alpha,
+        minLength: minLength(32),
+        maxLength: maxLength(32),
+      },
       password: { required },
       confirm_password: { required },
       one_time_token: { required },
