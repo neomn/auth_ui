@@ -87,15 +87,17 @@ export default{
     }
   },
   methods: {
+    preSubmitValidationCheck(){
+
+    },
     login(){
       this.v$.$reset()
       Object.values(this.formInputs).forEach((input) => {
 
         if (input.display)
-          this.v$.phone_number.$touch()
-          // this.v$[input.inputId].$touch()
+          this.v$[input.inputId].$touch()
       })
-      console.log(this.v$)
+      console.log(this.v$.$errors)
     },
 
 
