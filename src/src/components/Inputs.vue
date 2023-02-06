@@ -90,14 +90,9 @@ export default{
     preSubmitValidationCheck(){
 
     },
-    login(){
-      this.v$.$reset()
-      Object.values(this.formInputs).forEach((input) => {
 
-        if (input.display)
-          this.v$[input.inputId].$touch()
-      })
-      console.log(this.v$.$errors)
+    login(){
+      this.touchVisibleInputs()
     },
 
 
@@ -108,6 +103,12 @@ export default{
 
     recover(){
 
+    },
+    touchVisibleInputs(){
+      Object.values(this.formInputs).forEach((input) => {
+        if (input.display)
+          this.v$[input.inputId].$touch()
+      })
     },
   },
 }
