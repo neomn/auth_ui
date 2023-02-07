@@ -14,11 +14,10 @@
 import WebsiteLogo from "./WebsiteLogo.vue";
 import Inputs from "./Inputs.vue";
 import AuthMethods from "./AuthMethods.vue";
-import RegisterInputs from "./RegisterInputs.vue";
 import NavButtons from "./NavButtons.vue"
 
 export default {
-  components: {WebsiteLogo, AuthMethods, Inputs, RegisterInputs, NavButtons},
+  components: {WebsiteLogo, AuthMethods, Inputs, NavButtons},
   name: 'main',
 
   data() {
