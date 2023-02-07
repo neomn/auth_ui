@@ -23,7 +23,10 @@ export default {
     touchInput(id){
 
     },
-    changeInputRingColor(){
+    checkInputValidity(id){
+
+    },
+    changeInputRingColor(id){
 
     }
   }
