@@ -52,6 +52,44 @@ export default{
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
   },
+
+  methods: {
+
+    login(){
+      this.touchVisibleInputs()
+
+    },
+
+
+    register(){
+      this.touchVisibleInputs()
+    },
+
+
+    recover(){
+      this.touchVisibleInputs()
+    },
+
+
+
+    inputValueHasChanged(inputId){
+
+    },
+
+    touchVisibleInputs(){
+      this.v$.$reset()
+      Object.values(this.formInputs).forEach((input) => {
+        if (input.display)
+          this.v$[input.inputId].$touch()
+      })
+      console.log(this.v$.$errors)
+    },
+
+
+    makeAllVisibleInputsDirty(){
+
+    },
+  },
   validations(){
     return {
       phone_number: {
@@ -89,43 +127,6 @@ export default{
         maxLength: maxLength(6),
       },
     }
-  },
-  methods: {
-
-    login(){
-      this.touchVisibleInputs()
-
-    },
-
-
-    register(){
-      this.touchVisibleInputs()
-    },
-
-
-    recover(){
-      this.touchVisibleInputs()
-    },
-
-
-
-    inputValueHasChanged(inputId){
-
-    },
-
-    touchVisibleInputs(){
-      this.v$.$reset()
-      Object.values(this.formInputs).forEach((input) => {
-        if (input.display)
-          this.v$[input.inputId].$touch()
-      })
-      console.log(this.v$.$errors)
-    },
-
-
-    makeAllVisibleInputsDirty(){
-
-    },
   },
 }
 

@@ -9,8 +9,8 @@
 </template>
 
 <script>
-
 import ValidationStatus from "./ValidationStatus.vue";
+
 export default {
   components: {ValidationStatus},
   computed: {
