@@ -14,6 +14,10 @@ export default {
       get(){return this.$store.getters.formInputs[this.inputId].value},
       set(value){this.$store.dispatch('updateFormInputValue',{ inputId: this.inputId, value: value})},
     },
+    inputValidProperty: {
+      get(){return this.$store.getters.formInputs[this.inputId].valid},
+      set(value){this.$store.dispatch('updateFormInputValidProperty',{ inputId: this.inputId, valid: value})},
+    },
   },
   methods: {
     inputValueHasChanged(inputId , value){
