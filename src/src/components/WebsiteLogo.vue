@@ -4,7 +4,7 @@
       <label for="" class=" m-2 text-2xl">Easy</label>
       <img class="w-20 m-2" :src="icons.brand.logo">
     </div>
-    <ValidationStatus v-if="true" class="m-2 grow"/>
+    <ValidationStatus v-if="false" class="m-2 grow"/>
   </div>
 </template>
 
