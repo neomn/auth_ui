@@ -18,12 +18,13 @@ export default {
   methods: {
     inputValueHasChanged(inputId , value){
       this.touchInput(inputId)
+      this.updateInputValidateProperty(inputId)
       this.changeInputRingColor(inputId)
     },
     touchInput(inputId){
 
     },
-    checkInputValidity(inputId){
+    updateInputValidateProperty(inputId){
 
     },
     changeInputRingColor(inputId){
