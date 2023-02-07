@@ -16,17 +16,17 @@ export default {
     },
   },
   methods: {
-    inputValueHasChanged(id , value){
-      this.touchInput(id)
-      this.changeInputRingColor(id)
+    inputValueHasChanged(inputId , value){
+      this.touchInput(inputId)
+      this.changeInputRingColor(inputId)
     },
-    touchInput(id){
+    touchInput(inputId){
 
     },
-    checkInputValidity(id){
+    checkInputValidity(inputId){
 
     },
-    changeInputRingColor(id){
+    changeInputRingColor(inputId){
 
     }
   }
