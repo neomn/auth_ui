@@ -16,21 +16,9 @@ export default {
     },
   },
   methods: {
-    inputValueHasChanged(inputId , value){
+    inputValueHasChanged(inputId){
       this.$emit('inputValueHasChanged')
-      // this.touchInput(inputId)
-      // this.checkInputValidateProperty(inputId)
-      // this.changeInputRingColor(inputId)
-    },
-
-
-    touchInput(inputId){
-
-    },
-
-
-    checkInputValidateProperty(inputId){
-
+      this.changeInputRingColor(inputId)
     },
 
 

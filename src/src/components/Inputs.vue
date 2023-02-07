@@ -91,9 +91,6 @@ export default{
     }
   },
   methods: {
-    updateInputValidateProperty(inputId){
-
-    },
 
     login(){
       this.touchVisibleInputs()
@@ -109,6 +106,13 @@ export default{
     recover(){
       this.touchVisibleInputs()
     },
+
+
+
+    inputValueHasChanged(inputId){
+
+    },
+
     touchVisibleInputs(){
       this.v$.$reset()
       Object.values(this.formInputs).forEach((input) => {
@@ -119,8 +123,8 @@ export default{
     },
 
 
-    inputValueHasChanged(inputId){
-      console.log(inputId)
+    makeAllVisibleInputsDirty(){
+
     },
   },
 }
