@@ -43,7 +43,11 @@ export default{
     first_name(){ return this.$store.getters.formInputs.first_name.value},
     last_name(){ return this.$store.getters.formInputs.last_name.value},
     password(){ return this.$store.getters.formInputs.password.value},
-    one_time_token(){ return this.$store.getters.formInputs.one_time_token.value}
+    one_time_token(){ return this.$store.getters.formInputs.one_time_token.value},
+    inputValidProperty: {
+      get(inputId){return this.$store.getters.formInputs[inputId].valid},
+      set(inputId, value){this.$store.dispatch('updateFormInputValidateAndDirtyProperties',{ inputId: inputId, valid: value})},
+    },
   },
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
@@ -87,7 +91,7 @@ export default{
     }
   },
   methods: {
-    preSubmitValidationCheck(){
+    updateInputValidateProperty(inputId){
 
     },
 
