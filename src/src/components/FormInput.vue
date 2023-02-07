@@ -18,7 +18,7 @@ export default {
   methods: {
     inputValueHasChanged(inputId , value){
       this.touchInput(inputId)
-      this.updateInputValidateProperty(inputId)
+      this.checkInputValidateProperty(inputId)
       this.changeInputRingColor(inputId)
     },
 
@@ -28,7 +28,7 @@ export default {
     },
 
 
-    updateInputValidateProperty(inputId){
+    checkInputValidateProperty(inputId){
 
     },
 
