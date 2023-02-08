@@ -1,7 +1,7 @@
 <template>
   <div ref="input" class="flex justify-start items-center w-11/12 h-8 m-1  border border-gray-900 rounded-lg text-gray-300 bg-gray-600 overflow-hidden">
     <img :src="icon" class="w-4 h-4 mx-2">
-    <input v-model="inputValue" @focus="$emit('inputFocused')" @focusout="$emit('inputFocusedOut')" @input="inputValueHasChanged(inputId, inputValue)" :type="type" :placeholder="placeholder" class="w-full px-2 bg-gray-600">
+    <input v-model="inputValue" @focus="$emit('inputFocused')" @focusout="$emit('inputFocusedOut')" @input="inputValueHasChanged(inputId, inputValue)" :type="type" :placeholder="placeholder" class="w-full px-2 bg-gray-600 focus:outline-none">
   </div>
 </template>
 
