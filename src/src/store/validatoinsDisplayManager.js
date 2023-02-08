@@ -1,0 +1,7 @@
+
+function manageValidationsDisplay(){
+
+}
+
+
+export { manageValidationsDisplay }
