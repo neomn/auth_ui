@@ -87,6 +87,7 @@ export const store = new Vuex.Store({
         updateInputComponent: (context, route) => { context.commit('updateInputComponent', route) },
         updateFormInputValue: (context, payload) => { context.commit('updateFormInputValue', payload) },
         updateFormInputValidateAndDirtyProperties: (context, payload) => {context.commit('updateFormInputValidateAndDirtyProperties',payload)}
+        updateCurrentlyFocusedInput: (context, input) => {context.commit('updateCurrentlyFocusedInput',input)}
     },
 
     modules: {}
