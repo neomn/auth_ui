@@ -87,7 +87,7 @@ export const store = new Vuex.Store({
         changeSelectedNavButton: (context, payload) => { context.commit('changeSelectedNavButton', payload) },
         updateInputComponent: (context, route) => { context.commit('updateInputComponent', route) },
         updateFormInputValue: (context, payload) => { context.commit('updateFormInputValue', payload) },
-        updateFormInputValidateAndDirtyProperties: (context, payload) => {context.commit('updateFormInputValidateAndDirtyProperties',payload)}
+        updateFormInputValidateAndDirtyProperties: (context, payload) => {context.commit('updateFormInputValidateAndDirtyProperties',payload)},
         updateCurrentlyFocusedInput: (context, input) => {context.commit('updateCurrentlyFocusedInput',input)}
     },
 
