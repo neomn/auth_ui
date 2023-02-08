@@ -29,12 +29,11 @@ export default {
       if ( this.inputValidProperty ){
         this.$refs.input.classList.remove(invalidColor)
         this.$refs.input.classList.add(validColor)
+        return
       }
 
-      if ( !this.inputValidProperty ){
-        this.$refs.input.classList.remove(validColor)
-        this.$refs.input.classList.add(invalidColor)
-      }
+      this.$refs.input.classList.remove(validColor)
+      this.$refs.input.classList.add(invalidColor)
     },
 
 
