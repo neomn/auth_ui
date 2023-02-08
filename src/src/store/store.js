@@ -2,7 +2,7 @@ import Vuex from 'vuex'
 import { loginOptions } from "./loginOptions.js";
 import { registerOptions } from "./registerOptions.js";
 import { recoverOptions } from "./recoverOptions.js";
-import { manage } from "./displayManager.js";
+import { manageInputsDisplay } from "./InputsDisplayManager.js";
 
 export const store = new Vuex.Store({
     strict: true,
@@ -67,9 +67,9 @@ export const store = new Vuex.Store({
         changeCurrentAuthMethod: (state, payload) => { state.currentAuthMethod = payload },
         changeSelectedNavButton: (state, payload) => { state.selectedNavButton = payload },
         updateInputComponent: (state, route) => {
-            if (route === 'login')      { manage (state, loginOptions) }
-            if (route === 'register')   { manage (state, registerOptions) }
-            if (route === 'recover')    { manage (state, recoverOptions) }
+            if (route === 'login')      { manageInputsDisplay (state, loginOptions) }
+            if (route === 'register')   { manageInputsDisplay (state, registerOptions) }
+            if (route === 'recover')    { manageInputsDisplay (state, recoverOptions) }
         },
         updateFormInputValue: (state, payload) => {
             state.formInputs[payload.inputId].value = payload.value

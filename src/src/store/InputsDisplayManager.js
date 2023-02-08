@@ -1,5 +1,5 @@
 
-function manage(state, options){
+function manageInputsDisplay(state, options){
 
     if (requestedRouteAuthMethodsDoesNotIncludeCurrentlySelectedAuthMethod(state, options))
         selectFirstAuthMethodAsCurrentAuthMethod(state, options.authMethods)
@@ -65,5 +65,5 @@ function setWhichButtonsShouldBeDisplayed(state, buttonsToDisplay){
     })
 }
 
-export { manage }
+export { manageInputsDisplay }
 
