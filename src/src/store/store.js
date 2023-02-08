@@ -53,14 +53,14 @@ export const store = new Vuex.Store({
     },
 
     getters: {
-        theme:              state => { return state.theme },
-        selectedNavButton:  state => { return state.selectedNavButton },
-        formInputs:         state => { return state.formInputs },
-        buttons:            state => { return state.buttons },
-        currentAuthMethod:  state => { return state.currentAuthMethod },
-        authMethods:        state => { return state.authMethods },
-        icons:              state => { return state.assets.icons },
-
+        theme:                  state => { return state.theme },
+        selectedNavButton:      state => { return state.selectedNavButton },
+        formInputs:             state => { return state.formInputs },
+        buttons:                state => { return state.buttons },
+        currentAuthMethod:      state => { return state.currentAuthMethod },
+        authMethods:            state => { return state.authMethods },
+        icons:                  state => { return state.assets.icons },
+        currentlyFocusedInput:  state => { return state.currentlyFocusedInput },
     },
 
     mutations: {
