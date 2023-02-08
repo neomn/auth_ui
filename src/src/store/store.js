@@ -67,6 +67,7 @@ export const store = new Vuex.Store({
         changeTheme: (state, payload) => { state.theme = payload },
         changeCurrentAuthMethod: (state, payload) => { state.currentAuthMethod = payload },
         changeSelectedNavButton: (state, payload) => { state.selectedNavButton = payload },
+        updateCurrentlyFocusedInput: (state, input) => { state.currentlyFocusedInput = input },
         updateInputComponent: (state, route) => {
             if (route === 'login')      { manageInputsDisplay (state, loginOptions) }
             if (route === 'register')   { manageInputsDisplay (state, registerOptions) }
