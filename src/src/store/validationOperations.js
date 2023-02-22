@@ -42,4 +42,8 @@ function validateInput(inputId, value){
 
 }
 
+function allInputsAreValid(){
+    return false
+}
+
 export {validationRules, }
