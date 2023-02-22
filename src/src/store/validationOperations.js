@@ -42,7 +42,7 @@ function validateInput(inputId, value){
 
 }
 
-function allInputsAreValid(){
+function allInputsAreValid( currentAuthMethod ){
     return false
 }
 
