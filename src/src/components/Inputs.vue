@@ -48,6 +48,10 @@ export default{
       get(inputId){return this.$store.getters.formInputs[inputId].valid},
       set(inputId, value){this.$store.dispatch('updateFormInputValidateAndDirtyProperties',{ inputId: inputId, valid: value})},
     },
+    allInputsAreValid: {
+      get: () => { return this.$store.getters.allInputsAreValid },
+      set: (validationStatus) => { this.$store.dispatch('updateAllInputsAreValidProperty', validationStatus) },
+    },
   },
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
