@@ -3,6 +3,7 @@ import { loginOptions } from "./loginOptions.js";
 import { registerOptions } from "./registerOptions.js";
 import { recoverOptions } from "./recoverOptions.js";
 import { manageInputsDisplay } from "./InputsDisplayManager.js";
+import validationStatus from "../components/ValidationStatus.vue";
 
 export const store = new Vuex.Store({
     strict: true,
@@ -69,6 +70,7 @@ export const store = new Vuex.Store({
         changeCurrentAuthMethod: (state, payload) => { state.currentAuthMethod = payload },
         changeSelectedNavButton: (state, payload) => { state.selectedNavButton = payload },
         updateCurrentlyFocusedInput: (state, input) => { state.currentlyFocusedInput = input },
+        updateAllInputsAreValidProperty: (state, validationStatus) => { state.allInputsAreValid = validationStatus },
         updateInputComponent: (state, route) => {
             if (route === 'login')      { manageInputsDisplay (state, loginOptions) }
             if (route === 'register')   { manageInputsDisplay (state, registerOptions) }
@@ -89,7 +91,8 @@ export const store = new Vuex.Store({
         updateInputComponent: (context, route) => { context.commit('updateInputComponent', route) },
         updateFormInputValue: (context, payload) => { context.commit('updateFormInputValue', payload) },
         updateFormInputValidateAndDirtyProperties: (context, payload) => {context.commit('updateFormInputValidateAndDirtyProperties',payload)},
-        updateCurrentlyFocusedInput: (context, input) => {context.commit('updateCurrentlyFocusedInput',input)}
+        updateCurrentlyFocusedInput: (context, input) => {context.commit('updateCurrentlyFocusedInput',input)},
+        updateAllInputsAreValidProperty: (context, validationStatus) => { context.commit('updateAllInputsAreValidProperty',validationStatus)},
     },
 
     modules: {}
