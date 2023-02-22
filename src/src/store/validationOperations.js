@@ -38,4 +38,8 @@ const validationRules = {
     },
 }
 
+function validateInput(inputId, value){
+
+}
+
 export {validationRules, }
