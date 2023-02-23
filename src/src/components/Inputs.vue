@@ -79,6 +79,7 @@ export default{
       this.touchVisibleInputs()
     },
     inputValueHasChanged(inputId){
+      this.touchFocusedInput(inputId)
       this.v$.$validate()
       console.log(this.v$)
     },

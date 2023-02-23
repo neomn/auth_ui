@@ -12,6 +12,7 @@ export const store = new Vuex.Store({
         selectedNavButton: 'login',
         currentAuthMethod: 'sms',
         currentlyFocusedInput: '',
+        visibleInputs: [],
         allInputsAreValid: false,
         formInputs: {
             phone_number:       {inputId: 'phone_number', placeHolder: 'Phone Number', display: true, type: 'number', max_length: '12', value: '', dirty:false, valid:false, validationRules:{} },
