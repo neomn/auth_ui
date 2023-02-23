@@ -1,6 +1,12 @@
 <template>
-  <div class="flex justify-center items-center w-24 h-8 rounded border" :class="(allInputsAreValid) ? 'border-lime-300 shadow shadow-lime-400':'border-gray-600' ">
-    {{ text }}
+  <div class="relative">
+    <div class="absolute w-full h-full border rounded"
+         :class="(allInputsAreValid) ? 'animate-ping border-lime-400 shadow shadow-lime-400':'border-gray-600' ">
+    </div>
+    <div class="flex justify-center items-center w-24 h-8 border rounded"
+         :class="(allInputsAreValid) ? 'border-lime-400 shadow shadow-lime-400':'border-gray-600' " >
+      {{ text }}
+    </div>
   </div>
 </template>
 
