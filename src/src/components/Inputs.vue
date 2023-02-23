@@ -63,6 +63,12 @@ export default{
     this.$watch( ()=>this.$store.state.currentAuthMethod, (to, from)=>{
       console.log('auth method has changed' + to)
     })
+
+    this.$watch( ()=>this.$store.state.currentlyFocusedInput, (to, from)=>{
+      if (to){
+        console.log('currently focused input ' + to)
+      }
+    })
   },
 
 
