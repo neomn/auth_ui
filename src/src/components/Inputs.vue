@@ -55,17 +55,21 @@ export default{
   },
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
+
     this.$watch( ()=> this.$route.path,(to, from)=> {
       console.log('route has changed from ' +from+' to '+to )
     })
+
     this.$watch( ()=>this.$store.state.currentAuthMethod, (to, from)=>{
       console.log('auth method has changed' + to)
     })
   },
 
+
   methods: {
     login(){
       this.touchVisibleInputs()
+      // console.log(validationRules)
     },
     register(){
       this.touchVisibleInputs()
@@ -74,7 +78,9 @@ export default{
       this.touchVisibleInputs()
     },
     inputValueHasChanged(inputId){
-      console.log('input value has changed >' + inputId)
+
+      this.v$.validate()
+      console.log(this.v$)
     },
     touchVisibleInputs(){
       this.v$.$reset()
@@ -84,6 +90,12 @@ export default{
       })
       console.log(this.v$.$errors)
     },
+    touchFocusedInput(inputId){
+      this.v$[inputId].$touch()
+    },
+    untouchFocusedInput(inputId){
+      this.v$[inputId].$reset()
+    },
     makeAllVisibleInputsDirty(){
     },
     updateValueOfCurrentlyFocusedInput(input){
@@ -91,11 +103,56 @@ export default{
     },
   },
 
+
   validations(){
-    return {
-      validationRules
-    }
+
+    return validationRules
+
+    // return {
+    //   phone_number: {
+    //     $autoDirty:true,
+    //     required,
+    //     numeric,
+    //     minLength: minLength(11),
+    //     maxLength: maxLength(11),
+    //   },
+    //   email: {
+    //     $autoDirty:true,
+    //     required,
+    //     email,
+    //     maxLength: maxLength(64),
+    //   },
+    //   first_name: {
+    //     $autoDirty:true,
+    //     required,
+    //     alpha,
+    //     minLength: minLength(32),
+    //     maxLength: maxLength(32),
+    //   },
+    //   last_name: {
+    //     $autoDirty:true,
+    //     required,
+    //     alpha,
+    //     minLength: minLength(32),
+    //     maxLength: maxLength(32),
+    //   },
+    //   password: {
+    //     $autoDirty:true,
+    //     required,
+    //     minLength: minLength(8),
+    //     maxLength: maxLength(32),
+    //   },
+    //   one_time_token: {
+    //     $autoDirty:true,
+    //     required,
+    //     numeric,
+    //     minLength: minLength(6),
+    //     maxLength: maxLength(6),
+    //   },
+    // }
+
   },
+
 }
 
 </script>
