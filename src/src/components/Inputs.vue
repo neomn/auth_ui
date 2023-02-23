@@ -92,14 +92,6 @@ export default{
     inputFocusedOut(inputId){
       console.log('inputs focused out '+ inputId)
     },
-    touchVisibleInputs(){
-      this.v$.$reset()
-      Object.values(this.formInputs).forEach((input) => {
-        if (input.display)
-          this.v$[input.inputId].$touch()
-      })
-      console.log(this.v$.$errors)
-    },
     updateCurrentlyFocusedInput(input){
       this.$store.dispatch("updateCurrentlyFocusedInput",input)
     },
@@ -111,7 +103,17 @@ export default{
     },
     makeAllVisibleInputsDirty(){
     },
+    updateVisibleInputs(){
 
+    },
+    touchVisibleInputs(){
+      this.v$.$reset()
+      Object.values(this.formInputs).forEach((input) => {
+        if (input.display)
+          this.v$[input.inputId].$touch()
+      })
+      console.log(this.v$.$errors)
+    },
   },
 
 
