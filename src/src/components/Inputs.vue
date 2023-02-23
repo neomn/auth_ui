@@ -58,6 +58,9 @@ export default{
     this.$watch( ()=> this.$route.path,(to, from)=> {
       console.log('route has changed from ' +from+' to '+to )
     })
+    this.$watch( ()=>this.$store.state.currentAuthMethod, (to, from)=>{
+      console.log('auth method has changed' + to)
+    })
   },
 
   methods: {
