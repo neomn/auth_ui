@@ -62,26 +62,16 @@ export default{
 
     login(){
       this.touchVisibleInputs()
-
     },
-
-
     register(){
       this.touchVisibleInputs()
     },
-
-
     recover(){
       this.touchVisibleInputs()
     },
-
-
-
     inputValueHasChanged(inputId){
-      // this.updateValueOfCurrentlyFocusedInput(inputId)
-      // console.log('input value has changed >' + inputId)
+      console.log('input value has changed >' + inputId)
     },
-
     touchVisibleInputs(){
       this.v$.$reset()
       Object.values(this.formInputs).forEach((input) => {
@@ -90,10 +80,7 @@ export default{
       })
       console.log(this.v$.$errors)
     },
-
-
     makeAllVisibleInputsDirty(){
-
     },
     updateValueOfCurrentlyFocusedInput(input){
       this.$store.dispatch("updateCurrentlyFocusedInput",input)
