@@ -24,7 +24,6 @@
 import FormInput from "./FormInput.vue";
 import Button from "./Button.vue";
 import {validationRules} from "../store/validationOperations.js";
-
 import useVuelidate from '@vuelidate/core'
 import { required, minLength, maxLength, alpha, numeric, email, } from "@vuelidate/validators";
 
@@ -56,10 +55,12 @@ export default{
   },
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
+    this.$watch( ()=> this.$route.path,(to, from)=> {
+      console.log('route has changed from ' +from+' to '+to )
+    })
   },
 
   methods: {
-
     login(){
       this.touchVisibleInputs()
     },
@@ -86,6 +87,7 @@ export default{
       this.$store.dispatch("updateCurrentlyFocusedInput",input)
     },
   },
+
   validations(){
     return {
       validationRules
