@@ -79,13 +79,14 @@ export default{
       this.touchVisibleInputs()
     },
     inputValueHasChanged(inputId){
-
-      this.v$.validate()
+      this.v$.$validate()
       console.log(this.v$)
     },
     inputFocused(inputId){
       this.updateCurrentlyFocusedInput(inputId)
-      console.log('inputs focused '+ inputId)
+      // this.touchFocusedInput(inputId)
+      this.v$[inputId].$validate()
+      console.log(this.v$[inputId].$errors)
     },
     inputFocusedOut(inputId){
       console.log('inputs focused out '+ inputId)
@@ -98,6 +99,9 @@ export default{
       })
       console.log(this.v$.$errors)
     },
+    updateCurrentlyFocusedInput(input){
+      this.$store.dispatch("updateCurrentlyFocusedInput",input)
+    },
     touchFocusedInput(inputId){
       this.v$[inputId].$touch()
     },
@@ -106,9 +110,7 @@ export default{
     },
     makeAllVisibleInputsDirty(){
     },
-    updateCurrentlyFocusedInput(input){
-      this.$store.dispatch("updateCurrentlyFocusedInput",input)
-    },
+
   },
 
 
