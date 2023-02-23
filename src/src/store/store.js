@@ -65,6 +65,7 @@ export const store = new Vuex.Store({
         icons:                  state => { return state.assets.icons },
         currentlyFocusedInput:  state => { return state.currentlyFocusedInput },
         allInputsAreValid:  state => { return state.allInputsAreValid },
+        visibleInputs: state => { return state.visibleInputs },
     },
 
     mutations: {
@@ -84,6 +85,7 @@ export const store = new Vuex.Store({
         updateFormInputValidateAndDirtyProperties: () => {
 
         },
+        updateVisibleInputs: (state, visibleInputs) => {state.visibleInputs = visibleInputs},
     },
 
     actions: {
@@ -95,6 +97,7 @@ export const store = new Vuex.Store({
         updateFormInputValidateAndDirtyProperties: (context, payload) => {context.commit('updateFormInputValidateAndDirtyProperties',payload)},
         updateCurrentlyFocusedInput: (context, input) => {context.commit('updateCurrentlyFocusedInput',input)},
         updateAllInputsAreValidProperty: (context, validationStatus) => { context.commit('updateAllInputsAreValidProperty',validationStatus)},
+        updateVisibleInputs: (context, visibleInputs) => { context.commit('updateVisibleInputs', visibleInputs) },
     },
 
     modules: {}
