@@ -52,6 +52,11 @@ export default{
       get: () => { return this.$store.getters.allInputsAreValid },
       set: (validationStatus) => { this.$store.dispatch('updateAllInputsAreValidProperty', validationStatus) },
     },
+    visibleFormInputs(){
+      const result = Object.values(this.formInputs).map(formInput => { return formInput.display? formInput.inputId:null })
+      const filteredResult = result.filter(item => item !== null)
+      return filteredResult
+    },
   },
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
@@ -64,6 +69,7 @@ export default{
       console.log('auth method has changed' + to)
     })
 
+    console.log(this.visibleFormInputs)
   },
 
 
