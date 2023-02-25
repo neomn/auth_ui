@@ -68,12 +68,8 @@ export default{
 
   methods: {
     login(){
-
-      // do validation operations for login
       validationOperations('login')
-
       // send login request
-
     },
     register(){
       this.touchVisibleInputs()
