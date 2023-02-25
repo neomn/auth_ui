@@ -71,7 +71,12 @@ export default{
 
   methods: {
     login(){
-      this.touchVisibleInputs()
+
+      // do validation operations for login
+
+      // send login request
+
+
       // console.log(validationRules)
       // console.log(this.visibleFormInputs)
     },
@@ -114,7 +119,9 @@ export default{
     },
     makeAllVisibleInputsDirty(){
     },
+    validationOperations(actoin, authMethod){
 
+    },
   },
 
   validations(){ return validationRules },
