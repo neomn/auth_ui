@@ -52,10 +52,6 @@ export default{
       get: () => { return this.$store.getters.allInputsAreValid },
       set: (validationStatus) => { this.$store.dispatch('updateAllInputsAreValidProperty', validationStatus) },
     },
-    visibleFormInputs(){
-      const result = Object.values(this.formInputs).map(formInput => { return formInput.display? formInput.inputId:null })
-      return result.filter(item => item !== null)
-    },
   },
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
