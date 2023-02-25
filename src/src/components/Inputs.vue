@@ -74,9 +74,6 @@ export default{
 
       // send login request
 
-
-      // console.log(validationRules)
-      // console.log(this.visibleFormInputs)
     },
     register(){
       this.touchVisibleInputs()
