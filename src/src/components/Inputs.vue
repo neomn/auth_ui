@@ -53,8 +53,7 @@ export default{
     },
     visibleFormInputs(){
       const result = Object.values(this.formInputs).map(formInput => { return formInput.display? formInput.inputId:null })
-      const filteredResult = result.filter(item => item !== null)
-      return filteredResult
+      return result.filter(item => item !== null)
     },
   },
   mounted() {
