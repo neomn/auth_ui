@@ -23,9 +23,8 @@
 <script>
 import FormInput from "./FormInput.vue";
 import Button from "./Button.vue";
-import {validationRules} from "../store/validationOperations.js";
+import {validationRules} from "../store/validationRules.js";
 import useVuelidate from '@vuelidate/core'
-import { required, minLength, maxLength, alpha, numeric, email, } from "@vuelidate/validators";
 
 export default{
   data(){
