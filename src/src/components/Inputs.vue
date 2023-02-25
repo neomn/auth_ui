@@ -24,6 +24,7 @@
 import FormInput from "./FormInput.vue";
 import Button from "./Button.vue";
 import {validationRules} from "../store/validationRules.js";
+import {validationOperations} from "../store/validationOperations.js";
 import useVuelidate from '@vuelidate/core'
 
 export default{
@@ -73,6 +74,7 @@ export default{
     login(){
 
       // do validation operations for login
+      validationOperations('login')
 
       // send login request
 
@@ -118,9 +120,6 @@ export default{
       this.v$[inputId].$reset()
     },
     makeAllVisibleInputsDirty(){
-    },
-    validationOperations(actoin, authMethod){
-
     },
   },
 
