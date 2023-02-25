@@ -11,8 +11,8 @@
     </div>
     <div v-auto-animate id="submitButton" class=" basis-2/6 flex justify-around items-center w-full">
       <Button id="login" @click="login" :text="buttons.login.placeHolder" v-if="buttons.login.display"/>
-      <Button id="register" :text="buttons.register.placeHolder" v-if="buttons.register.display"/>
-      <Button id="recover" :text="buttons.recover.placeHolder" v-if="buttons.recover.display"/>
+      <Button id="register" @click="register" :text="buttons.register.placeHolder" v-if="buttons.register.display"/>
+      <Button id="recover" @click="recover" :text="buttons.recover.placeHolder" v-if="buttons.recover.display"/>
       <Button id="check" :text="buttons.check.placeholder" v-if="buttons.check.display"/>
     </div>
   </div>
@@ -62,14 +62,12 @@ export default{
     this.$store.dispatch('updateInputComponent', this.$route.name)
 
     this.$watch( ()=> this.$route.path,(to, from)=> {
-      console.log('route has changed from ' +from+' to '+to )
+      // console.log('route has changed from ' +from+' to '+to )
     })
 
     this.$watch( ()=>this.$store.state.currentAuthMethod, (to, from)=>{
-      console.log('auth method has changed' + to)
+      // console.log('auth method has changed' + to)
     })
-
-    console.log(this.visibleFormInputs)
   },
 
 
@@ -77,25 +75,27 @@ export default{
     login(){
       this.touchVisibleInputs()
       // console.log(validationRules)
+      // console.log(this.visibleFormInputs)
     },
     register(){
       this.touchVisibleInputs()
+      // console.log(this.visibleFormInputs)
     },
     recover(){
       this.touchVisibleInputs()
     },
     inputValueHasChanged(inputId){
-      this.v$.$validate()
-      console.log(this.v$)
+      // this.v$.$validate()
+      // console.log(this.v$)
     },
     inputFocused(inputId){
-      this.updateCurrentlyFocusedInput(inputId)
+      // this.updateCurrentlyFocusedInput(inputId)
       // this.touchFocusedInput(inputId)
-      this.v$[inputId].$validate()
-      console.log(this.v$[inputId].$errors)
+      // this.v$[inputId].$validate()
+      // console.log(this.v$[inputId].$errors)
     },
     inputFocusedOut(inputId){
-      console.log('inputs focused out '+ inputId)
+      // console.log('inputs focused out '+ inputId)
     },
     touchVisibleInputs(){
       this.v$.$reset()
@@ -103,7 +103,7 @@ export default{
         if (input.display)
           this.v$[input.inputId].$touch()
       })
-      console.log(this.v$.$errors)
+      // console.log(this.v$.$errors)
     },
     updateCurrentlyFocusedInput(input){
       this.$store.dispatch("updateCurrentlyFocusedInput",input)
