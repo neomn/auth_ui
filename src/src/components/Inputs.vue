@@ -10,7 +10,7 @@
       <FormInput inputId="one_time_token" @inputFocused="inputFocused('one_time_token')" @inputFocusedOut="inputFocusedOut('one_time_token')" @inputValueHasChanged="inputValueHasChanged('one_time_token')" :icon="icons.formInputs.one_time_token" :placeholder="formInputs.one_time_token.placeHolder" v-if="formInputs.one_time_token.display" class=""/>
     </div>
     <div v-auto-animate id="submitButton" class=" basis-2/6 flex justify-around items-center w-full">
-      <Button id="login" @click="login" :text="buttons.login.placeHolder" v-if="buttons.login.display"/>
+      <Button id="login" @click="loginOperations" :text="buttons.login.placeHolder" v-if="buttons.login.display"/>
       <Button id="register" @click="register" :text="buttons.register.placeHolder" v-if="buttons.register.display"/>
       <Button id="recover" @click="recover" :text="buttons.recover.placeHolder" v-if="buttons.recover.display"/>
       <Button id="check" :text="buttons.check.placeholder" v-if="buttons.check.display"/>
@@ -67,8 +67,10 @@ export default{
 
 
   methods: {
+    loginOperations(){
+
+    },
     login(){
-      validationOperations('login')
       // send login request
     },
     register(){
@@ -110,6 +112,8 @@ export default{
     },
     makeAllVisibleInputsDirty(){
     },
+
+
   },
 
   validations(){ return validationRules },
