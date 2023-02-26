@@ -69,7 +69,6 @@ export const store = new Vuex.Store({
     },
 
     mutations: {
-        updateV$Object: (state, v$) => {state.v$ = v$},
         changeTheme: (state, payload) => { state.theme = payload },
         changeCurrentAuthMethod: (state, payload) => { state.currentAuthMethod = payload },
         changeSelectedNavButton: (state, payload) => { state.selectedNavButton = payload },
