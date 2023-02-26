@@ -1,10 +1,15 @@
-
 import {store} from "./store.js";
 
 function validationOperations (v$, action){
-    const currentAuthMethod = store.getters.currentAuthMethod
+    checkIfNoFormInputIsVisible()
 }
 
+function checkIfNoFormInputIsVisible() {
+    console.log(visibleFormInputs())
+    // if (visibleFormInputs().length <= 0)
+    //     console.log('invisible')
+    // store.commit('updateAllInputsAreValidProperty', true)
+}
 
 function visibleFormInputs(){
     const result = Object.values(store.getters.formInputs).map(formInput => { return formInput.display? formInput.inputId:null })

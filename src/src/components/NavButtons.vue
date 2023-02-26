@@ -24,10 +24,10 @@ export default {
   },
   methods: {
     async onClickNavButtons(clickedButton){
+      await this.$store.dispatch('changeSelectedNavButton', clickedButton)
+      await this.$store.dispatch('updateInputComponent', clickedButton)
+      // await this.$root.$emit('routeHasChanged', clickedButton)
       await this.$router.push(clickedButton)
-      this.$root.$emit('routeHasChanged', clickedButton)
-      this.$store.dispatch('changeSelectedNavButton', clickedButton)
-      this.$store.dispatch('updateInputComponent', clickedButton)
     },
   }
 }
