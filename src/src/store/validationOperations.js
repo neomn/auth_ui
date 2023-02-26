@@ -5,10 +5,12 @@ function validationOperations (v$, action){
 }
 
 function checkIfNoFormInputIsVisible() {
-    console.log(visibleFormInputs())
-    // if (visibleFormInputs().length <= 0)
-    //     console.log('invisible')
-    // store.commit('updateAllInputsAreValidProperty', true)
+    const result = visibleFormInputs().length <= 0
+    disableOrEnableActionButton(result)
+}
+
+function disableOrEnableActionButton(value){
+    store.commit('updateAllInputsAreValidProperty', value)
 }
 
 function visibleFormInputs(){
