@@ -68,7 +68,7 @@ export default{
 
   methods: {
     loginOperations(){
-      validationOperations('login')
+      validationOperations(this.v$, 'login')
     },
     registerOperations(){
       validationOperations('register')
@@ -108,9 +108,11 @@ export default{
     untouchFocusedInput(inputId){
       this.v$[inputId].$reset()
     },
+    getVuelidateObject(){
+      this.v$.validate()
+      return this.v$
+    },
   },
-
-  validations(){ return validationRules },
 
 }
 
