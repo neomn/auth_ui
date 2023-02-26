@@ -3,7 +3,6 @@ import {store} from "./store.js";
 
 function validationOperations (v$, action){
     const currentAuthMethod = store.getters.currentAuthMethod
-    console.log(v$)
 }
 
 
