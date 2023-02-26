@@ -65,6 +65,7 @@ export const store = new Vuex.Store({
         icons:                  state => { return state.assets.icons },
         currentlyFocusedInput:  state => { return state.currentlyFocusedInput },
         allInputsAreValid:      state => { return state.allInputsAreValid },
+        v$:                     state => { return state.v$ },
     },
 
     mutations: {
