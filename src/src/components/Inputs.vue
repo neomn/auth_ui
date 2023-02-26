@@ -71,7 +71,10 @@ export default{
       validationOperations('login')
     },
     registerOperations(){
-      validationOperations('login')
+      validationOperations('register')
+    },
+    recoverOperations(){
+      validationOperations('recover')
     },
     login(){
       // send login request
