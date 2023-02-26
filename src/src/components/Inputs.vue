@@ -11,8 +11,8 @@
     </div>
     <div v-auto-animate id="submitButton" class=" basis-2/6 flex justify-around items-center w-full">
       <Button id="login" @click="loginOperations" :text="buttons.login.placeHolder" v-if="buttons.login.display"/>
-      <Button id="register" @click="register" :text="buttons.register.placeHolder" v-if="buttons.register.display"/>
-      <Button id="recover" @click="recover" :text="buttons.recover.placeHolder" v-if="buttons.recover.display"/>
+      <Button id="register" @click="registerOperations" :text="buttons.register.placeHolder" v-if="buttons.register.display"/>
+      <Button id="recover" @click="recoverOperations" :text="buttons.recover.placeHolder" v-if="buttons.recover.display"/>
       <Button id="check" :text="buttons.check.placeholder" v-if="buttons.check.display"/>
     </div>
   </div>
@@ -68,7 +68,10 @@ export default{
 
   methods: {
     loginOperations(){
-
+      validationOperations('login')
+    },
+    registerOperations(){
+      validationOperations('login')
     },
     login(){
       // send login request
