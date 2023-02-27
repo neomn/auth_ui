@@ -31,8 +31,4 @@ function getInvalidFormInputs(v$){
 }
 
 
-
-function makeAllVisibleInputsDirty(){
-}
-
 export { validationOperations }
