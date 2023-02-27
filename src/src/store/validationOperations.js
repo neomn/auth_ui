@@ -1,10 +1,11 @@
 import {store} from "./store.js";
 
 function validationOperations (v$, action){
-    checkIfNoFormInputIsVisible()
+    noFormInputIsVisible()
+
 }
 
-function checkIfNoFormInputIsVisible() {
+function noFormInputIsVisible() {
     const result = visibleFormInputs().length <= 0
     disableOrEnableActionButton(result)
 }
