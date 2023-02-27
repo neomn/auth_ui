@@ -25,9 +25,10 @@ function visibleFormInputs(){
 }
 
 
-function getInvalidFormInputs(v$){
-    // visibleFormInputs().forEach(input => { v$[input].$touch() })
-    v$.$validate()
+async function getInvalidFormInputs(v$){
+    visibleFormInputs().forEach(input => { v$[input].$touch() })
+    await visibleFormInputs().forEach(input => { v$[input].$validate() })
+
     console.log(v$)
 }
 
