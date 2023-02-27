@@ -82,21 +82,16 @@ export default{
       // send login request
     },
     register(){
-      this.touchVisibleInputs()
-      // console.log(this.visibleFormInputs)
+
     },
     recover(){
-      this.touchVisibleInputs()
+
     },
     inputValueHasChanged(inputId){
-      // this.v$.$validate()
-      // console.log(this.v$)
+
     },
     inputFocused(inputId){
-      // this.updateCurrentlyFocusedInput(inputId)
-      // this.touchFocusedInput(inputId)
-      // this.v$[inputId].$validate()
-      // console.log(this.v$[inputId].$errors)
+
     },
     inputFocusedOut(inputId){
       // console.log('inputs focused out '+ inputId)
