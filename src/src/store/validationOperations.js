@@ -1,16 +1,17 @@
 import {store} from "./store.js";
 
 function validationOperations (v$, action){
-    noFormInputIsVisible()
-
+    if (noFormInputIsVisible())
+        console.log('test')
 }
 
 function noFormInputIsVisible() {
     const result = visibleFormInputs().length <= 0
-    disableOrEnableActionButton(result)
+    setActionButtonVisibility(result)
+    return result
 }
 
-function disableOrEnableActionButton(value){
+function setActionButtonVisibility(value){
     store.commit('updateAllInputsAreValidProperty', value)
 }
 
