@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <div class="absolute w-full h-full border rounded"
+    <div class="absolute w-full h-full border rounded animate-ping"
          :class="(allInputsAreValid) ? ' border-lime-400 shadow shadow-lime-400':'border-gray-600' ">
     </div>
     <div class="flex justify-center items-center w-24 h-8 border rounded"
