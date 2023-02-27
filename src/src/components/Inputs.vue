@@ -70,6 +70,7 @@ export default{
 
   methods: {
     loginOperations(){
+      this.v$.phone_number.$touch()
       validationOperations(this.v$, 'login')
     },
     registerOperations(){
@@ -116,6 +117,9 @@ export default{
     },
   },
 
+  validations() {
+    return validationRules
+  },
 }
 
 </script>
