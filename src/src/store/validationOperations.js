@@ -24,27 +24,12 @@ function visibleFormInputs(){
     return result.filter(item => item !== null)
 }
 
-
-async function getInvalidFormInputs(v$){
+function getInvalidFormInputs(v$){
     visibleFormInputs().forEach(input => { v$[input].$touch() })
-    await visibleFormInputs().forEach(input => { v$[input].$validate() })
-
+    visibleFormInputs().forEach(input => { v$[input].$validate() })
     console.log(v$)
 }
 
-
-
-
-
-
-function touchVisibleInputs(){
-    this.v$.$reset()
-    Object.values(this.formInputs).forEach((input) => {
-        if (input.display)
-            this.v$[input.inputId].$touch()
-    })
-    // console.log(this.v$.$errors)
-}
 
 
 function makeAllVisibleInputsDirty(){
