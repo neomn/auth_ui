@@ -18,23 +18,23 @@ export default {
   methods: {
     inputValueHasChanged(inputId){
       this.$emit('inputValueHasChanged')
-      this.changeInputRingColor(inputId)
+      // this.changeInputRingColor(inputId)
     },
 
 
-    changeInputRingColor(inputId){
-      const validColor = 'border-lime-400'
-      const invalidColor = 'border-red-600'
-
-      if ( this.inputValidProperty ){
-        this.$refs.input.classList.remove(invalidColor)
-        this.$refs.input.classList.add(validColor)
-        return
-      }
-
-      this.$refs.input.classList.remove(validColor)
-      this.$refs.input.classList.add(invalidColor)
-    },
+    // changeInputRingColor(inputId){
+    //   const validColor = 'border-lime-400'
+    //   const invalidColor = 'border-red-600'
+    //
+    //   if ( this.inputValidProperty ){
+    //     this.$refs.input.classList.remove(invalidColor)
+    //     this.$refs.input.classList.add(validColor)
+    //     return
+    //   }
+    //
+    //   this.$refs.input.classList.remove(validColor)
+    //   this.$refs.input.classList.add(invalidColor)
+    // },
 
 
     applyInputIsRequiredEffect(){

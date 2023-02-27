@@ -5,12 +5,10 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        ping: 'ping 1s cubic-bezier(0.5, 0.5, 1, 0.1) infinite',
+        ping: 'ping 1s cubic-bezier(.87,.86,.51,.89) infinite',
         // Customize the attributes here as desired:
-        animationDuration: '1s',
-        animationTimingFunction: 'linear',
-        animationDelay: '1s',
-        animationIterationCount: '3',
+        animationDelay: '3s',
+
       },
       keyframes: {
         'ping': {
