@@ -73,10 +73,10 @@ export default{
       validationOperations(this.v$, 'login')
     },
     registerOperations(){
-      validationOperations('register')
+      validationOperations(this.v$, 'register')
     },
     recoverOperations(){
-      validationOperations('recover')
+      validationOperations(this.v$,'recover')
     },
     login(){
       // send login request
