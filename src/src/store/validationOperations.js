@@ -1,14 +1,18 @@
 import {store} from "./store.js";
 
 function validationOperations (v$, action){
-    if (noFormInputIsVisible())
-        console.log('test')
+
+    if (noFormInputIsVisible()){
+        setActionButtonVisibility(true)
+        return
+    }
+
+    setActionButtonVisibility(false)
+
 }
 
 function noFormInputIsVisible() {
-    const result = visibleFormInputs().length <= 0
-    setActionButtonVisibility(result)
-    return result
+    return visibleFormInputs().length <= 0
 }
 
 function setActionButtonVisibility(value){
@@ -19,6 +23,8 @@ function visibleFormInputs(){
     const result = Object.values(store.getters.formInputs).map(formInput => { return formInput.display? formInput.inputId:null })
     return result.filter(item => item !== null)
 }
+
+
 
 
 
