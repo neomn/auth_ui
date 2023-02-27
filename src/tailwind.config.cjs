@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        ping: 'ping 1s cubic-bezier(0.9, 1, 0.6, 0.1) 3',
+        ping: 'ping 1s cubic-bezier(0.5, 0.5, 1, 0.1) infinite',
         // Customize the attributes here as desired:
         animationDuration: '1s',
         animationTimingFunction: 'linear',
