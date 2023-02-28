@@ -87,7 +87,7 @@ export default{
     sendRegisterRequest(){
 
     },
-    recover(){
+    sendRecoverRequest(){
 
     },
     inputValueHasChanged(inputId){
