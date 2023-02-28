@@ -70,7 +70,7 @@ export default{
 
   methods: {
     loginOperations(){
-      validationOperations(this.v$, 'login')
+      validationOperations.checkStatus(this.v$, 'login')
     },
     registerOperations(){
       validationOperations(this.v$, 'register')
