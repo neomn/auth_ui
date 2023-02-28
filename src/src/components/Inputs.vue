@@ -73,7 +73,7 @@ export default{
       validationOperations.checkStatus(this.v$, 'login')
     },
     registerOperations(){
-      validationOperations(this.v$, 'register')
+      validationOperations.checkStatus(this.v$, 'register')
     },
     recoverOperations(){
       validationOperations(this.v$,'recover')
