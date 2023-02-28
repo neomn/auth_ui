@@ -76,7 +76,7 @@ export default{
       validationOperations.checkStatus(this.v$, 'register')
     },
     recoverOperations(){
-      validationOperations(this.v$,'recover')
+      validationOperations.checkStatus(this.v$,'recover')
     },
     login(){
       // send login request
