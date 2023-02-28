@@ -22,9 +22,7 @@ export const validationOperations = {
     },
 
     visibleFormInputs() {
-        const result = Object.values(store.getters.formInputs).map(formInput => {
-            return formInput.display ? formInput.inputId : null
-        })
+        const result = Object.values(store.getters.formInputs).map(formInput => { return formInput.display ? formInput.inputId : null })
         return result.filter(item => item !== null)
     },
 
