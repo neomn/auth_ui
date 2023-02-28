@@ -14,7 +14,7 @@ export const validationOperations = {
     },
 
     noFormInputIsVisible() {
-        return visibleFormInputs().length <= 0
+        return this.visibleFormInputs().length <= 0
     },
 
     setActionButtonVisibility(value) {
