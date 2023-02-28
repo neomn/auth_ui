@@ -69,8 +69,11 @@ export default{
 
 
   methods: {
-    loginOperations(){
-      validationOperations.checkStatus(this.v$, 'login')
+    async loginOperations(){
+      // validationOperations.checkStatus(this.v$, 'login')
+      // this.v$.phone_number.$touch()
+      await validationOperations.getInvalidFormInputs(this.v$)
+      console.log(this.v$)
     },
     registerOperations(){
       validationOperations.checkStatus(this.v$, 'register')
@@ -78,7 +81,7 @@ export default{
     recoverOperations(){
       validationOperations.checkStatus(this.v$,'recover')
     },
-    login(){
+    sendLoginRequest(){
       // send login request
     },
     register(){

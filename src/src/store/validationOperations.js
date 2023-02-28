@@ -8,9 +8,9 @@ export const validationOperations = {
             return
         }
         this.setActionButtonVisibility(false)
-        if (action) {
-            this.getInvalidFormInputs(v$)
-        }
+        // if (action) {
+        //     this.getInvalidFormInputs(v$)
+        // }
     },
 
     noFormInputIsVisible() {
@@ -29,7 +29,7 @@ export const validationOperations = {
     getInvalidFormInputs(v$) {
         this.visibleFormInputs().forEach(input => { v$[input].$touch() })
         this.visibleFormInputs().forEach(input => { v$[input].$validate() })
-        console.log(v$)
+        // console.log(v$)
     },
 }
 
