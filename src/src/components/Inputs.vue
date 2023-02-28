@@ -84,7 +84,7 @@ export default{
     sendLoginRequest(){
       // send login request
     },
-    register(){
+    sendRegisterRequest(){
 
     },
     recover(){
