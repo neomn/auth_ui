@@ -25,13 +25,9 @@ function visibleFormInputs(){
 }
 
 function getInvalidFormInputs(v$){
-    // visibleFormInputs().forEach(input => { v$[input].$touch() })
-    // visibleFormInputs().forEach(input => { v$[input].$validate() })
-    v$.phone_number.$touch()
-    v$.$nextTick(() => {
-        console.log(v$)
-    });
-    // console.log(v$)
+    visibleFormInputs().forEach(input => { v$[input].$touch() })
+    visibleFormInputs().forEach(input => { v$[input].$validate() })
+    console.log(v$)
 }
 
 
