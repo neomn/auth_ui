@@ -1,7 +1,7 @@
 
 import {alpha, email, maxLength, minLength, numeric, required} from "@vuelidate/validators";
 
-const validationRules = {
+export const validationRules = {
     phone_number: {
         required,
         numeric,
@@ -37,6 +37,3 @@ const validationRules = {
         maxLength: maxLength(6),
     },
 }
-
-
-export {validationRules, }
