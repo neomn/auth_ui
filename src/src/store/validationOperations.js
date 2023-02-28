@@ -2,7 +2,7 @@ import {store} from "./store.js";
 
 export const validationOperations = {
 
-    validationOperations(v$, action) {
+    checkStatus(v$, action) {
         if (this.noFormInputIsVisible()) {
             this.setActionButtonVisibility(true)
             return
