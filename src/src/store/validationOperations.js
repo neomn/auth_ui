@@ -3,13 +3,13 @@ import {store} from "./store.js";
 export const validationOperations = {
 
     validationOperations(v$, action) {
-        if (noFormInputIsVisible()) {
-            setActionButtonVisibility(true)
+        if (this.noFormInputIsVisible()) {
+            this.setActionButtonVisibility(true)
             return
         }
-        setActionButtonVisibility(false)
+        this.setActionButtonVisibility(false)
         if (action) {
-            getInvalidFormInputs(v$)
+            this.getInvalidFormInputs(v$)
         }
     },
 
