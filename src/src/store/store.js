@@ -63,7 +63,8 @@ export const store = new Vuex.Store({
         authMethods:            state => { return state.authMethods },
         icons:                  state => { return state.assets.icons },
         currentlyFocusedInput:  state => { return state.currentlyFocusedInput },
-        allInputsAreValid:  state => { return state.allInputsAreValid },
+        allInputsAreValid:      state => { return state.allInputsAreValid },
+        // inputIsValid:           (state, inputId) => { return state.formInputs[inputId].valid }
     },
 
     mutations: {
