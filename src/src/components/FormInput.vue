@@ -5,9 +5,6 @@
                  ${ inputIsFocused && inputValue.toString().length>0 && !inputIsValid  ? 'border-red-500' : ''}
                  ${ inputIsFocused && inputValue.toString().length>0 && inputIsValid ? 'border-lime-500' : ''}
                  ${ inputIsValid ? 'border-lime-500' : ''}  `">
-
-  <!--        {{ inputIsFocused && !inputIsValid ? 'border-red-500':'' }}-->
-<!--        {{ inputIsFocused && inputIsValid  ? 'border-lime-400':'' }} ">-->
     <img :src="icon" class="w-4 h-4 mx-2">
     <input v-model="inputValue" @focus="inputFocused" @focusout="inputFocusedOut" @input="inputValueHasChanged(inputId, inputValue)" :type="type" :placeholder="placeholder" class="w-full px-2 bg-gray-600 focus:outline-none">
   </div>
