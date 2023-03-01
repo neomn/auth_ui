@@ -1,5 +1,7 @@
 <template>
-  <div ref="input" class="flex justify-start items-center w-11/12 h-8 m-1  border border-gray-900 rounded-lg text-gray-300 bg-gray-600 overflow-hidden" :class="(true) ? 'border-lime-400':'border-red-400'">
+  <div ref="input" class="flex justify-start items-center w-11/12 h-8 m-1  border rounded-lg
+        text-gray-300 bg-gray-600 overflow-hidden"
+        :class="(inputIsFocused)? 'border-gray-300':'border-gray-900'" >
     <img :src="icon" class="w-4 h-4 mx-2">
     <input v-model="inputValue" @focus="inputFocused" @focusout="inputFocusedOut" @input="inputValueHasChanged(inputId, inputValue)" :type="type" :placeholder="placeholder" class="w-full px-2 bg-gray-600 focus:outline-none">
   </div>
@@ -9,6 +11,11 @@
 export default {
   name: "FormInput",
   props: ['inputId','icon', 'type', 'placeholder'],
+  data(){
+    return {
+      inputIsFocused: false,
+    }
+  },
   computed: {
     // inputIsValid: ( inputId ) => {return this.$store.getters.inputIsValid[inputId]},
     inputValue: {
@@ -22,9 +29,11 @@ export default {
       // this.changeInputRingColor(inputId)
     },
     inputFocused(){
+      this.inputIsFocused = true
       this.$emit('inputFocused')
     },
     inputFocusedOut(){
+      this.inputIsFocused = false
       this.$emit('inputFocusedOut')
     },
 
@@ -46,6 +55,17 @@ export default {
 
 
     applyInputIsRequiredEffect(){
+      const effect = "  border-2 border-red-600 "
+    },
+    applyInputIsFocusedEffect(){
+      console.log('apply effect')
+      const effect = "  border-2 border-red-600 "
+    },
+    applyInputIsFocusedOutEffect(){
+      console.log('apply effect')
+      const effect = "  border-2 border-red-600 "
+    },
+    applyInputIsValidEffect(){
       console.log('apply effect')
       const effect = "  border-2 border-red-600 "
     },
