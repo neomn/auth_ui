@@ -22,8 +22,7 @@ export const validationOperations = {
     },
 
     getInvalidFormInputs(v$) {
-        this.visibleFormInputs().forEach(input => { v$[input].$touch() })
-        this.visibleFormInputs().forEach(input => { v$[input].$validate() })
+        console.log(this.visibleFormInputs())
     },
 }
 

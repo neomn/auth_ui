@@ -69,7 +69,7 @@ export default{
   methods: {
     async loginOperations(){
       await validationOperations.getInvalidFormInputs(this.v$)
-      console.log(this.v$)
+      // console.log(this.v$)
     },
     registerOperations(){
       validationOperations.updateActionButtonVisibility(this.v$, 'register')
