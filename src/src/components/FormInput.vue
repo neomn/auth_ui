@@ -36,39 +36,6 @@ export default {
       this.inputIsFocused = false
       this.$emit('inputFocusedOut')
     },
-
-
-
-    // changeInputRingColor(inputId){
-    //   const validColor = 'border-lime-400'
-    //   const invalidColor = 'border-red-600'
-    //
-    //   if ( this.inputValidProperty ){
-    //     this.$refs.input.classList.remove(invalidColor)
-    //     this.$refs.input.classList.add(validColor)
-    //     return
-    //   }
-    //
-    //   this.$refs.input.classList.remove(validColor)
-    //   this.$refs.input.classList.add(invalidColor)
-    // },
-
-
-    applyInputIsRequiredEffect(){
-      const effect = "  border-2 border-red-600 "
-    },
-    applyInputIsFocusedEffect(){
-      console.log('apply effect')
-      const effect = "  border-2 border-red-600 "
-    },
-    applyInputIsFocusedOutEffect(){
-      console.log('apply effect')
-      const effect = "  border-2 border-red-600 "
-    },
-    applyInputIsValidEffect(){
-      console.log('apply effect')
-      const effect = "  border-2 border-red-600 "
-    },
   }
 }
 </script>
