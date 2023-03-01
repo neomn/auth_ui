@@ -57,12 +57,10 @@ export default{
     this.$store.dispatch('updateInputComponent', this.$route.name)
 
     this.$watch( ()=> this.$route.path,(to, from)=> {
-      // console.log('route has changed from ' +from+' to '+to )
       validationOperations.updateActionButtonVisibility()
     })
 
     this.$watch( ()=>this.$store.state.currentAuthMethod, (to, from)=>{
-      // console.log('auth method has changed' + to)
       validationOperations.updateActionButtonVisibility()
     })
   },
@@ -70,8 +68,7 @@ export default{
 
   methods: {
     async loginOperations(){
-      // validationOperations.checkStatus(this.v$, 'login')
-      // this.v$.phone_number.$touch()
+
       await validationOperations.getInvalidFormInputs(this.v$)
       console.log(this.v$)
     },
@@ -82,7 +79,7 @@ export default{
       validationOperations.updateActionButtonVisibility(this.v$,'recover')
     },
     sendLoginRequest(){
-      // send login request
+
     },
     sendRegisterRequest(){
 
@@ -97,21 +94,12 @@ export default{
 
     },
     inputFocusedOut(inputId){
-      // console.log('inputs focused out '+ inputId)
+
     },
     updateCurrentlyFocusedInput(input){
       this.$store.dispatch("updateCurrentlyFocusedInput",input)
     },
-    touchFocusedInput(inputId){
-      this.v$[inputId].$touch()
-    },
-    untouchFocusedInput(inputId){
-      this.v$[inputId].$reset()
-    },
-    getVuelidateObject(){
-      this.v$.validate()
-      return this.v$
-    },
+
   },
 
   validations() {
