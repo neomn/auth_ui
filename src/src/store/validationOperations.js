@@ -2,15 +2,13 @@ import {store} from "./store.js";
 
 export const validationOperations = {
 
-    checkStatus(v$, action) {
+    updateActionButtonVisibility() {
         if (this.noFormInputIsVisible()) {
             this.setActionButtonVisibility(true)
             return
         }
+
         this.setActionButtonVisibility(false)
-        // if (action) {
-        //     this.getInvalidFormInputs(v$)
-        // }
     },
 
     noFormInputIsVisible() {
@@ -29,7 +27,6 @@ export const validationOperations = {
     getInvalidFormInputs(v$) {
         this.visibleFormInputs().forEach(input => { v$[input].$touch() })
         this.visibleFormInputs().forEach(input => { v$[input].$validate() })
-        // console.log(v$)
     },
 }
 

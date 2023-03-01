@@ -58,12 +58,12 @@ export default{
 
     this.$watch( ()=> this.$route.path,(to, from)=> {
       // console.log('route has changed from ' +from+' to '+to )
-      validationOperations.checkStatus()
+      validationOperations.updateActionButtonVisibility()
     })
 
     this.$watch( ()=>this.$store.state.currentAuthMethod, (to, from)=>{
       // console.log('auth method has changed' + to)
-      validationOperations.checkStatus()
+      validationOperations.updateActionButtonVisibility()
     })
   },
 
@@ -76,10 +76,10 @@ export default{
       console.log(this.v$)
     },
     registerOperations(){
-      validationOperations.checkStatus(this.v$, 'register')
+      validationOperations.updateActionButtonVisibility(this.v$, 'register')
     },
     recoverOperations(){
-      validationOperations.checkStatus(this.v$,'recover')
+      validationOperations.updateActionButtonVisibility(this.v$,'recover')
     },
     sendLoginRequest(){
       // send login request
