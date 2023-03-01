@@ -1,8 +1,7 @@
 import {store} from "./store.js";
 
-function sync () {
-
+function syncInputValidationProperties () {
 
 }
 
-export {sync, }
+export {syncInputValidationProperties, }

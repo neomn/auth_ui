@@ -25,7 +25,7 @@ import FormInput from "./FormInput.vue";
 import Button from "./Button.vue";
 import {validationRules} from "../store/validationRules.js";
 import {validationOperations} from "../store/validationOperations.js";
-import {sync} from "../store/updateFormInputsValidationRelatedProperties.js";
+import {syncInputValidationProperties} from "../store/updateFormInputsValidationRelatedProperties.js";
 import useVuelidate from '@vuelidate/core'
 
 export default{
@@ -69,8 +69,11 @@ export default{
 
   methods: {
     async loginOperations(){
-      await validationOperations.getInvalidFormInputs(this.v$)
+      // await validationOperations.getInvalidFormInputs(this.v$)
       // console.log(this.v$)
+      this.v$.phone_number.$touch()
+      this.v$.phone_number.$validate()
+      console.log(this.v$.phone_number)
     },
     registerOperations(){
       validationOperations.updateActionButtonVisibility(this.v$, 'register')
