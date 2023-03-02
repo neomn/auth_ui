@@ -6,8 +6,8 @@ module.exports = {
     extend: {
       animation: {
         ping: 'ping 1s cubic-bezier(.87,.86,.51,.89) infinite',
-        // Customize the attributes here as desired:
-        animationDelay: '3s',
+        pulse: 'pulse 0.3s cubic-bezier(.4, 0, .6, 1) 2',
+        animationDelay: '2s'
       },
       keyframes: {
         'ping': {
