@@ -4,7 +4,8 @@
         :class="`${ inputIsFocused && inputValue.toString().length<=0 ? 'border-gray-300' : ''}
                  ${ inputIsFocused && inputValue.toString().length>0 && !inputIsValid  ? 'border-red-500' : ''}
                  ${ inputIsFocused && inputValue.toString().length>0 && inputIsValid ? 'border-lime-500' : ''}
-                 ${ inputIsValid ? 'border-lime-500' : ''}  `">
+                 ${ inputIsValid ? 'border-lime-500' : ''}
+                 ${ pingInvalidInputs ? 'border-yellow-500' : ''}  `">
     <img :src="icon" class="w-4 h-4 mx-2">
     <input v-model="inputValue" @focus="inputFocused" @focusout="inputFocusedOut" @input="inputValueHasChanged(inputId, inputValue)" :type="type" :placeholder="placeholder" class="w-full px-2 bg-gray-600 focus:outline-none">
   </div>
@@ -20,11 +21,12 @@ export default {
     }
   },
   computed: {
-    inputIsValid() { return this.$store.getters.inputIsValid(this.inputId) },
     inputValue: {
       get(){return this.$store.getters.formInputs[this.inputId].value},
       set(value){this.$store.dispatch('updateFormInputValue',{ inputId: this.inputId, value: value})},
-    }
+    },
+    inputIsValid() { return this.$store.getters.inputIsValid(this.inputId) },
+    pingInvalidInputs() { return this.$store.getters.pingInvalidInputs }
   },
   methods: {
     inputValueHasChanged(inputId){

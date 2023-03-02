@@ -13,7 +13,7 @@ export const store = new Vuex.Store({
         currentAuthMethod: 'sms',
         currentlyFocusedInput: '',
         allInputsAreValid: false,
-        pingInvalidInputs: false,
+        applyPulseEffectForInvalidInputs: false,
         formInputs: {
             phone_number:       {inputId: 'phone_number',       placeHolder: 'Phone Number',            display: true,  type: 'number',     max_length: '12',   value: '', dirty:false, valid:false, passedValidationRules:{}, pendingValidationRules:{} },
             email:              {inputId: 'email',              placeHolder: 'Email',                   display: false, type: 'email',      max_length: '50',   value: '', dirty:false, valid:false, passedValidationRules:{}, pendingValidationRules:{} },
@@ -65,7 +65,7 @@ export const store = new Vuex.Store({
         icons:                  state => { return state.assets.icons },
         currentlyFocusedInput:  state => { return state.currentlyFocusedInput },
         allInputsAreValid:      state => { return state.allInputsAreValid },
-        pingInvalidInputs:      state => { return state.pingInvalidInputs },
+        pulseInvalidInputs:      state => { return state.applyPulseEffectForInvalidInputs },
         inputIsValid:           (state) => (inputId) => { return state.formInputs[inputId].valid }
     },
 
@@ -75,7 +75,7 @@ export const store = new Vuex.Store({
         changeSelectedNavButton: (state, payload) => { state.selectedNavButton = payload },
         updateCurrentlyFocusedInput: (state, input) => { state.currentlyFocusedInput = input },
         updateAllInputsAreValidProperty: (state, validationStatus) => { state.allInputsAreValid = validationStatus },
-        updatePingInvalidInputs: (state, value) => { state.pingInvalidInputs = value },
+        updatePulseInvalidInputs: (state, value) => { state.applyPulseEffectForInvalidInputs = value },
         updateInputComponent: (state, route) => {
             if (route === 'login')      { manageInputsDisplay (state, loginOptions) }
             if (route === 'register')   { manageInputsDisplay (state, registerOptions) }
@@ -98,7 +98,7 @@ export const store = new Vuex.Store({
         updateCurrentlyFocusedInput:                (context, input)            => {context.commit('updateCurrentlyFocusedInput',input)},
         updateAllInputsAreValidProperty:            (context, validationStatus) => { context.commit('updateAllInputsAreValidProperty',validationStatus)},
         updateFormInputValidateAndDirtyProperties:  (context, payload)          => {context.commit('updateFormInputValidateAndDirtyProperties',payload)},
-        updatePingInvalidInputs:  (context, value)          => { context.commit('updatePingInvalidInputs', value) },
+        updatePulseInvalidInputs:                   (context, value)            => { context.commit('updatePulseInvalidInputs', value) },
     },
 
     modules: {}
