@@ -7,7 +7,6 @@ module.exports = {
       animation: {
         ping: 'ping 1s cubic-bezier(.87,.86,.51,.89) infinite',
         pulse: 'pulse 0.3s cubic-bezier(.4, 0, .6, 1) 2',
-        animationDelay: '2s'
       },
       keyframes: {
         'ping': {
