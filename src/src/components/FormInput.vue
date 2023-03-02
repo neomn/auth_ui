@@ -1,13 +1,11 @@
 <template>
   <div class="relative flex justify-center items-center w-11/12 h-8 m-1">
-
-
-    <div  class="absolute w-11/12 h-8 rounded-lg border "
-          :class="`${ inputIsFocused && inputValue.toString().length<=0 ? 'border-gray-300' : ''}
-                   ${ inputIsFocused && inputValue.toString().length>0 && !inputIsValid  ? 'border-red-500' : ''}
-                   ${ inputIsFocused && inputValue.toString().length>0 && inputIsValid ? 'border-lime-500' : ''}
-                   ${ inputIsValid ? 'border-lime-500' : ''}
-                   ${ !inputIsValid && pulseInvalidInputs ? 'animate-pulse border-red-500' : ''}  `">
+    <div  class="absolute w-11/12 h-8 rounded-lg "
+          :class="`${ inputIsFocused && inputValue.toString().length<=0 ? 'border border-gray-300' : ''}
+                   ${ inputIsFocused && inputValue.toString().length>0 && !inputIsValid  ? 'border border-red-500' : ''}
+                   ${ inputIsFocused && inputValue.toString().length>0 && inputIsValid ? 'border border-lime-500' : ''}
+                   ${ inputIsValid ? 'border border-lime-500' : ''}
+                   ${ !inputIsValid && pulseInvalidInputs ? 'animate-pulse border border-red-500' : ''}  `">
     </div>
     <div class="flex justify-start items-center w-11/12 h-8 p-[1px] rounded-lg z-10 ">
       <div class=" flex justify-start items-center w-full h-full rounded-lg text-gray-300 bg-gray-600 overflow-hidden ">
@@ -17,8 +15,6 @@
                class="w-full px-2 bg-gray-600 focus:outline-none">
       </div>
     </div>
-
-
   </div>
 </template>
 
