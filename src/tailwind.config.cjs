@@ -8,7 +8,6 @@ module.exports = {
         ping: 'ping 1s cubic-bezier(.87,.86,.51,.89) infinite',
         // Customize the attributes here as desired:
         animationDelay: '3s',
-
       },
       keyframes: {
         'ping': {

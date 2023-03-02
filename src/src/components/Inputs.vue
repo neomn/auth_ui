@@ -53,6 +53,12 @@ export default{
       get: () => { return this.$store.getters.allInputsAreValid },
       set: (validationStatus) => { this.$store.dispatch('updateAllInputsAreValidProperty', validationStatus) },
     },
+    pulseInvalidInputs: {
+      get: () => { return this.$store.getters.pulseInvalidInputs },
+      set: (value) => { this.$store.dispatch('updatePulseInvalidInputs', value) },
+    },
+
+
   },
   mounted() {
     this.$store.dispatch('updateInputComponent', this.$route.name)
@@ -69,6 +75,7 @@ export default{
 
   methods: {
     async loginOperations(){
+      validationOperations.pulseInvalidInputs()
       // await validationOperations.getInvalidFormInputs(this.v$)
       // console.log(this.v$)
       this.v$.phone_number.$touch()
@@ -76,9 +83,11 @@ export default{
       console.log(this.v$.phone_number)
     },
     registerOperations(){
+      validationOperations.pulseInvalidInputs()
       validationOperations.updateActionButtonVisibility(this.v$, 'register')
     },
     recoverOperations(){
+      validationOperations.pulseInvalidInputs()
       validationOperations.updateActionButtonVisibility(this.v$,'recover')
     },
     sendLoginRequest(){

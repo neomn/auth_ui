@@ -24,6 +24,13 @@ export const validationOperations = {
     getInvalidFormInputs(v$) {
         console.log(this.visibleFormInputs())
     },
+
+    pulseInvalidInputs(){
+        store.commit('updatePulseInvalidInputs', true)
+        setTimeout(() => {
+            store.commit('updatePulseInvalidInputs', false)
+        }, 2000)
+    },
 }
 
 
