@@ -5,7 +5,7 @@
                    ${ inputIsFocused && inputValue.toString().length>0 && !inputIsValid  ? 'border border-red-500' : ''}
                    ${ inputIsFocused && inputValue.toString().length>0 && inputIsValid ? 'border border-lime-500' : ''}
                    ${ inputIsValid ? 'border border-lime-500' : ''}
-                   ${ !inputIsValid && pulseInvalidInputs ? 'animate-pulse border border-red-500' : ''}  `">
+                   ${ inputIsVisible && !inputIsValid && pulseInvalidInputs ? 'animate-pulse border border-red-500' : ''}  `">
     </div>
     <div class="flex justify-start items-center w-11/12 h-8 p-[1px] rounded-lg z-10 ">
       <div class=" flex justify-start items-center w-full h-full rounded-lg text-gray-300 bg-gray-600 overflow-hidden ">
@@ -34,6 +34,7 @@ export default {
       set(value){this.$store.dispatch('updateFormInputValue',{ inputId: this.inputId, value: value})},
     },
     inputIsValid() { return this.$store.getters.inputIsValid(this.inputId) },
+    inputIsVisible() { return this.$store.getters.inputIsVisible(this.inputId) },
     pulseInvalidInputs() { return this.$store.getters.pulseInvalidInputs }
   },
   methods: {

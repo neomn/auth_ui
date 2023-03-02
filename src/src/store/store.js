@@ -15,7 +15,7 @@ export const store = new Vuex.Store({
         allInputsAreValid: false,
         applyPulseEffectForInvalidInputs: false,
         formInputs: {
-            phone_number:       {inputId: 'phone_number',       placeHolder: 'Phone Number',            display: true,  type: 'number',     max_length: '12',   value: '', dirty:false, valid:true, passedValidationRules:{}, pendingValidationRules:{} },
+            phone_number:       {inputId: 'phone_number',       placeHolder: 'Phone Number',            display: true,  type: 'number',     max_length: '12',   value: '', dirty:false, valid:false, passedValidationRules:{}, pendingValidationRules:{} },
             email:              {inputId: 'email',              placeHolder: 'Email',                   display: false, type: 'email',      max_length: '50',   value: '', dirty:false, valid:false, passedValidationRules:{}, pendingValidationRules:{} },
             first_name:         {inputId: 'first_name',         placeHolder: 'First Name',              display: false, type: 'text',       max_length: '30',   value: '', dirty:false, valid:false, passedValidationRules:{}, pendingValidationRules:{} },
             last_name:          {inputId: 'last_name',          placeHolder: 'Last Name',               display: false, type: 'text',       max_length: '30',   value: '', dirty:false, valid:false, passedValidationRules:{}, pendingValidationRules:{} },
@@ -66,7 +66,8 @@ export const store = new Vuex.Store({
         currentlyFocusedInput:  state => { return state.currentlyFocusedInput },
         allInputsAreValid:      state => { return state.allInputsAreValid },
         pulseInvalidInputs:      state => { return state.applyPulseEffectForInvalidInputs },
-        inputIsValid:           (state) => (inputId) => { return state.formInputs[inputId].valid }
+        inputIsValid:           (state) => (inputId) => { return state.formInputs[inputId].valid },
+        inputIsVisible:         (state) => (inputId) => { return state.formInputs[inputId].display },
     },
 
     mutations: {
