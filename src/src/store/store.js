@@ -65,6 +65,7 @@ export const store = new Vuex.Store({
         icons:                  state => { return state.assets.icons },
         currentlyFocusedInput:  state => { return state.currentlyFocusedInput },
         allInputsAreValid:      state => { return state.allInputsAreValid },
+        pingInvalidInputs:      state => { return state.pingInvalidInputs },
         inputIsValid:           (state) => (inputId) => { return state.formInputs[inputId].valid }
     },
 
@@ -74,6 +75,7 @@ export const store = new Vuex.Store({
         changeSelectedNavButton: (state, payload) => { state.selectedNavButton = payload },
         updateCurrentlyFocusedInput: (state, input) => { state.currentlyFocusedInput = input },
         updateAllInputsAreValidProperty: (state, validationStatus) => { state.allInputsAreValid = validationStatus },
+        updatePingInvalidInputs: (state, value) => { state.pingInvalidInputs = value },
         updateInputComponent: (state, route) => {
             if (route === 'login')      { manageInputsDisplay (state, loginOptions) }
             if (route === 'register')   { manageInputsDisplay (state, registerOptions) }
@@ -96,6 +98,7 @@ export const store = new Vuex.Store({
         updateCurrentlyFocusedInput:                (context, input)            => {context.commit('updateCurrentlyFocusedInput',input)},
         updateAllInputsAreValidProperty:            (context, validationStatus) => { context.commit('updateAllInputsAreValidProperty',validationStatus)},
         updateFormInputValidateAndDirtyProperties:  (context, payload)          => {context.commit('updateFormInputValidateAndDirtyProperties',payload)},
+        updatePingInvalidInputs:  (context, value)          => { context.commit('updatePingInvalidInputs', value) },
     },
 
     modules: {}
