@@ -1,15 +1,21 @@
 <template>
-  <div ref="input" class="flex justify-start items-center w-11/12 h-8 m-1  border border-gray-900 rounded-lg text-gray-300
-        bg-gray-600 overflow-hidden"
-        :class="`${ inputIsFocused && inputValue.toString().length<=0 ? 'border-gray-300' : ''}
-                 ${ inputIsFocused && inputValue.toString().length>0 && !inputIsValid  ? 'border-red-500' : ''}
-                 ${ inputIsFocused && inputValue.toString().length>0 && inputIsValid ? 'border-lime-500' : ''}
-                 ${ inputIsValid ? 'border-lime-500' : ''}
-                 ${ pingInvalidInputs ? 'border-yellow-500' : ''}  `">
-    <img :src="icon" class="w-4 h-4 mx-2">
-    <input v-model="inputValue" @focus="inputFocused" @focusout="inputFocusedOut" @input="inputValueHasChanged(inputId, inputValue)" :type="type" :placeholder="placeholder" class="w-full px-2 bg-gray-600 focus:outline-none">
+  <div class="relative flex justify-center items-center ">
+    <div ref="input" class="absolute  w-11/12 h-8 rounded-lg border-2"
+         :class="`${ inputIsFocused && inputValue.toString().length<=0 ? 'border-gray-300' : ''}
+                  ${ inputIsFocused && inputValue.toString().length>0 && !inputIsValid  ? 'border-red-500' : ''}
+                  ${ inputIsFocused && inputValue.toString().length>0 && inputIsValid ? 'border-lime-500' : ''}
+                  ${ inputIsValid ? 'border-lime-500' : ''}
+                  ${ !inputIsValid && pulseInvalidInputs ? 'animate-pulse border-red-500' : ''}  `">
+
+    </div>
+    <div class="flex justify-start items-center w-11/12 h-8 m-1  border border-gray-900 rounded-lg text-gray-300
+            bg-gray-600 overflow-hidden">
+      <img :src="icon" class="w-4 h-4 mx-2">
+      <input v-model="inputValue" @focus="inputFocused" @focusout="inputFocusedOut" @input="inputValueHasChanged(inputId, inputValue)" :type="type" :placeholder="placeholder" class="w-full px-2 bg-gray-600 focus:outline-none">
+    </div>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -26,7 +32,7 @@ export default {
       set(value){this.$store.dispatch('updateFormInputValue',{ inputId: this.inputId, value: value})},
     },
     inputIsValid() { return this.$store.getters.inputIsValid(this.inputId) },
-    pingInvalidInputs() { return this.$store.getters.pingInvalidInputs }
+    pulseInvalidInputs() { return this.$store.getters.pulseInvalidInputs }
   },
   methods: {
     inputValueHasChanged(inputId){
