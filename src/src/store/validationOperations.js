@@ -29,7 +29,7 @@ export const validationOperations = {
         store.commit('updatePulseInvalidInputs', true)
         setTimeout(() => {
             store.commit('updatePulseInvalidInputs', false)
-        }, 2000)
+        }, 1000)
     },
 }
 
