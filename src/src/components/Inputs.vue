@@ -78,9 +78,9 @@ export default{
       validationOperations.pulseInvalidInputs()
       // await validationOperations.getInvalidFormInputs(this.v$)
       // console.log(this.v$)
-      this.v$.phone_number.$touch()
-      this.v$.phone_number.$validate()
-      console.log(this.v$.phone_number)
+      // this.v$.phone_number.$touch()
+      // this.v$.phone_number.$validate()
+      // console.log(this.v$.phone_number)
     },
     registerOperations(){
       validationOperations.pulseInvalidInputs()
@@ -103,13 +103,13 @@ export default{
 
     },
     inputFocused(inputId){
-
+      this.updateCurrentlyFocusedInput(inputId)
     },
     inputFocusedOut(inputId){
-
+      this.updateCurrentlyFocusedInput('')
     },
-    updateCurrentlyFocusedInput(input){
-      this.$store.dispatch("updateCurrentlyFocusedInput",input)
+    updateCurrentlyFocusedInput(inputId){
+      this.$store.dispatch("updateCurrentlyFocusedInput",inputId)
     },
 
   },
