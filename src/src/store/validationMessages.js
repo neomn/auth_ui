@@ -1,6 +1,7 @@
 
 export const validationMessages = {
-    required: 'should be alphabetic',
+    required: 'is required',
     alpha: 'should be alphabetic',
     email: 'should be valid email address',
+    numeric: 'should be numeric',
 }
