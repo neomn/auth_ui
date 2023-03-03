@@ -4,17 +4,42 @@
       <label for="" class=" m-2 text-2xl">Easy</label>
       <img class="w-20 m-2" :src="icons.brand.logo">
     </div>
-    <ValidationStatus v-if="true" class=" border m-2 grow"/>
+    <ValidationStatus v-if="this.anyFocusedInput" class=" border m-2 grow"/>
   </div>
 </template>
 
 <script>
 import ValidationStatus from "./ValidationStatus.vue";
 
+
 export default {
   components: {ValidationStatus},
+  data(){
+    return {
+      anyFocusedInput: false,
+      debounceUpdateAnyFocusedInput: this.debounce(this.updateAnyFocusedInput,200)
+    }
+  },
   computed: {
-    icons(){return this.$store.state.assets.icons}
+    icons(){return this.$store.state.assets.icons},
+    currentlyFocusedInput(){ return this.$store.getters.currentlyFocusedInput }
+  },
+  mounted() {
+    this.$watch(() => this.currentlyFocusedInput, (to, from) => {
+      this.debounceUpdateAnyFocusedInput()
+    })
+  },
+  methods: {
+    updateAnyFocusedInput(){
+      this.currentlyFocusedInput ? this.anyFocusedInput = true: this.anyFocusedInput = false
+    },
+    debounce(callback, wait=1000){
+      let timeout
+      return (...args) => {
+        clearTimeout(timeout)
+        timeout = setTimeout(()=>{ callback(...args) }, wait)
+      }
+    },
   },
 }
 
