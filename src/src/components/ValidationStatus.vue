@@ -4,7 +4,10 @@
 
 <script>
 export default {
-  name: "ValidationStatus"
+  name: "ValidationStatus",
+  computed: {
+
+  },
 }
 </script>
 
