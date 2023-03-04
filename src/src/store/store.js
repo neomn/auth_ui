@@ -3,7 +3,6 @@ import { loginOptions } from "./loginOptions.js";
 import { registerOptions } from "./registerOptions.js";
 import { recoverOptions } from "./recoverOptions.js";
 import { manageInputsDisplay } from "./InputsDisplayManager.js";
-import validationStatus from "../components/ValidationStatus.vue";
 
 export const store = new Vuex.Store({
     strict: true,
