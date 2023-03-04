@@ -1,7 +1,8 @@
-import {store} from "./store.js";
+import {store} from "../store/store.js";
 
-function syncInputValidationProperties () {
+export const sync = {
+    init(){
 
+    },
 }
 
-export {syncInputValidationProperties, }

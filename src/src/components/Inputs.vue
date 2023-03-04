@@ -25,6 +25,7 @@ import FormInput from "./FormInput.vue";
 import Button from "./Button.vue";
 import {validationRules} from "../validation/validationRules.js";
 import {validationOperations} from "../validation/validationOperations.js";
+import {sync} from "../validation/updateValidAndInvalidValidationRulesInTheStore.js";
 import useVuelidate from '@vuelidate/core'
 
 export default{
@@ -60,6 +61,7 @@ export default{
 
   },
   mounted() {
+    sync.init()
     this.$store.dispatch('updateInputComponent', this.$route.name)
 
     this.$watch( ()=> this.$route.path,(to, from)=> {
@@ -99,7 +101,7 @@ export default{
 
     },
     inputValueHasChanged(inputId){
-
+        console.log(this.v$)
     },
     inputFocused(inputId){
       this.updateCurrentlyFocusedInput(inputId)
