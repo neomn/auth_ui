@@ -19,7 +19,7 @@ export const store = new Vuex.Store({
             first_name:         {inputId: 'first_name',         placeHolder: 'First Name',              display: false, type: 'text',       max_length: '30',   value: '', dirty:false, valid:false, passedValidationRules:{}, pendingValidationRules:{} },
             last_name:          {inputId: 'last_name',          placeHolder: 'Last Name',               display: false, type: 'text',       max_length: '30',   value: '', dirty:false, valid:false, passedValidationRules:{}, pendingValidationRules:{} },
             password:           {inputId: 'password',           placeHolder: 'Password',                display: true,  type: 'password',   max_length: '20',   value: '', dirty:false, valid:false, passedValidationRules:{}, pendingValidationRules:{} },
-            confirm_password:   {inputId: 'confirm_password',   placeHolder: 'Enter Password Again',    display: false, type: 'password',   max_length: '20',   value: '', dirty:false, valid:false, passedValidationRules:{}, pendingValidationRules:{} },
+            // confirm_password:   {inputId: 'confirm_password',   placeHolder: 'Enter Password Again',    display: false, type: 'password',   max_length: '20',   value: '', dirty:false, valid:false, passedValidationRules:{}, pendingValidationRules:{} },
             one_time_token:     {inputId: 'one_time_token',     placeHolder: 'Token',                   display: false, type: 'number',     max_length: '6',    value: '', dirty:false, valid:false, passedValidationRules:{}, pendingValidationRules:{} },
         },
         buttons: {
