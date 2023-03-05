@@ -4,8 +4,13 @@ import {validationRules} from "./validationRules.js";
 export const sync = {
     init(){
         Object.values(store.getters.formInputs).forEach(input => {
-            // input.pendingValidationRules = validationRules[input.inputId]
-            // console.log(input.pendingValidationRules)
+            let payload = {
+                inputId: input.inputId,
+                rules: {},
+                valid: false,
+            }
+            payload.rules = validationRules[input.inputId]
+            store.commit("updateValidAndInvalidRules", payload)
         })
     },
 }
