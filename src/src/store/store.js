@@ -64,9 +64,11 @@ export const store = new Vuex.Store({
         icons:                  state => { return state.assets.icons },
         currentlyFocusedInput:  state => { return state.currentlyFocusedInput },
         allInputsAreValid:      state => { return state.allInputsAreValid },
-        pulseInvalidInputs:      state => { return state.applyPulseEffectForInvalidInputs },
+        pulseInvalidInputs:     state => { return state.applyPulseEffectForInvalidInputs },
         inputIsValid:           (state) => (inputId) => { return state.formInputs[inputId].valid },
         inputIsVisible:         (state) => (inputId) => { return state.formInputs[inputId].display },
+        validRules:             (state) => (inputId) => { return state.formInputs[inputId].passedValidationRules },
+        invalidRules:           (state) => (inputId) => { return state.formInputs[inputId].pendingValidationRules },
     },
 
     mutations: {
