@@ -3,8 +3,10 @@
     <div>
 <!--      {{this.validRulesForFocusedInput}}-->
     </div>
-    <div class="text-red-400">
-      {{Object.keys(this.invalidRulesForFocusedInput)}}
+    <div class="pl-4 text-sm text-red-400">
+      <ul class="gap-0">
+        <li v-for="rule in Object.keys(this.invalidRulesForFocusedInput)" class="space-y-0">  <small>{{rule}}</small>  </li>
+      </ul>
     </div>
   </div>
 </template>
