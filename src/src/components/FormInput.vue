@@ -1,5 +1,5 @@
 <template>
-  <div class="relative flex justify-center items-center w-11/12 h-8 m-1">
+  <div class="relative flex justify-center items-center w-11/12 h-8 mt-1">
     <div  class="absolute w-11/12 h-8 rounded-lg "
           :class="`${ inputIsFocused && inputValue.toString().length<=0 ? 'border border-gray-300' : ''}
                    ${ inputIsFocused && inputValue.toString().length>0 && !inputIsValid  ? 'border border-red-500' : ''}
