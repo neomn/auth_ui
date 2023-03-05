@@ -1,7 +1,7 @@
 <template>
   <div class="rounded-lg overflow-y-scroll">
-    <div>
-<!--      {{this.validRulesForFocusedInput}}-->
+    <div v-if="validRulesForFocusedInput">
+      {{this.validRulesForFocusedInput}}
     </div>
     <div class="pl-4 text-sm text-red-400">
       <ul v-auto-animate class="gap-0">
@@ -21,9 +21,8 @@ export default {
   computed: {
     focusedInput(){ return this.$store.getters.currentlyFocusedInput },
     validRulesForFocusedInput(){
-      if (this.focusedInput)
+      if (this.focusedInput && !this.isEmptyObject(this.$store.getters.validRules(this.focusedInput)))
           return this.$store.getters.validRules(this.focusedInput)
-      return ''
     },
     invalidRulesForFocusedInput(){
       if (this.focusedInput)
@@ -38,6 +37,9 @@ export default {
         clearTimeout(timeout)
         timeout = setTimeout(() => { callback(...args)  }, wait)
       }
+    },
+    isEmptyObject(object){
+      return Object.keys(object).length === 0
     },
   },
 }
