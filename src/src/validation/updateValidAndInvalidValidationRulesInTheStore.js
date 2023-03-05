@@ -12,7 +12,6 @@ export const sync = {
             payload.rules = validationRules[input.inputId]
             store.commit("updateValidAndInvalidRules", payload)
         })
-        console.log(store.getters.formInputs)
     },
 }
 
