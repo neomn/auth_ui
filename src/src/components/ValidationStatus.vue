@@ -20,8 +20,16 @@ export default {
   name: "ValidationStatus",
   computed: {
     focusedInput(){ return this.$store.getters.currentlyFocusedInput },
-    validRulesForFocusedInput(){ return this.$store.getters.validRules(this.focusedInput) },
-    invalidRulesForFocusedInput(){ return this.$store.getters.invalidRules(this.focusedInput) },
+    validRulesForFocusedInput(){
+      if (this.focusedInput)
+          return this.$store.getters.validRules(this.focusedInput)
+      return ''
+    },
+    invalidRulesForFocusedInput(){
+      if (this.focusedInput)
+        return this.$store.getters.invalidRules(this.focusedInput)
+      return ''
+    },
   },
   methods: {
     debounce(callback, wait=300){
