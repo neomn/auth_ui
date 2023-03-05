@@ -105,6 +105,7 @@ export const store = new Vuex.Store({
         updateAllInputsAreValidProperty:            (context, validationStatus) => { context.commit('updateAllInputsAreValidProperty',validationStatus)},
         updateFormInputValidateAndDirtyProperties:  (context, payload)          => {context.commit('updateFormInputValidateAndDirtyProperties',payload)},
         updatePulseInvalidInputs:                   (context, value)            => { context.commit('updatePulseInvalidInputs', value) },
+        updateValidAndInvalidRules:                 (context, payload)          => { context.commit("updateValidAndInvalidRules", payload) }
     },
 
     modules: {}
