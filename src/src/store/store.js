@@ -87,6 +87,12 @@ export const store = new Vuex.Store({
         updateFormInputValidateAndDirtyProperties: () => {
 
         },
+        updateValidAndInvalidRules: (state, payload) => {
+            let inputId = payload.inputId
+            let rules = payload.rules
+            let valid = payload.valid
+            valid ? state.formInputs[inputId].passedValidationRules = rules : state.formInputs[inputId].pendingValidationRules = rules
+        },
     },
 
     actions: {
