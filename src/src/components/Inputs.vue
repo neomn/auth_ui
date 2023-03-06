@@ -101,7 +101,8 @@ export default{
 
     },
     inputValueHasChanged(inputId){
-        // console.log(this.v$)
+      // console.log(this.v$.phone_number.required.$invalid)
+      sync.syncFormInputPassedAndPendingRules(inputId)
     },
     inputFocused(inputId){
       this.updateCurrentlyFocusedInput(inputId)
