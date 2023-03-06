@@ -14,10 +14,10 @@ export const sync = {
         })
     },
     syncFormInputPassedAndPendingRules(v$, inputId){
-        let passedRules = {}
-        let pendingRules = {}
+        let passedRules = []
+        let pendingRules = []
         Object.keys(validationRules[inputId]).forEach(rule => {
-            v$[inputId][rule].$invalid ? pendingRules += rule : passedRules += rule
+            v$[inputId][rule].$invalid ? pendingRules.push(rule) : passedRules.push(rule)
         })
         console.log('passed > ' + passedRules + "\n")
         console.log('passed > ' + pendingRules + "\n")
