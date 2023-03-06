@@ -3,7 +3,7 @@
     <div v-if="validRulesForFocusedInput">
       {{this.validRulesForFocusedInput}}
     </div>
-    <div v-if="invalidRulesForFocusedInput" class="pl-4 text-sm text-red-400">
+    <div v-if="invalidRulesForFocusedInput" class="pl-4 text-sm text-red-500">
       <ul v-auto-animate class="gap-0">
         <li v-for="rule in Object.keys(this.invalidRulesForFocusedInput)" class="space-y-0">
           <small >{{rule}}</small>
