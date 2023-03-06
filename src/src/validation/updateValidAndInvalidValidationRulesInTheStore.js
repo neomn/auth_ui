@@ -23,6 +23,10 @@ export const sync = {
         } else pendingRules = Object.keys(validationRules[inputId])
         store.commit('updateValidAndInvalidRules', {inputId: inputId, rules: passedRules, valid:true})
         store.commit('updateValidAndInvalidRules', {inputId: inputId, rules: pendingRules, valid:false})
+    },
+    updateInputValidity(inputId){
+        store.getters.formInputs[inputId].pendingValidationRules ?
+            store.commit()
     }
 }
 

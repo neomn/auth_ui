@@ -86,8 +86,8 @@ export const store = new Vuex.Store({
         updateFormInputValue: (state, payload) => {
             state.formInputs[payload.inputId].value = payload.value
         },
-        updateFormInputValidateAndDirtyProperties: () => {
-
+        updateFormInputValidity: (state, payload) => {
+            state.formInputs[payload.inputId].valid = payload.valid
         },
         updateValidAndInvalidRules: (state, payload) => {
             let inputId = payload.inputId
@@ -105,7 +105,7 @@ export const store = new Vuex.Store({
         updateFormInputValue:                       (context, payload)          => { context.commit('updateFormInputValue', payload) },
         updateCurrentlyFocusedInput:                (context, input)            => {context.commit('updateCurrentlyFocusedInput',input)},
         updateAllInputsAreValidProperty:            (context, validationStatus) => { context.commit('updateAllInputsAreValidProperty',validationStatus)},
-        updateFormInputValidateAndDirtyProperties:  (context, payload)          => {context.commit('updateFormInputValidateAndDirtyProperties',payload)},
+        updateFormInputValidity:                    (context, payload)          => {context.commit('updateFormInputValidity', payload)},
         updatePulseInvalidInputs:                   (context, value)            => { context.commit('updatePulseInvalidInputs', value) },
         updateValidAndInvalidRules:                 (context, payload)          => { context.commit("updateValidAndInvalidRules", payload) }
     },

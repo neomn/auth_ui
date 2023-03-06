@@ -100,9 +100,10 @@ export default{
     sendRecoverRequest(){
 
     },
-    async inputValueHasChanged(inputId){
+    inputValueHasChanged(inputId){
       // console.log(this.v$.phone_number.required.$invalid)
-      await sync.syncFormInputPassedAndPendingRules(this.v$, inputId)
+      sync.syncFormInputPassedAndPendingRules(this.v$, inputId)
+      sync.updateInputValidity(inputId)
     },
     inputFocused(inputId){
       this.updateCurrentlyFocusedInput(inputId)
