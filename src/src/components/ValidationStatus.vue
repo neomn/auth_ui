@@ -25,17 +25,12 @@ export default {
   computed: {
     focusedInput(){ return this.$store.getters.currentlyFocusedInput },
     validRulesForFocusedInput(){
-      if (this.focusedInput && !this.isEmptyObject(this.$store.getters.validRules(this.focusedInput)))
+      if (this.focusedInput && this.$store.getters.validRules(this.focusedInput))
           return this.$store.getters.validRules(this.focusedInput)
     },
     invalidRulesForFocusedInput(){
-      if (this.focusedInput && !this.isEmptyObject(this.$store.getters.invalidRules(this.focusedInput)))
+      if (this.focusedInput && this.$store.getters.invalidRules(this.focusedInput))
         return this.$store.getters.invalidRules(this.focusedInput)
-    },
-  },
-  methods: {
-    isEmptyObject(object){
-      return Object.keys(object).length === 0
     },
   },
 }
