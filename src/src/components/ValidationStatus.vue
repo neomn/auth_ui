@@ -24,15 +24,9 @@ export default {
       if (this.focusedInput && !this.isEmptyObject(this.$store.getters.validRules(this.focusedInput)))
           return this.$store.getters.validRules(this.focusedInput)
     },
-    // invalidRulesForFocusedInput(){
-    //   const invalidRules = this.$store.getters.invalidRules(this.focusedInput)
-    //   if (this.focusedInput && !this.isEmptyObject(invalidRules))
-    //     return invalidRules
-    // },
     invalidRulesForFocusedInput(){
-      if (this.focusedInput)
+      if (this.focusedInput && !this.isEmptyObject(this.$store.getters.invalidRules(this.focusedInput)))
         return this.$store.getters.invalidRules(this.focusedInput)
-      return ''
     },
   },
   methods: {
