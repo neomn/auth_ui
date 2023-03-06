@@ -1,7 +1,11 @@
 <template>
   <div class="rounded-lg overflow-y-scroll">
-    <div v-if="validRulesForFocusedInput">
-      {{this.validRulesForFocusedInput}}
+    <div v-if="validRulesForFocusedInput" class="pl-4 text-sm text-lime-500">
+      <ul v-auto-animate class="gap-0">
+        <li v-for="rule in Object.keys(this.validRulesForFocusedInput)" class="space-y-0">
+          <small >{{rule}}</small>
+        </li>
+      </ul>
     </div>
     <div v-if="invalidRulesForFocusedInput" class="pl-4 text-sm text-red-500">
       <ul v-auto-animate class="gap-0">
