@@ -21,14 +21,8 @@ export const sync = {
                 v$[inputId][rule].$invalid ? pendingRules.push(rule) : passedRules.push(rule)
             })
         } else pendingRules = Object.keys(validationRules[inputId])
-
         store.commit('updateValidAndInvalidRules', {inputId: inputId, rules: passedRules, valid:true})
         store.commit('updateValidAndInvalidRules', {inputId: inputId, rules: pendingRules, valid:false})
-
-        console.log('valid > ' + store.getters.validRules(inputId)+ "\n")
-        console.log('invalid > ' + store.getters.invalidRules(inputId)+ "\n")
-        console.log('run > ' + temp + "\n")
-        console.log("\n")
     }
 }
 
