@@ -28,6 +28,10 @@ export const sync = {
         store.getters.formInputs[inputId].pendingValidationRules.length === 0 ?
             store.commit('updateFormInputValidity', {inputId: inputId, valid: true}):
             store.commit('updateFormInputValidity', {inputId: inputId, valid: false})
-    }
+    },
+    async updateAllInputsAreValid(){
+        const inputs = Object.values(store.getters.formInputs).every(input => {return input.valid === true})
+        console.log(inputs)
+    },
 }
 
