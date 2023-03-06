@@ -30,8 +30,10 @@ export const sync = {
             store.commit('updateFormInputValidity', {inputId: inputId, valid: false})
     },
     async updateAllInputsAreValid(){
-        const inputs = Object.values(store.getters.formInputs).every(input => {return input.valid === true})
-        console.log(inputs)
+        const visibleInputs = Object.values(store.getters.formInputs).filter(input => {return input.display === true})
+        visibleInputs.every(input => {return input.valid}) ?
+            store.commit('updateAllInputsAreValidProperty', true) :
+            store.commit('updateAllInputsAreValidProperty', false)
     },
 }
 
