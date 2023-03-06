@@ -13,14 +13,14 @@ export const sync = {
             store.commit("updateValidAndInvalidRules", payload)
         })
     },
-    syncFormInputPassedAndPendingRules(inputId){
-        //get all rules for form input
+    syncFormInputPassedAndPendingRules(v$, inputId){
+        let passedRules = {}
+        let pendingRules = {}
         Object.keys(validationRules[inputId]).forEach(rule => {
-
+            v$[inputId][rule].$invalid ? pendingRules += rule : passedRules += rule
         })
-
-        // iterate through all rules
-        //if rule is valid then put it on passed rules else put in on pending rules
+        console.log('passed > ' + passedRules + "\n")
+        console.log('passed > ' + pendingRules + "\n")
     }
 }
 
