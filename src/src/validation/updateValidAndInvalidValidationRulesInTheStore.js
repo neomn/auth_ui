@@ -13,7 +13,7 @@ export const sync = {
             store.commit("updateValidAndInvalidRules", payload)
         })
     },
-    syncFormInputPassedAndPendingRules(v$, inputId){
+    async syncFormInputPassedAndPendingRules(v$, inputId){
         let passedRules = []
         let pendingRules = []
         if (store.getters.formInputs[inputId].value){
@@ -25,8 +25,9 @@ export const sync = {
         store.commit('updateValidAndInvalidRules', {inputId: inputId, rules: pendingRules, valid:false})
     },
     updateInputValidity(inputId){
-        store.getters.formInputs[inputId].pendingValidationRules ?
-            store.commit()
+        store.getters.formInputs[inputId].pendingValidationRules.length === 0 ?
+            store.commit('updateFormInputValidity', {inputId: inputId, valid: true}):
+            store.commit('updateFormInputValidity', {inputId: inputId, valid: false})
     }
 }
 
