@@ -11,7 +11,7 @@ export const store = new Vuex.Store({
         selectedNavButton: 'login',
         currentAuthMethod: 'sms',
         currentlyFocusedInput: '',
-        allInputsAreValid: false,
+        visibleInputsAreValid: false,
         applyPulseEffectForInvalidInputs: false,
         formInputs: {
             phone_number:       {inputId: 'phone_number',       placeHolder: 'Phone Number',            display: true,  type: 'number',     max_length: '12',   value: '', dirty:false, valid:false, passedValidationRules:[], pendingValidationRules:[] },
@@ -63,7 +63,7 @@ export const store = new Vuex.Store({
         authMethods:            state => { return state.authMethods },
         icons:                  state => { return state.assets.icons },
         currentlyFocusedInput:  state => { return state.currentlyFocusedInput },
-        allInputsAreValid:      state => { return state.allInputsAreValid },
+        visibleInputsAreValid:      state => { return state.visibleInputsAreValid },
         pulseInvalidInputs:     state => { return state.applyPulseEffectForInvalidInputs },
         inputIsValid:           (state) => (inputId) => { return state.formInputs[inputId].valid },
         inputIsVisible:         (state) => (inputId) => { return state.formInputs[inputId].display },
@@ -76,7 +76,7 @@ export const store = new Vuex.Store({
         changeCurrentAuthMethod: (state, payload) => { state.currentAuthMethod = payload },
         changeSelectedNavButton: (state, payload) => { state.selectedNavButton = payload },
         updateCurrentlyFocusedInput: (state, input) => { state.currentlyFocusedInput = input },
-        updateAllInputsAreValidProperty: (state, validationStatus) => { state.allInputsAreValid = validationStatus },
+        updateVisibleInputsAreValid: (state, validationStatus) => { state.visibleInputsAreValid = validationStatus },
         updatePulseInvalidInputs: (state, value) => { state.applyPulseEffectForInvalidInputs = value },
         updateInputComponent: (state, route) => {
             if (route === 'login')      { manageInputsDisplay (state, loginOptions) }
@@ -104,7 +104,7 @@ export const store = new Vuex.Store({
         updateInputComponent:                       (context, route)            => { context.commit('updateInputComponent', route) },
         updateFormInputValue:                       (context, payload)          => { context.commit('updateFormInputValue', payload) },
         updateCurrentlyFocusedInput:                (context, input)            => {context.commit('updateCurrentlyFocusedInput',input)},
-        updateAllInputsAreValidProperty:            (context, validationStatus) => { context.commit('updateAllInputsAreValidProperty',validationStatus)},
+        updateVisibleInputsAreValidProperty:            (context, validationStatus) => { context.commit('updateAllInputsAreValidProperty',validationStatus)},
         updateFormInputValidity:                    (context, payload)          => {context.commit('updateFormInputValidity', payload)},
         updatePulseInvalidInputs:                   (context, value)            => { context.commit('updatePulseInvalidInputs', value) },
         updateValidAndInvalidRules:                 (context, payload)          => { context.commit("updateValidAndInvalidRules", payload) }
