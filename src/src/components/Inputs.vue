@@ -25,7 +25,7 @@ import FormInput from "./FormInput.vue";
 import Button from "./Button.vue";
 import {validationRules} from "../validation/validationRules.js";
 import {validationOperations} from "../validation/validationOperations.js";
-import {sync} from "../validation/updateValidAndInvalidValidationRulesInTheStore.js";
+import {sync} from "../validation/syncStoreWithValidation.js";
 import useVuelidate from '@vuelidate/core'
 
 export default{
@@ -85,11 +85,11 @@ export default{
     },
     registerOperations(){
       validationOperations.pulseInvalidInputs()
-      validationOperations.updateActionButtonVisibility(this.v$, 'register')
+      // validationOperations.updateActionButtonVisibility(this.v$, 'register')
     },
     recoverOperations(){
       validationOperations.pulseInvalidInputs()
-      validationOperations.updateActionButtonVisibility(this.v$,'recover')
+      // validationOperations.updateActionButtonVisibility(this.v$,'recover')
     },
     sendLoginRequest(){
 
