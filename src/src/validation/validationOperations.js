@@ -1,4 +1,5 @@
 import {store} from "../store/store.js";
+import {sync} from "./updateValidAndInvalidValidationRulesInTheStore.js";
 
 export const validationOperations = {
 
@@ -11,7 +12,9 @@ export const validationOperations = {
     },
 
     setActionButtonVisibility(value) {
-        store.commit('updateVisibleInputsAreValid', value)
+        // store.commit('updateVisibleInputsAreValid', value)
+        sync.updateVisibleInputsAreValid()
+
     },
 
     visibleFormInputs() {
