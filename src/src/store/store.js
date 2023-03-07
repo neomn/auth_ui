@@ -14,12 +14,12 @@ export const store = new Vuex.Store({
         visibleInputsAreValid: false,
         applyPulseEffectForInvalidInputs: false,
         formInputs: {
-            phone_number:       {inputId: 'phone_number',       placeHolder: 'Phone Number',            display: true,  type: 'number',     max_length: '12',   value: '', dirty:false, valid:false, passedValidationRules:[], pendingValidationRules:[] },
-            email:              {inputId: 'email',              placeHolder: 'Email',                   display: false, type: 'email',      max_length: '50',   value: '', dirty:false, valid:false, passedValidationRules:[], pendingValidationRules:[] },
-            first_name:         {inputId: 'first_name',         placeHolder: 'First Name',              display: false, type: 'text',       max_length: '30',   value: '', dirty:false, valid:false, passedValidationRules:[], pendingValidationRules:[] },
-            last_name:          {inputId: 'last_name',          placeHolder: 'Last Name',               display: false, type: 'text',       max_length: '30',   value: '', dirty:false, valid:false, passedValidationRules:[], pendingValidationRules:[] },
-            password:           {inputId: 'password',           placeHolder: 'Password',                display: true,  type: 'password',   max_length: '20',   value: '', dirty:false, valid:false, passedValidationRules:[], pendingValidationRules:[] },
-            one_time_token:     {inputId: 'one_time_token',     placeHolder: 'Token',                   display: false, type: 'number',     max_length: '6',    value: '', dirty:false, valid:false, passedValidationRules:[], pendingValidationRules:[] },
+            phone_number:   {inputId: 'phone_number',       placeHolder: 'Phone Number',  display: true,  type: 'number',    value: '', dirty:false, valid:false, passedValidationRules:[], pendingValidationRules:[] },
+            email:          {inputId: 'email',              placeHolder: 'Email',         display: false, type: 'email',     value: '', dirty:false, valid:false, passedValidationRules:[], pendingValidationRules:[] },
+            first_name:     {inputId: 'first_name',         placeHolder: 'First Name',    display: false, type: 'text',      value: '', dirty:false, valid:false, passedValidationRules:[], pendingValidationRules:[] },
+            last_name:      {inputId: 'last_name',          placeHolder: 'Last Name',     display: false, type: 'text',      value: '', dirty:false, valid:false, passedValidationRules:[], pendingValidationRules:[] },
+            password:       {inputId: 'password',           placeHolder: 'Password',      display: true,  type: 'password',  value: '', dirty:false, valid:false, passedValidationRules:[], pendingValidationRules:[] },
+            one_time_token: {inputId: 'one_time_token',     placeHolder: 'Token',         display: false, type: 'number',    value: '', dirty:false, valid:false, passedValidationRules:[], pendingValidationRules:[] },
         },
         buttons: {
             login:      {placeHolder: 'Login',    display: true},
