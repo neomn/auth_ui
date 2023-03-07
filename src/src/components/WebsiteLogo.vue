@@ -11,7 +11,7 @@
 
 
 <script>
-import ValidationStatus from "./ValidationStatus.vue";
+import ValidationStatus from "./ValidationMessageDisplay.vue";
 
 
 export default {
