@@ -12,7 +12,7 @@ export const validationMessages = {
         numeric: 'should be :max digits min',
         alpha: 'should be :max character min',
     },
-    getMessage(attribute, rule, value){
+    getMessage(rule, type, ruleValue){
 
     },
 }
