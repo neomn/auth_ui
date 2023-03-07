@@ -29,11 +29,11 @@ export const sync = {
             store.commit('updateFormInputValidity', {inputId: inputId, valid: true}):
             store.commit('updateFormInputValidity', {inputId: inputId, valid: false})
     },
-    async updateAllInputsAreValid(){
+    async updateVisibleInputsAreValid(){
         const visibleInputs = Object.values(store.getters.formInputs).filter(input => {return input.display === true})
         visibleInputs.every(input => {return input.valid}) ?
-            store.commit('updateAllInputsAreValidProperty', true) :
-            store.commit('updateAllInputsAreValidProperty', false)
+            store.commit('updateVisibleInputsAreValid', true) :
+            store.commit('updateVisibleInputsAreValid', false)
     },
 }
 

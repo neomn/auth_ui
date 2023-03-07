@@ -11,7 +11,7 @@ export const validationOperations = {
     },
 
     setActionButtonVisibility(value) {
-        store.commit('updateAllInputsAreValidProperty', value)
+        store.commit('updateVisibleInputsAreValid', value)
     },
 
     visibleFormInputs() {

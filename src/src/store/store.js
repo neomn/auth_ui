@@ -63,12 +63,12 @@ export const store = new Vuex.Store({
         authMethods:            state => { return state.authMethods },
         icons:                  state => { return state.assets.icons },
         currentlyFocusedInput:  state => { return state.currentlyFocusedInput },
-        visibleInputsAreValid:      state => { return state.visibleInputsAreValid },
+        visibleInputsAreValid:  state => { return state.visibleInputsAreValid },
         pulseInvalidInputs:     state => { return state.applyPulseEffectForInvalidInputs },
-        inputIsValid:           (state) => (inputId) => { return state.formInputs[inputId].valid },
-        inputIsVisible:         (state) => (inputId) => { return state.formInputs[inputId].display },
-        validRules:             (state) => (inputId) => { return state.formInputs[inputId].passedValidationRules },
-        invalidRules:           (state) => (inputId) => { return state.formInputs[inputId].pendingValidationRules },
+        inputIsValid:           state => (inputId) => { return state.formInputs[inputId].valid },
+        inputIsVisible:         state => (inputId) => { return state.formInputs[inputId].display },
+        validRules:             state => (inputId) => { return state.formInputs[inputId].passedValidationRules },
+        invalidRules:           state => (inputId) => { return state.formInputs[inputId].pendingValidationRules },
     },
 
     mutations: {
@@ -98,16 +98,16 @@ export const store = new Vuex.Store({
     },
 
     actions: {
-        changeTheme:                                (context, payload)          => { context.commit('changeTheme', payload) },
-        changeCurrentAuthMethod:                    (context, payload)          => { context.commit('changeCurrentAuthMethod', payload) },
-        changeSelectedNavButton:                    (context, payload)          => { context.commit('changeSelectedNavButton', payload) },
-        updateInputComponent:                       (context, route)            => { context.commit('updateInputComponent', route) },
-        updateFormInputValue:                       (context, payload)          => { context.commit('updateFormInputValue', payload) },
-        updateCurrentlyFocusedInput:                (context, input)            => {context.commit('updateCurrentlyFocusedInput',input)},
-        updateVisibleInputsAreValidProperty:            (context, validationStatus) => { context.commit('updateAllInputsAreValidProperty',validationStatus)},
-        updateFormInputValidity:                    (context, payload)          => {context.commit('updateFormInputValidity', payload)},
-        updatePulseInvalidInputs:                   (context, value)            => { context.commit('updatePulseInvalidInputs', value) },
-        updateValidAndInvalidRules:                 (context, payload)          => { context.commit("updateValidAndInvalidRules", payload) }
+        changeTheme:                   (context, payload)          => { context.commit('changeTheme', payload) },
+        changeCurrentAuthMethod:       (context, payload)          => { context.commit('changeCurrentAuthMethod', payload) },
+        changeSelectedNavButton:       (context, payload)          => { context.commit('changeSelectedNavButton', payload) },
+        updateInputComponent:          (context, route)            => { context.commit('updateInputComponent', route) },
+        updateFormInputValue:          (context, payload)          => { context.commit('updateFormInputValue', payload) },
+        updateCurrentlyFocusedInput:   (context, input)            => {context.commit('updateCurrentlyFocusedInput',input)},
+        updateVisibleInputsAreValid:   (context, validationStatus) => { context.commit('updateVisibleInputsAreValid',validationStatus)},
+        updateFormInputValidity:       (context, payload)          => {context.commit('updateFormInputValidity', payload)},
+        updatePulseInvalidInputs:      (context, value)            => { context.commit('updatePulseInvalidInputs', value) },
+        updateValidAndInvalidRules:    (context, payload)          => { context.commit("updateValidAndInvalidRules", payload) }
     },
 
     modules: {}

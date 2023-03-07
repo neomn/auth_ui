@@ -49,9 +49,9 @@ export default{
       get(inputId){return this.$store.getters.formInputs[inputId].valid},
       set(inputId, value){this.$store.dispatch('updateFormInputValidateAndDirtyProperties',{ inputId: inputId, valid: value})},
     },
-    allInputsAreValid: {
-      get: () => { return this.$store.getters.allInputsAreValid },
-      set: (validationStatus) => { this.$store.dispatch('updateAllInputsAreValidProperty', validationStatus) },
+    visibleInputsAreValid: {
+      get: () => { return this.$store.getters.visibleInputsAreValid },
+      set: (validationStatus) => { this.$store.dispatch('updateVisibleInputsAreValid', validationStatus) },
     },
     pulseInvalidInputs: {
       get: () => { return this.$store.getters.pulseInvalidInputs },
@@ -104,7 +104,7 @@ export default{
       // console.log(this.v$.phone_number.required.$invalid)
       sync.syncFormInputPassedAndPendingRules(this.v$, inputId)
       sync.updateInputValidity(inputId)
-      sync.updateAllInputsAreValid()
+      sync.updateVisibleInputsAreValid()
     },
     inputFocused(inputId){
       this.updateCurrentlyFocusedInput(inputId)
