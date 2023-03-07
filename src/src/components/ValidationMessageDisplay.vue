@@ -18,7 +18,7 @@
 </template>
 
 <script>
-
+import {validationMessages} from "../validation/validationMessages.js";
 
 export default {
   name: "ValidationStatus",

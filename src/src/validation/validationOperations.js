@@ -1,5 +1,4 @@
 import {store} from "../store/store.js";
-import {sync} from "./updateValidAndInvalidValidationRulesInTheStore.js";
 
 export const validationOperations = {
 
