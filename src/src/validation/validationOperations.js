@@ -11,12 +11,6 @@ export const validationOperations = {
         return this.visibleFormInputs().length <= 0
     },
 
-    setActionButtonVisibility(value) {
-        // store.commit('updateVisibleInputsAreValid', value)
-        sync.updateVisibleInputsAreValid()
-
-    },
-
     visibleFormInputs() {
         const result = Object.values(store.getters.formInputs).map(formInput => {
             return formInput.display ? formInput.inputId : null

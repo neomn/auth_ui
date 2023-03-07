@@ -65,11 +65,11 @@ export default{
     this.$store.dispatch('updateInputComponent', this.$route.name)
 
     this.$watch( ()=> this.$route.path,(to, from)=> {
-      validationOperations.updateActionButtonVisibility()
+      sync.updateVisibleInputsAreValid()
     })
 
     this.$watch( ()=>this.$store.state.currentAuthMethod, (to, from)=>{
-      validationOperations.updateActionButtonVisibility()
+      sync.updateVisibleInputsAreValid()
     })
   },
 
